@@ -64,7 +64,7 @@
             <p>&copy; 2024 Xzor Gaming Profile. Game on!</p>
         </footer>
     </div>
-<style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -86,6 +86,41 @@
             text-align: center;
             padding: 40px 0;
             border-bottom: 2px solid #21262d;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #58a6ff;
+            box-shadow: 0 0 30px rgba(88, 166, 255, 0.3);
+            object-fit: cover;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(88, 166, 255, 0.5);
+        }
+        .profile-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #58a6ff;
+            box-shadow: 0 0 30px rgba(88, 166, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #161b22, #21262d);
+            color: #58a6ff;
+            font-size: 4rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .profile-placeholder:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(88, 166, 255, 0.5);
         }
         h1 {
             font-size: 3rem;
@@ -123,7 +158,6 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(45deg, #5865f2, #7289da);
             color: white;
             text-decoration: none;
             padding: 12px 24px;
@@ -131,11 +165,21 @@
             transition: all 0.3s ease;
             font-weight: 600;
         }
-        .social-link:hover {
+        .discord-link {
+            background: linear-gradient(45deg, #5865f2, #7289da);
+        }
+        .discord-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
         }
-        .discord-icon {
+        .star-citizen-link {
+            background: linear-gradient(45deg, #0f4c81, #1e6aa0);
+        }
+        .star-citizen-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 106, 160, 0.4);
+        }
+        .social-icon {
             width: 24px;
             height: 24px;
             fill: currentColor;
@@ -212,7 +256,6 @@
             }
         }
     </style>
-
 <script>
 
 </script>
