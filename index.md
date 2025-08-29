@@ -1,6 +1,5 @@
 <div class="container">
         <header>
-            <h1>Xzor</h1>
             <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         </header>
         <div class="profile-section">
@@ -61,7 +60,7 @@
             </p>
         </div>
         <footer>
-            <p>&copy; 2024 Xzor Gaming Profile. Game on!</p>
+            <p>&copy; 2025 Xzor Gaming Profile. Game on!</p>
         </footer>
     </div>
 <style>
