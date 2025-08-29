@@ -1,7 +1,7 @@
 <div class="container">
         <header>
             <img src="profile.png" alt="Xzor Profile" class="profile-image">
-            <div class="profile-placeholder">X</div>
+<!--             <div class="profile-placeholder">X</div> -->
             <h1>Xzor</h1>
             <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         </header>
