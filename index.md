@@ -41,27 +41,6 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title">📊 Gaming Stats</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Hours Played</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Games Owned</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Achievements</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Friends Online</div>
-            </div>
-        </div>
-    </div>
-    <div class="profile-section">
         <h2 class="section-title">🎮 Currently Playing</h2>
         <div class="games-list">
             <div class="game-item star-citizen-game">
@@ -80,6 +59,27 @@ description: Exploring the cosmos, one game at a time
                 <div class="game-title">No Man's Sky</div>
                 <div class="game-status">Intergalactic Explorer</div>
                 <div class="game-description">∞ worlds discovered</div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section">
+        <h2 class="section-title">📊 Gaming Stats</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Hours Played</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Games Owned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Achievements</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Friends Online</div>
             </div>
         </div>
     </div>
