@@ -38,7 +38,7 @@ description: Exploring the cosmos, one game at a time
                 </svg>
                 Twitch Channel
             </a>
-              <a href="[https://www.twitch.tv/xzor_](https://steamcommunity.com/id/ubuntuser/)" class="social-link steam-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://steamcommunity.com/id/ubuntuser/" class="social-link steam-link" target="_blank" rel="noopener noreferrer">
                 <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
                 </svg>
                 Steam Profile
