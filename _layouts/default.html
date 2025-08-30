@@ -29,37 +29,242 @@
             position: relative;
         }
         
-        /* Starfield Background */
+        /* Enhanced Multi-Layer Twinkling Starfield Background */
         .starfield {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: 
-                radial-gradient(4px 4px at 20px 30px, #ffffff, transparent),
-                radial-gradient(3px 3px at 40px 70px, rgba(255, 105, 180, 1), transparent),
-                radial-gradient(3px 3px at 90px 40px, #58a6ff, transparent),
-                radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.9), transparent),
-                radial-gradient(3px 3px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
-                radial-gradient(2px 2px at 200px 90px, #ffffff, transparent),
-                radial-gradient(3px 3px at 250px 50px, rgba(88, 166, 255, 0.8), transparent),
-                radial-gradient(2px 2px at 80px 120px, #ffffff, transparent),
-                radial-gradient(3px 3px at 300px 150px, rgba(255, 105, 180, 0.7), transparent),
-                radial-gradient(2px 2px at 350px 80px, #58a6ff, transparent),
-                radial-gradient(4px 4px at 120px 180px, rgba(255, 255, 255, 0.6), transparent),
-                radial-gradient(2px 2px at 280px 120px, rgba(88, 166, 255, 0.9), transparent);
-            background-repeat: repeat;
-            background-size: 400px 300px;
-            animation: sparkle 25s linear infinite;
             z-index: -1;
-            opacity: 1;
             pointer-events: none;
+            overflow: hidden;
         }
         
-        @keyframes sparkle {
+        /* Layer 1: Large twinkling stars */
+        .starfield::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                radial-gradient(3px 3px at 120px 80px, rgba(255, 255, 255, 1), transparent),
+                radial-gradient(4px 4px at 280px 150px, rgba(88, 166, 255, 0.9), transparent),
+                radial-gradient(2px 2px at 450px 90px, rgba(255, 105, 180, 1), transparent),
+                radial-gradient(3px 3px at 650px 200px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(4px 4px at 850px 120px, rgba(255, 105, 180, 0.9), transparent),
+                radial-gradient(2px 2px at 1050px 180px, rgba(88, 166, 255, 1), transparent),
+                radial-gradient(3px 3px at 1250px 60px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(4px 4px at 1450px 220px, rgba(255, 105, 180, 0.8), transparent),
+                radial-gradient(2px 2px at 200px 300px, rgba(88, 166, 255, 0.9), transparent),
+                radial-gradient(3px 3px at 400px 380px, rgba(255, 255, 255, 1), transparent),
+                radial-gradient(4px 4px at 600px 320px, rgba(255, 105, 180, 0.9), transparent),
+                radial-gradient(2px 2px at 800px 420px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(3px 3px at 1000px 340px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(4px 4px at 1200px 460px, rgba(255, 105, 180, 1), transparent),
+                radial-gradient(2px 2px at 1400px 380px, rgba(88, 166, 255, 0.9), transparent);
+            background-repeat: repeat;
+            background-size: 800px 600px;
+            animation: 
+                slowDrift 60s linear infinite,
+                twinkle-large 4s ease-in-out infinite alternate;
+        }
+        
+        /* Layer 2: Medium stars with different animation timing */
+        .starfield::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 150%;
+            background-image: 
+                radial-gradient(2px 2px at 80px 40px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 180px 120px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 320px 80px, rgba(255, 105, 180, 0.7), transparent),
+                radial-gradient(1px 1px at 480px 160px, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(2px 2px at 620px 60px, rgba(88, 166, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 780px 140px, rgba(255, 105, 180, 0.8), transparent),
+                radial-gradient(2px 2px at 920px 100px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 1080px 180px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(2px 2px at 140px 240px, rgba(255, 105, 180, 0.7), transparent),
+                radial-gradient(1px 1px at 300px 280px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 460px 220px, rgba(88, 166, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 640px 300px, rgba(255, 105, 180, 0.6), transparent),
+                radial-gradient(2px 2px at 800px 260px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 960px 320px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 1120px 240px, rgba(255, 105, 180, 0.7), transparent);
+            background-repeat: repeat;
+            background-size: 600px 400px;
+            animation: 
+                mediumDrift 45s linear infinite reverse,
+                twinkle-medium 2.5s ease-in-out infinite alternate;
+        }
+        
+        /* Small stars layer */
+        .starfield-small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background-image: 
+                radial-gradient(1px 1px at 50px 30px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 120px 80px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 200px 50px, rgba(255, 105, 180, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 280px 120px, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 360px 40px, rgba(88, 166, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 440px 100px, rgba(255, 105, 180, 0.6), transparent),
+                radial-gradient(1px 1px at 520px 70px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 600px 140px, rgba(88, 166, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 90px 180px, rgba(255, 105, 180, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 170px 220px, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 250px 160px, rgba(88, 166, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 330px 240px, rgba(255, 105, 180, 0.4), transparent),
+                radial-gradient(1px 1px at 410px 200px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 490px 260px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 570px 180px, rgba(255, 105, 180, 0.5), transparent);
+            background-repeat: repeat;
+            background-size: 400px 300px;
+            animation: 
+                fastDrift 30s linear infinite,
+                twinkle-small 1.8s ease-in-out infinite alternate;
+        }
+        
+        /* Shooting stars */
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 1), transparent);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(88, 166, 255, 0.4),
+                0 0 30px rgba(255, 105, 180, 0.2);
+            animation: shootingStar 8s linear infinite;
+            opacity: 0;
+        }
+        
+        .shooting-star:nth-child(3) { 
+            top: 20%; 
+            left: -10px; 
+            animation-delay: 2s;
+            animation-duration: 3s;
+        }
+        .shooting-star:nth-child(4) { 
+            top: 60%; 
+            left: -10px; 
+            animation-delay: 8s;
+            animation-duration: 2.5s;
+        }
+        .shooting-star:nth-child(5) { 
+            top: 35%; 
+            left: -10px; 
+            animation-delay: 15s;
+            animation-duration: 4s;
+        }
+        .shooting-star:nth-child(6) { 
+            top: 80%; 
+            left: -10px; 
+            animation-delay: 22s;
+            animation-duration: 3.5s;
+        }
+        
+        /* Nebula effect */
+        .nebula {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 800px 400px at 30% 20%, rgba(88, 166, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse 600px 300px at 70% 70%, rgba(255, 105, 180, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse 400px 600px at 50% 50%, rgba(147, 51, 234, 0.02) 0%, transparent 50%);
+            animation: nebulaFloat 120s ease-in-out infinite alternate;
+        }
+        
+        /* Enhanced Animation keyframes */
+        @keyframes slowDrift {
+            from { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            to { transform: translateY(-300px) translateX(-150px) rotate(360deg); }
+        }
+        
+        @keyframes mediumDrift {
             from { transform: translateY(0px) translateX(0px); }
             to { transform: translateY(-200px) translateX(-100px); }
+        }
+        
+        @keyframes fastDrift {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-150px) translateX(-75px); }
+        }
+        
+        @keyframes twinkle-large {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            25% { opacity: 0.8; transform: scale(1.1); }
+            50% { opacity: 1; transform: scale(1.3); }
+            75% { opacity: 0.7; transform: scale(1.0); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+        
+        @keyframes twinkle-medium {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            33% { opacity: 0.9; transform: scale(1.1); }
+            66% { opacity: 0.6; transform: scale(1.0); }
+            100% { opacity: 0.5; transform: scale(0.95); }
+        }
+        
+        @keyframes twinkle-small {
+            0% { opacity: 0.2; }
+            20% { opacity: 0.6; }
+            40% { opacity: 0.3; }
+            60% { opacity: 0.8; }
+            80% { opacity: 0.4; }
+            100% { opacity: 0.5; }
+        }
+        
+        @keyframes shootingStar {
+            0% { 
+                opacity: 0; 
+                transform: translateX(0px) translateY(0px) rotate(45deg) scale(0.5); 
+            }
+            5% { 
+                opacity: 1; 
+                transform: translateX(50px) translateY(-20px) rotate(45deg) scale(1); 
+            }
+            95% { 
+                opacity: 1; 
+                transform: translateX(750px) translateY(-180px) rotate(45deg) scale(1); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: translateX(800px) translateY(-200px) rotate(45deg) scale(0.5); 
+            }
+        }
+        
+        @keyframes nebulaFloat {
+            0% { 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+                opacity: 1; 
+            }
+            25% { 
+                transform: translateY(-30px) scale(1.05) rotate(90deg); 
+                opacity: 0.9; 
+            }
+            50% { 
+                transform: translateY(-50px) scale(1.1) rotate(180deg); 
+                opacity: 0.8; 
+            }
+            75% { 
+                transform: translateY(-30px) scale(1.05) rotate(270deg); 
+                opacity: 0.9; 
+            }
+            100% { 
+                transform: translateY(0px) scale(1) rotate(360deg); 
+                opacity: 1; 
+            }
         }
         
         .container {
@@ -411,7 +616,14 @@
     </style>
 </head>
 <body>
-    <div class="starfield"></div>
+    <div class="starfield">
+        <div class="starfield-small"></div>
+        <div class="nebula"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
     {{ content }}
 </body>
 </html>
