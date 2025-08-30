@@ -6,8 +6,6 @@ description: Exploring the cosmos, one game at a time
 
 <div class="container">
     <header>
-        <img src="profile.png" alt="Xzor Profile" class="profile-image">
-<!--         <h1>Xzor</h1><br> -->
         <h1>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
               &nbsp;&nbsp;&nbsp;╚███╔╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██████╔╝<br>
@@ -16,6 +14,8 @@ description: Exploring the cosmos, one game at a time
             ╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚══════╝&nbsp;&nbsp;&nbsp;╚═════╝&nbsp;&nbsp;&nbsp;╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝</h1>
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
+        <img src="profile.png" alt="Xzor Profile" class="profile-image">
+        <h1>Xzor</h1><br>
     </header>
     <div class="profile-section">
         <h2 class="section-title">🚀 Connect With Me</h2>
