@@ -18,7 +18,7 @@ description: Exploring the cosmos, one game at a time
         <h1>Xzor</h1>
     </header>
     <div class="profile-section">
-        <h2 class="section-title">🚀 Connect With Me</h2>
+        <h2 class="section-title centered-title">🚀 Connect With Me</h2>
         <div class="social-links">
             <a href="https://discordapp.com/users/251628894048878594" class="social-link discord-link" target="_blank" rel="noopener noreferrer">
                 <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -41,7 +41,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title">🎮 Currently Playing</h2>
+        <h2 class="section-title centered-title">🎮 Currently Playing</h2>
         <div class="games-list">
             <div class="game-item star-citizen-game">
                 <div class="game-title">Star Citizen</div>
@@ -63,7 +63,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title">📊 Gaming Stats</h2>
+        <h2 class="section-title centered-title">📊 Gaming Stats</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">∞</div>
@@ -84,7 +84,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title">🏆 Recent Achievements</h2>
+        <h2 class="section-title centered-title">🏆 Recent Achievements</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
                 <div class="achievement-icon">🚀</div>
@@ -118,16 +118,20 @@ description: Exploring the cosmos, one game at a time
             </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title">🌌 About Me</h2>
+        <h2 class="section-title centered-title">🌌 About Me</h2>
         <p class="about-text">
-            Welcome to my digital command center! I'm Xzor, a passionate space enthusiast and gaming veteran who's been exploring virtual galaxies since the 80's. 
-            From commanding fleets in Star Citizen to navigating the neon-soaked streets of Night City, I live for immersive experiences that transport us beyond the ordinary.
+            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
+            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
+            games and detailed simulation experiences.
         </p>
         <p class="about-text">
-            As a High Admiral in Star Citizen's exclusive Evocati program, I help shape the future of space simulation gaming. When I'm not charting new star systems, you'll find me diving into RPGs, mastering competitive shooters, or discovering hidden gems in the indie gaming scene.
+            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
+            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
+            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
         </p>
         <p class="about-text">
-            Ready to team up for an adventure? Hit me up on Discord – the cosmos awaits! 🚀
+            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
+            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
         </p>
     </div>
     <footer>
