@@ -9,8 +9,8 @@ description: Exploring the cosmos, one game at a time
         <img src="profile.png" alt="Xzor Profile" class="profile-image">
         <h1>Xzor</h1><br>
         <h1><span>██╗  ██╗███████╗ ██████╗ ██████╗ <spawn><br>
-            <span>╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<span><br>
-             <span>╚███╔╝   ███╔╝ ██║   ██║██████╔╝<span><br>
+            <span> ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<span><br>
+             <span> ╚███╔╝   ███╔╝ ██║   ██║██████╔╝<span><br>
             <span>██╔██╗  ███╔╝  ██║   ██║██╔══██╗<span><br>
            <span>██╔╝ ██╗███████╗╚██████╔╝██║  ██║<span><br>
             <span>╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝<span></h1>
