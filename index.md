@@ -149,6 +149,37 @@ body {
     position: relative;
 }
 
+/* Alternative starfield approach using body pseudo-element */
+body::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: 
+        radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 105, 180, 1), transparent),
+        radial-gradient(2px 2px at 90px 40px, #58a6ff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
+        radial-gradient(1px 1px at 200px 90px, #ffffff, transparent),
+        radial-gradient(2px 2px at 250px 50px, rgba(88, 166, 255, 0.8), transparent) !important;
+    background-repeat: repeat !important;
+    background-size: 300px 200px !important;
+    animation: sparkle-pseudo 25s linear infinite !important;
+    z-index: -1000 !important;
+    opacity: 0.8 !important;
+    pointer-events: none !important;
+}
+
+@keyframes sparkle-pseudo {
+    from { transform: translateY(0px) translateX(0px); }
+    to { transform: translateY(-200px) translateX(-100px); }
+}
+
 /* Override Jekyll theme containers */
 .container-lg {
     max-width: none !important;
@@ -184,9 +215,13 @@ body {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
-    background-image: 
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    background: 
         radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
         radial-gradient(2px 2px at 40px 70px, rgba(255, 105, 180, 1), transparent),
         radial-gradient(2px 2px at 90px 40px, #58a6ff, transparent),
@@ -196,10 +231,13 @@ body {
         radial-gradient(2px 2px at 250px 50px, rgba(88, 166, 255, 0.8), transparent) !important;
     background-repeat: repeat !important;
     background-size: 300px 200px !important;
+    background-attachment: fixed !important;
     animation: sparkle 25s linear infinite !important;
     z-index: -999 !important;
-    opacity: 0.7 !important;
+    opacity: 0.8 !important;
     pointer-events: none !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
 }
 
 @keyframes sparkle {
