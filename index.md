@@ -65,11 +65,13 @@ description: Exploring the cosmos, one game at a time
                 <div class="game-title">Star Citizen</div>
                 <div class="game-status">High Admiral • Evocati</div>
                 <div class="game-description">Commanding in the verse since 2016</div>
+                <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item">
-                <div class="game-title">Cyberpunk 2077</div>
-                <div class="game-status">Night City Legend</div>
-                <div class="game-description">Living the neon dream</div>
+                <div class="game-title"Star Citizen Referral</div>
+                <div class="game-status">Want to play Star Citizen?</div>
+                <div class="game-description"Click to get 50,000 starting cash</div>
+                <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item">
                 <div class="game-title">No Man's Sky</div>
