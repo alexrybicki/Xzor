@@ -328,6 +328,21 @@
             background-clip: text;
         }
         
+        .centered-title {
+            text-align: center;
+            padding-left: 0;
+        }
+        
+        .centered-title::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #58a6ff, transparent);
+            margin: 0 auto 15px auto;
+            opacity: 0.6;
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
@@ -598,9 +613,6 @@
         <div class="starfield-small"></div>
         <div class="nebula"></div>
         <div class="aurora"></div>
-        <div class="light-shimmer"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
     </div>
