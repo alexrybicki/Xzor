@@ -8,14 +8,12 @@ description: Exploring the cosmos, one game at a time
     <header>
         <img src="profile.png" alt="Xzor Profile" class="profile-image">
         <h1>Xzor</h1>
-        <h1> ___    ___ ________  ________  ________     <br>
-            |\  \  /  /|\_____  \|\   __  \|\   __  \    <br>
-            \ \  \/  / /\|___/  /\ \  \|\  \ \  \|\  \   <br>
-             \ \    / /     /  / /\ \  \\\  \ \   _  _\  <br>
-              /     \/     /  /_/__\ \  \\\  \ \  \\  \| <br>
-             /  /\   \    |\________\ \_______\ \__\\ _\ <br>
-            /__/ /\ __\    \|_______|\|_______|\|__|\|__|<br>
-            |__|/ \|__|                                  </h1>
+        <h1>██╗  ██╗███████╗ ██████╗ ██████╗ <br>
+            ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
+             ╚███╔╝   ███╔╝ ██║   ██║██████╔╝<br>
+             ██╔██╗  ███╔╝  ██║   ██║██╔══██╗<br>
+            ██╔╝ ██╗███████╗╚██████╔╝██║  ██║<br>
+            ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝</h1>
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
