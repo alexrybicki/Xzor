@@ -14,22 +14,6 @@ description: Exploring the cosmos, one game at a time
              ██╔██╗  ███╔╝  ██║   ██║██╔══██╗<br>
             ██╔╝ ██╗███████╗╚██████╔╝██║  ██║<br>
             ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝</h1>
-        <div class="ascii-container">
-  <div class="xzor-text">
-    <span class="outline">
-      <span class="filled">X</span>
-    </span>
-    <span class="outline">
-      <span class="filled">Z</span>
-    </span>
-    <span class="outline">
-      <span class="filled">O</span>
-    </span>
-    <span class="outline">
-      <span class="filled">R</span>
-    </span>
-  </div>
-</div>
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
