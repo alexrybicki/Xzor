@@ -131,22 +131,61 @@ title: Xzor Gaming Profile
     box-sizing: border-box;
 }
 
+/* Override Jekyll theme constraints */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden !important;
+}
+
 body {
     background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%) !important;
     color: #ffffff !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     line-height: 1.6;
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: 100vh !important;
     position: relative;
+}
+
+/* Override Jekyll theme containers */
+.container-lg {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+.markdown-body {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Hide Jekyll's default header */
+.markdown-body > h1:first-child {
+    display: none !important;
+}
+
+/* Hide any Jekyll navigation or header elements */
+.markdown-body > h1:first-of-type {
+    display: none !important;
+}
+
+/* Make sure Jekyll doesn't add unwanted margins/padding to our content */
+.markdown-body > div:first-child {
+    margin-top: 0 !important;
 }
 
 .starfield {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100vw !important;
+    height: 100vh !important;
     background-image: 
         radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
         radial-gradient(2px 2px at 40px 70px, rgba(255, 105, 180, 1), transparent),
@@ -158,8 +197,9 @@ body {
     background-repeat: repeat !important;
     background-size: 300px 200px !important;
     animation: sparkle 25s linear infinite !important;
-    z-index: -1 !important;
+    z-index: -999 !important;
     opacity: 0.7 !important;
+    pointer-events: none !important;
 }
 
 @keyframes sparkle {
