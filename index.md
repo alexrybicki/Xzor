@@ -75,6 +75,7 @@ description: Exploring the cosmos, one game at a time
                 <div class="game-status">Intergalactic Explorer</div>
                 <div class="game-description">∞ worlds discovered</div>
             </div>
+            </div>
         </div>
     </div>
     <div class="profile-section">
