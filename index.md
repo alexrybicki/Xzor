@@ -13,7 +13,13 @@ description: Exploring the cosmos, one game at a time
          <h1>╚███╔╝   ███╔╝ ██║   ██║██████╔╝</h1>
          <h1>██╔██╗  ███╔╝  ██║   ██║██╔══██╗</h1>
         <h1>██╔╝ ██╗███████╗╚██████╔╝██║  ██║</h1>
-<h1>╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝</h1>
+        <h1>╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝</h1>
+
+ <h1>__  __               </h1>
+ <h1>\ \/ / _______  _ __ </h1>
+  <h1>\  / |_  / _ \| '__|</h1>
+ <h1> /  \  / / (_) | |   </h1>
+ <h1>/_/\_\/___\___/|_|   </h1>
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
