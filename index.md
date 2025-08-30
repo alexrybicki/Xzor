@@ -120,6 +120,6 @@ description: Exploring the cosmos, one game at a time
     </div>
 
     <footer>
-        <p>&copy; 2024 Xzor Gaming Profile • See you in the 'verse! ✨</p>
+        <p>&copy; 2025 Xzor Gaming Profile • See you in the 'verse! ✨</p>
     </footer>
 </div>
