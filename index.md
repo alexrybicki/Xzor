@@ -142,11 +142,11 @@ body {
 }
 
 .starfield {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     background-image: 
         radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
         radial-gradient(2px 2px at 40px 70px, rgba(255, 105, 180, 1), transparent),
@@ -154,12 +154,12 @@ body {
         radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.8), transparent),
         radial-gradient(2px 2px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
         radial-gradient(1px 1px at 200px 90px, #ffffff, transparent),
-        radial-gradient(2px 2px at 250px 50px, rgba(88, 166, 255, 0.8), transparent);
-    background-repeat: repeat;
-    background-size: 300px 200px;
-    animation: sparkle 25s linear infinite;
-    z-index: -1;
-    opacity: 0.7;
+        radial-gradient(2px 2px at 250px 50px, rgba(88, 166, 255, 0.8), transparent) !important;
+    background-repeat: repeat !important;
+    background-size: 300px 200px !important;
+    animation: sparkle 25s linear infinite !important;
+    z-index: -1 !important;
+    opacity: 0.7 !important;
 }
 
 @keyframes sparkle {
