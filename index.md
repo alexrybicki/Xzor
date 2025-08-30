@@ -34,25 +34,25 @@ title: Xzor Gaming Profile
                 Twitch Channel
             </a>
         </div>
-    </header>
+    </div>
 
     <div class="profile-section">
         <h2 class="section-title">📊 Gaming Stats</h2>
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number">2,500+</div>
+                <div class="stat-number">∞</div>
                 <div class="stat-label">Hours Played</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">127</div>
+                <div class="stat-number">∞</div>
                 <div class="stat-label">Games Owned</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">89%</div>
-                <div class="stat-label">Achievement Rate</div>
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Achievements</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">42</div>
+                <div class="stat-number">∞</div>
                 <div class="stat-label">Friends Online</div>
             </div>
         </div>
@@ -308,7 +308,7 @@ h1 {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: 20px;
 }
@@ -347,7 +347,7 @@ h1 {
 
 .games-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
 }
@@ -477,7 +477,7 @@ footer {
     }
 
     .stats-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .games-list {
