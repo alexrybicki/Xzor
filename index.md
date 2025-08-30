@@ -11,7 +11,6 @@ description: Exploring the cosmos, one game at a time
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
-
     <div class="profile-section">
         <h2 class="section-title">🚀 Connect With Me</h2>
         <div class="social-links">
@@ -35,7 +34,6 @@ description: Exploring the cosmos, one game at a time
             </a>
         </div>
     </div>
-
     <div class="profile-section">
         <h2 class="section-title">📊 Gaming Stats</h2>
         <div class="stats-grid">
@@ -57,7 +55,6 @@ description: Exploring the cosmos, one game at a time
             </div>
         </div>
     </div>
-
     <div class="profile-section">
         <h2 class="section-title">🎮 Currently Playing</h2>
         <div class="games-list">
@@ -80,7 +77,6 @@ description: Exploring the cosmos, one game at a time
             </div>
         </div>
     </div>
-
     <div class="profile-section">
         <h2 class="section-title">🏆 Recent Achievements</h2>
         <div class="achievements-grid">
@@ -111,12 +107,10 @@ description: Exploring the cosmos, one game at a time
                     <div class="achievement-title">BMM</div>
                     <div class="achievement-desc">Is the BMM in development?</div>
                     <a href="https://bmm.xzor.dev"></a>
-
                 </div>
                 </div> 
             </div>
     </div>
-
     <div class="profile-section">
         <h2 class="section-title">🌌 About Me</h2>
         <p class="about-text">
@@ -129,7 +123,6 @@ description: Exploring the cosmos, one game at a time
             Ready to team up for an adventure? Hit me up on Discord – the cosmos awaits! 🚀
         </p>
     </div>
-
     <footer>
         <p>&copy; 2025 Xzor Gaming Profile • See you in the 'verse! ✨</p>
     </footer>
