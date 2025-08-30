@@ -7,7 +7,7 @@ description: Exploring the cosmos, one game at a time
 <div class="container">
     <header>
         <img src="profile.png" alt="Xzor Profile" class="profile-image">
-        <h1>Xzor</h1><br>
+<!--         <h1>Xzor</h1><br> -->
         <h1>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
               &nbsp;&nbsp;&nbsp;╚███╔╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██████╔╝<br>
