@@ -120,7 +120,7 @@ description: Exploring the cosmos, one game at a time
     <div class="profile-section">
         <h2 class="section-title">🌌 About Me</h2>
         <p class="about-text">
-            Welcome to my digital command center! I'm Xzor, a passionate space enthusiast and gaming veteran who's been exploring virtual galaxies for over a decade. From commanding fleets in Star Citizen to navigating the neon-soaked streets of Night City, I live for immersive experiences that transport us beyond the ordinary.
+            Welcome to my digital command center! I'm Xzor, a passionate space enthusiast and gaming veteran who's been exploring virtual galaxies since the 80's. From commanding fleets in Star Citizen to navigating the neon-soaked streets of Night City, I live for immersive experiences that transport us beyond the ordinary.
         </p>
         <p class="about-text">
             As a High Admiral in Star Citizen's exclusive Evocati program, I help shape the future of space simulation gaming. When I'm not charting new star systems, you'll find me diving into RPGs, mastering competitive shooters, or discovering hidden gems in the indie gaming scene.
