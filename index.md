@@ -1,9 +1,7 @@
 <div class="container">
-        <header>
             <img src="profile.png" alt="Xzor Profile" class="profile-image">
             <h1>Xzor</h1>
             <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
-        </header>
         <div class="profile-section">
             <h2 class="section-title">Connect With Me</h2>
             <div class="social-links">
@@ -68,15 +66,16 @@
             </p>
         </div>
         <footer>
-            <p>&copy; 2024 Xzor Gaming Profile. Game on!</p>
+            <p>&copy; 2025 Xzor Gaming Profile. Game on!</p>
         </footer>
     </div>
-    <style>
+        <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             background-color: #0e1117;
             color: #ffffff;
@@ -84,16 +83,19 @@
             line-height: 1.6;
             min-height: 100vh;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         header {
             text-align: center;
             padding: 40px 0;
             border-bottom: 2px solid #21262d;
         }
+
         .profile-image {
             width: 150px;
             height: 150px;
@@ -105,10 +107,12 @@
             display: block;
             transition: all 0.3s ease;
         }
+
         .profile-image:hover {
             transform: scale(1.05);
             box-shadow: 0 0 40px rgba(88, 166, 255, 0.5);
         }
+
         .profile-placeholder {
             width: 150px;
             height: 150px;
@@ -125,21 +129,25 @@
             font-weight: bold;
             transition: all 0.3s ease;
         }
+
         .profile-placeholder:hover {
             transform: scale(1.05);
             box-shadow: 0 0 40px rgba(88, 166, 255, 0.5);
         }
+
         h1 {
             font-size: 3rem;
             color: #58a6ff;
             margin-bottom: 10px;
             text-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
         }
+
         .subtitle {
             font-size: 1.2rem;
             color: #8b949e;
             margin-bottom: 30px;
         }
+
         .profile-section {
             background-color: #161b22;
             border: 1px solid #21262d;
@@ -148,6 +156,7 @@
             margin: 30px 0;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
+
         .section-title {
             font-size: 1.5rem;
             color: #58a6ff;
@@ -155,12 +164,14 @@
             border-bottom: 2px solid #21262d;
             padding-bottom: 10px;
         }
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         .social-link {
             display: inline-flex;
             align-items: center;
@@ -172,31 +183,38 @@
             transition: all 0.3s ease;
             font-weight: 600;
         }
+
         .discord-link {
             background: linear-gradient(45deg, #5865f2, #7289da);
         }
+
         .discord-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
         }
+
         .star-citizen-link {
             background: linear-gradient(45deg, #0f4c81, #1e6aa0);
         }
+
         .star-citizen-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(30, 106, 160, 0.4);
         }
+
         .social-icon {
             width: 24px;
             height: 24px;
             fill: currentColor;
         }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
+
         .stat-card {
             background-color: #0d1117;
             border: 1px solid #21262d;
@@ -205,25 +223,30 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
+
         .stat-card:hover {
             transform: translateY(-5px);
         }
+
         .stat-number {
             font-size: 2rem;
             font-weight: bold;
             color: #58a6ff;
         }
+
         .stat-label {
             color: #8b949e;
             font-size: 0.9rem;
             text-transform: uppercase;
         }
+
         .games-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
+
         .game-item {
             background-color: #0d1117;
             border: 1px solid #21262d;
@@ -231,19 +254,23 @@
             padding: 15px;
             transition: all 0.3s ease;
         }
+
         .game-item:hover {
             border-color: #58a6ff;
             box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);
         }
+
         .game-title {
             color: #58a6ff;
             font-weight: 600;
             margin-bottom: 5px;
         }
+
         .game-status {
             color: #8b949e;
             font-size: 0.9rem;
         }
+
         footer {
             text-align: center;
             padding: 40px 0;
@@ -251,13 +278,16 @@
             border-top: 1px solid #21262d;
             margin-top: 40px;
         }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
+
             .container {
                 padding: 10px;
             }
+
             .profile-section {
                 padding: 20px;
             }
