@@ -148,29 +148,32 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(255, 182, 193, 0.8), transparent),
-        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(88, 166, 255, 0.6), transparent),
-        radial-gradient(2px 2px at 160px 30px, rgba(255, 105, 180, 0.7), transparent);
+        radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 105, 180, 1), transparent),
+        radial-gradient(2px 2px at 90px 40px, #58a6ff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
+        radial-gradient(1px 1px at 200px 90px, #ffffff, transparent),
+        radial-gradient(2px 2px at 250px 50px, rgba(88, 166, 255, 0.8), transparent);
     background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: sparkle 20s linear infinite;
+    background-size: 300px 200px;
+    animation: sparkle 25s linear infinite;
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 @keyframes sparkle {
-    from { transform: translateY(0px) rotate(0deg); }
-    to { transform: translateY(-100px) rotate(360deg); }
+    from { transform: translateY(0px) translateX(0px); }
+    to { transform: translateY(-200px) translateX(-100px); }
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 40px;
     position: relative;
     z-index: 1;
+    width: 95%;
 }
 
 header {
@@ -464,7 +467,8 @@ footer {
     }
     
     .container {
-        padding: 10px;
+        padding: 10px 20px;
+        width: 98%;
     }
     
     .profile-section {
