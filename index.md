@@ -105,14 +105,13 @@ description: Exploring the cosmos, one game at a time
             </div>
             <a href="https://bmm.xzor.dev">
             <div class="achievement-item">
-                <a href="https://bmm.xzor.dev">
                 <div class="achievement-icon">🌠</div>
                 <div class="achievement-content">
                     <div class="achievement-title">BMM</div>
                     <div class="achievement-desc">Is the BMM in development?</div>
                 </div>
                 </div>
-                 </a>  
+             </a>  
             </div>
     </div>
 
