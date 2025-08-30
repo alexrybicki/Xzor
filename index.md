@@ -64,7 +64,7 @@ description: Exploring the cosmos, one game at a time
             <div class="game-item star-citizen-game">
                 <div class="game-title">Star Citizen</div>
                 <div class="game-status">High Admiral • Evocati</div>
-                <div class="game-description">Commanding the verse since 2016</div>
+                <div class="game-description">Commanding inn the verse since 2016</div>
             </div>
             <div class="game-item">
                 <div class="game-title">Cyberpunk 2077</div>
