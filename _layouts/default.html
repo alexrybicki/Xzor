@@ -207,93 +207,42 @@
             animation: nebulaFloat 240s ease-in-out infinite alternate;
         }
         
-        /* Gentle Animation keyframes */
-        @keyframes slowDrift {
-            from { transform: translateY(0px) translateX(0px); }
-            to { transform: translateY(-50px) translateX(-25px); }
-        }
-        
-        @keyframes mediumDrift {
-            from { transform: translateY(0px) translateX(0px); }
-            to { transform: translateY(-35px) translateX(-15px); }
-        }
-        
-        @keyframes fastDrift {
-            from { transform: translateY(0px) translateX(0px); }
-            to { transform: translateY(-25px) translateX(-10px); }
-        }
-        
+        /* Optimized Animation keyframes */
         @keyframes twinkle-large {
-            0% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.9; transform: scale(1.05); }
-            100% { opacity: 0.6; transform: scale(1); }
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
         }
         
         @keyframes twinkle-medium {
-            0% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.02); }
-            100% { opacity: 0.4; transform: scale(1); }
-        }
-        
-        @keyframes twinkle-small {
-            0% { opacity: 0.2; }
-            50% { opacity: 0.6; }
-            100% { opacity: 0.3; }
+            0% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.5; }
         }
         
         @keyframes shootingStar {
             0% { 
                 opacity: 0; 
-                transform: translateX(-100px) translateY(50px) rotate(30deg); 
+                transform: translateX(-50px) translateY(25px); 
             }
-            20% { 
+            10% { 
                 opacity: 0.8; 
-                transform: translateX(200px) translateY(-50px) rotate(30deg); 
+                transform: translateX(100px) translateY(-25px); 
             }
-            80% { 
+            90% { 
                 opacity: 0.8; 
-                transform: translateX(600px) translateY(-150px) rotate(30deg); 
+                transform: translateX(600px) translateY(-150px); 
             }
             100% { 
                 opacity: 0; 
-                transform: translateX(800px) translateY(-200px) rotate(30deg); 
-            }
-        }
-        
-        @keyframes nebulaFloat {
-            0% { 
-                transform: translateY(0px) scale(1); 
-                opacity: 0.8; 
-            }
-            50% { 
-                transform: translateY(-15px) scale(1.02); 
-                opacity: 1; 
-            }
-            100% { 
-                transform: translateY(0px) scale(1); 
-                opacity: 0.8; 
-            }
-        }
-        
-        @keyframes lightShimmer {
-            0% { 
-                background-position: 0% 0%; 
-                opacity: 0.3;
-            }
-            50% { 
-                background-position: 100% 100%; 
-                opacity: 0.6;
-            }
-            100% { 
-                background-position: 0% 0%; 
-                opacity: 0.3;
+                transform: translateX(700px) translateY(-175px); 
             }
         }
         
         @keyframes pulseGlow {
-            0% { opacity: 0.1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 0.1; }
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.9; }
         }
         
         .container {
