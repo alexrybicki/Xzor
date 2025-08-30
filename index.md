@@ -70,7 +70,7 @@ description: Exploring the cosmos, one game at a time
             <div class="game-item">
                 <div class="game-title"Star Citizen Referral</div>
                 <div class="game-status">Want to play Star Citizen?</div>
-                <div class="game-description"Click to get 50,000 starting cash"</div>
+                <div class="game-description">Click to get 50,000 starting cash</div>
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item">
