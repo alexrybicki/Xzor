@@ -1,7 +1,9 @@
-<div class="container">
-            <img src="profile.png" alt="Xzor Profile" class="profile-image">
+    <div class="container">
+        <header>
+            <!-- <img src="profile.png" alt="Xzor Profile" class="profile-image"> -->
             <h1>Xzor</h1>
             <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
+        </header>
         <div class="profile-section">
             <h2 class="section-title">Connect With Me</h2>
             <div class="social-links">
@@ -60,16 +62,16 @@
         <div class="profile-section">
             <h2 class="section-title">About Me</h2>
             <p style="color: #8b949e; font-size: 1.1rem; line-height: 1.8;">
-                Welcome to my gaming profile! I'm Xzor, a passionate gamer who loves exploring virtual worlds,
+                Welcome to my gaming profile! I'm Xzor, a passionate gamer who loves exploring virtual worlds, 
                 competing in challenging matches, and connecting with fellow gamers. Whether it's strategy games,
                 FPS, RPGs, or indie gems, I'm always ready for the next adventure.
             </p>
         </div>
         <footer>
-            <p>&copy; 2025 Xzor Gaming Profile. Game on!</p>
+            <p>&copy; 2024 Xzor Gaming Profile. Game on!</p>
         </footer>
     </div>
-        <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -261,6 +263,3 @@
             }
         }
     </style>
-<script>
-
-</script>
