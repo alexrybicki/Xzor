@@ -143,6 +143,6 @@ description: Exploring the cosmos, one game at a time
         </p>
     </div>
     <footer>
-        <p>&copy; 2025 Xzor Gaming Profile • See you in the 'verse! ✨</p>
+        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨</p>
     </footer>
 </div>
