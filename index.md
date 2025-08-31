@@ -129,18 +129,13 @@ description: Exploring the cosmos, one game at a time
     <div class="profile-section">
         <h2 class="section-title centered-title">🌌 About Me</h2>
         <p class="about-text">
-            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
-            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
-            games and detailed simulation experiences.
+            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution from classic arcade games, the Atari 2600, MS-DOS classics, up to today's immersive virtual worlds. My passion lies primarily in space exploration games and detailed simulation experiences, as well as open-world exploration.
         </p>
         <p class="about-text">
-            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
-            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
-            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
+            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
         </p>
         <p class="about-text">
-            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
-            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
+            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
         </p>
     </div>
     <footer>
