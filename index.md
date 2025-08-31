@@ -62,9 +62,9 @@ description: Exploring the cosmos, one game at a time
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item">
-                <div class="game-title">No Man's Sky</div>
-                <div class="game-status">Intergalactic Explorer</div>
-                <div class="game-description">∞ worlds discovered</div>
+                <div class="game-title">Minecraft</div>
+                <div class="game-status">Subterranean Explorer</div>
+                <div class="game-description">∞ [Minerealm Public Server](https://www.minerealm.com/)</div>
             </div>
         </div>
     </div>
