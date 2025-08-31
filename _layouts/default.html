@@ -300,6 +300,21 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        @keyframes scWatermarkPulse {
+            0% { 
+                opacity: 0.05; 
+                transform: scale(0.95); 
+            }
+            50% { 
+                opacity: 0.15; 
+                transform: scale(1.02); 
+            }
+            100% { 
+                opacity: 0.08; 
+                transform: scale(0.98); 
+            }
+        }
         
         .container {
             max-width: 1400px;
@@ -474,6 +489,34 @@
             fill: currentColor;
         }
         
+        /* Star Citizen Icon and Watermark Styles */
+        .sc-icon-container,
+        .sc-watermark-container {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+        
+        .sc-watermark-container {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            opacity: 0.08;
+            animation: scWatermarkPulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .sc-watermark-container svg,
+        .sc-icon-container svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+        }
+        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -527,6 +570,8 @@
             padding: 20px;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
         }
         
         .game-item:hover {
@@ -553,18 +598,24 @@
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .game-status {
             color: #ff69b4;
             font-size: 0.9rem;
             margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
         }
         
         .game-description {
             color: #8b949e;
             font-size: 0.8rem;
             font-style: italic;
+            position: relative;
+            z-index: 1;
         }
         
         .achievements-grid {
@@ -704,17 +755,47 @@
             .achievements-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .sc-watermark-container {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
     <script>
       /*to prevent Firefox FOUC, this must be here*/
       let FF_FOUC_FIX;
+      
+      // Global SVG content variable
+      let scSvgContent = '';
+      
+      // Function to load and inject SVG content
+      function loadStarCitizenSVG() {
         fetch('sc_svg_content.html')
           .then(response => response.text())
           .then(html => {
-            document.getElementById('sc-svg-container').innerHTML = html;
+            scSvgContent = html;
+            // Inject into all SC containers
+            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = scSvgContent;
+            });
           })
-          .catch(error => console.error('Error loading SVG:', error));
+          .catch(error => {
+            console.error('Error loading SVG:', error);
+            // Fallback to a simple icon if SVG fails to load
+            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>`;
+            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = fallbackSVG;
+            });
+          });
+      }
+      
+      // Load SVG when DOM is ready
+      document.addEventListener('DOMContentLoaded', loadStarCitizenSVG);
     </script>
 </head>
 <body>
