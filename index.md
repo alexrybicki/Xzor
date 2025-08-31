@@ -155,6 +155,6 @@ description: Exploring the cosmos, one game at a time
             <p>This is the popup content.</p>
             <button onclick="closePopup()">Close</button>
           </div>
-        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('[https://www.example.com](https://www.youtube.com/watch?v=rUt7D4PnjxU)', '_blank');}});</script>
+        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=rUt7D4PnjxU', '_blank');}});</script>
     </footer>
 </div>
