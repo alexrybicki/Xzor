@@ -149,6 +149,6 @@ description: Exploring the cosmos, one game at a time
     </div>
     <footer>
         <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
-        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=rUt7D4PnjxU', '_blank');}});</script>
+        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
 </div>
