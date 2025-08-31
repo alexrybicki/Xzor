@@ -889,6 +889,20 @@
         loadMinecraftSVG();
         loadReferralSVG();
       });
+        document.getElementById('myParagraph').addEventListener('mousedown', function(event) {
+          // Check for Ctrl, Shift, and left mouse button (button property is 0)
+          if (event.ctrlKey && event.shiftKey && event.button === 0) {
+            // Prevent the default behavior (like text selection)
+            event.preventDefault();
+        
+            // Show the popup
+            document.getElementById('popup').style.display = 'block';
+          }
+        });
+        
+        function closePopup() {
+          document.getElementById('popup').style.display = 'none';
+        }
     </script>
 </head>
 <body>
