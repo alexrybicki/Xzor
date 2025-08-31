@@ -148,6 +148,12 @@ description: Exploring the cosmos, one game at a time
         </p>
     </div>
     <footer>
-        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ π</p>
+        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p>
+        <p id="myParagraph">π</p>
+          <div id="popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; border:1px solid black; background-color:white; z-index:1000;">
+            <h2>Hello!</h2>
+            <p>This is the popup content.</p>
+            <button onclick="closePopup()">Close</button>
+          </div>
     </footer>
 </div>
