@@ -27,10 +27,8 @@ description: Exploring the cosmos, one game at a time
                 </svg>
                 Discord Profile
             </a>
-                        <a href="https://robertsspaceindustries.com/en/citizens/Xzor" class="social-link star-citizen-link" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <a href="https://robertsspaceindustries.com/en/citizens/Xzor" class="social-link star-citizen-link" target="_blank" rel="noopener noreferrer">
                <div id="sc-svg-container"></div> 
-                </svg>
                 Star Citizen Profile
             </a>
             <a href="https://steamcommunity.com/id/ubuntuser/" class="social-link steam-link" target="_blank" rel="noopener noreferrer">
