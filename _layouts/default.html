@@ -491,13 +491,15 @@
         
         /* Star Citizen Icon and Watermark Styles */
         .sc-icon-container,
-        .sc-watermark-container {
+        .sc-watermark-container,
+        .mc-watermark-container {
             width: 24px;
             height: 24px;
             display: inline-block;
         }
         
-        .sc-watermark-container {
+        .sc-watermark-container,
+        .mc-watermark-container {
             position: absolute;
             top: 50%;
             right: 15px;
@@ -510,8 +512,14 @@
             z-index: 0;
         }
         
+        .mc-watermark-container {
+            animation-delay: 2s; /* Offset animation slightly for variety */
+            filter: grayscale(1) contrast(1.2) brightness(0.8);
+        }
+        
         .sc-watermark-container svg,
-        .sc-icon-container svg {
+        .sc-icon-container svg,
+        .mc-watermark-container svg {
             width: 100%;
             height: 100%;
             fill: currentColor;
@@ -591,6 +599,11 @@
         .star-citizen-game {
             border-color: rgba(255, 105, 180, 0.5);
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(30, 106, 160, 0.1));
+        }
+        
+        .minecraft-game {
+            border-color: rgba(76, 175, 80, 0.5);
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(46, 125, 50, 0.1));
         }
         
         .game-title {
@@ -760,14 +773,20 @@
                 width: 60px;
                 height: 60px;
             }
+            
+            .mc-watermark-container {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
     <script>
       /*to prevent Firefox FOUC, this must be here*/
       let FF_FOUC_FIX;
       
-      // Global SVG content variable
+      // Global SVG content variables
       let scSvgContent = '';
+      let mcSvgContent = '';
       
       // Function to load and inject SVG content
       function loadStarCitizenSVG() {
@@ -782,7 +801,7 @@
             });
           })
           .catch(error => {
-            console.error('Error loading SVG:', error);
+            console.error('Error loading Star Citizen SVG:', error);
             // Fallback to a simple icon if SVG fails to load
             const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -794,8 +813,36 @@
           });
       }
       
-      // Load SVG when DOM is ready
-      document.addEventListener('DOMContentLoaded', loadStarCitizenSVG);
+      // Function to load Minecraft SVG
+      function loadMinecraftSVG() {
+        fetch('mc_svg_content.html')
+          .then(response => response.text())
+          .then(html => {
+            mcSvgContent = html;
+            // Inject into all MC containers
+            const containers = document.querySelectorAll('.mc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = mcSvgContent;
+            });
+          })
+          .catch(error => {
+            console.error('Error loading Minecraft SVG:', error);
+            // Fallback to a simple icon if SVG fails to load
+            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+            </svg>`;
+            const containers = document.querySelectorAll('.mc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = fallbackSVG;
+            });
+          });
+      }
+      
+      // Load both SVGs when DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        loadStarCitizenSVG();
+        loadMinecraftSVG();
+      });
     </script>
 </head>
 <body>
