@@ -14,7 +14,7 @@ description: Exploring the cosmos, one game at a time
             ╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚══════╝&nbsp;&nbsp;&nbsp;╚═════╝&nbsp;&nbsp;&nbsp;╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝</h1><br>
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
-        <img src="profile.png" alt="Xzor Profile" class="profile-image">
+        <img src="Profile-large.png" alt="Xzor Profile" class="profile-image">
         <h1>Xzor</h1>
     </header>
     <div class="profile-section">
