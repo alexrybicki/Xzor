@@ -1,154 +1,433 @@
----
-layout: default
-title: Xzor Gaming Profile
-description: Exploring the cosmos, one game at a time
----
-
-<div class="container">
-    <header>
-        <h1 class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
-             ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
-              &nbsp;&nbsp;&nbsp;╚███╔╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██████╔╝<br>
-            &nbsp;&nbsp;&nbsp;██╔██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██╔══██╗<br>
-           ██╔╝&nbsp;&nbsp;&nbsp;██╗███████╗╚██████╔╝██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║<br>
-            ╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚══════╝&nbsp;&nbsp;&nbsp;╚═════╝&nbsp;&nbsp;&nbsp;╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝</h1><br>
-        <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
-        <p class="tagline">Exploring the cosmos, one game at a time</p>
-        <img src="Profile-large.png" alt="Xzor Profile" class="profile-image">
-        <h1>Xzor</h1>
-    </header>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">
-            🚀 Connect With Me</h2>
-        <div class="social-links">
-            <a href="https://discordapp.com/users/251628894048878594" class="social-link discord-link" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.120.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-                Discord Profile
-            </a>
-            <a href="https://robertsspaceindustries.com/en/citizens/Xzor" class="social-link star-citizen-link" target="_blank" rel="noopener noreferrer">
-               <div class="sc-icon-container"></div> 
-                Star Citizen Profile
-            </a>
-            <a href="https://steamcommunity.com/id/ubuntuser/" class="social-link steam-link" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" viewBox="0 0 16 16" aria-hidden="true"> 
-                <path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z"/>  
-                <path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048"/>
-                </svg>
-                Steam Profile
-            </a>
-            <a href="https://www.twitch.tv/xzor_" class="social-link twitch-link" target="_blank" rel="noopener noreferrer">
-                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
-                </svg>
-                Twitch Channel
-            </a>
-        </div>
-    </div>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">🎮 Currently Playing</h2>
-        <div class="games-list">
-            <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">
-            <div class="game-item star-citizen-game">
-                <div class="game-title">Star Citizen</div>
-                <div class="game-status">High Admiral • Evocati</div>
-                <div class="game-description">Commanding in the verse since 2016</div>
-                <div class="sc-watermark-container"></div>
-            </div>
-            </a>
-            <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">
-            <div class="game-item referral-game">
-                <div class="game-title">Star Citizen Referral</div>
-                <div class="game-status">Want to play Star Citizen?</div>
-                <div class="game-description">Click to get 50,000 starting cash</div>
-                <div class="ref-watermark-container"></div>
-            </div>
-            </a>
-            <a href="https://www.minerealm.com/">
-            <div class="game-item minecraft-game">
-                <div class="game-title">Minecraft</div>
-                <div class="game-status">Subterranean Explorer</div>
-                <div class="game-description">∞ Find me in the Minerealm Public Server</div>
-                <div class="mc-watermark-container"></div>
-            </div> 
-            </a>
-        </div>
-    </div>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">📊 Gaming Stats</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Hours Played</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Games Owned</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Achievements</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Friends Online</div>
-            </div>
-        </div>
-    </div>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">🏆 Recent Achievements</h2>
-        <div class="achievements-grid">
-            <div class="achievement-item">
-                <div class="achievement-icon">🚀</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">First Flight</div>
-                    <div class="achievement-desc">Successfully piloted through asteroid field</div>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">⭐</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">Star Navigator</div>
-                    <div class="achievement-desc">Completed 50 deep space missions</div>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">👑</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">Fleet Commander</div>
-                    <div class="achievement-desc">Led successful squadron operations</div>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">🌠</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">BMM</div>
-                    <div class="achievement-desc">Is the BMM in development?</div>
-                    <a href="https://bmm.xzor.dev"></a>
-                </div>
-            </div> 
-        </div>
-    </div>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">🌌 About Me</h2>
-        <p class="about-text">
-            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
-            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
-            games and detailed simulation experiences.
-        </p>
-        <p class="about-text">
-            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
-            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
-            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
-        </p>
-        <p class="about-text">
-            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
-            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
-        </p>
-    </div>
-    <footer>
-        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
-        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
-    </footer>
-</div>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Starfield Background */
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: 
+                radial-gradient(4px 4px at 20px 30px, #ffffff, transparent),
+                radial-gradient(3px 3px at 40px 70px, rgba(255, 105, 180, 1), transparent),
+                radial-gradient(3px 3px at 90px 40px, #58a6ff, transparent),
+                radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(3px 3px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
+                radial-gradient(2px 2px at 200px 90px, #ffffff, transparent),
+                radial-gradient(3px 3px at 250px 50px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 80px 120px, #ffffff, transparent),
+                radial-gradient(3px 3px at 300px 150px, rgba(255, 105, 180, 0.7), transparent),
+                radial-gradient(2px 2px at 350px 80px, #58a6ff, transparent),
+                radial-gradient(4px 4px at 120px 180px, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(2px 2px at 280px 120px, rgba(88, 166, 255, 0.9), transparent);
+            background-repeat: repeat;
+            background-size: 400px 300px;
+            animation: sparkle 25s linear infinite;
+            z-index: -1;
+            opacity: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes sparkle {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-200px) translateX(-100px); }
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            position: relative;
+            z-index: 1;
+            width: 95%;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 20px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #58a6ff;
+            box-shadow: 0 0 30px rgba(88, 166, 255, 0.5), 0 0 60px rgba(255, 105, 180, 0.3);
+            object-fit: cover;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(88, 166, 255, 0.7), 0 0 80px rgba(255, 105, 180, 0.5);
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            color: #58a6ff;
+            margin-bottom: -10px;
+            text-shadow: 0 0 20px rgb(59 133 79 / 0%), 0 0 40px rgb(187 171 179 / 0%);
+            background: linear-gradient(5deg, #0c3b6b, #906599);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #c6d1dd;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            color: #ff69b4b3;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .profile-section {
+            background: rgba(22, 27, 34, 0.8);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 105, 180, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-section:hover {
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 105, 180, 0.3);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #58a6ff;
+            margin-bottom: 25px;
+            text-align: left;
+            background: linear-gradient(179deg, #ffffff, #10bacb17);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        
+        .discord-link {
+            background: linear-gradient(45deg, #5865f2, #7289da);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+        }
+        
+        .discord-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.5);
+            color: white;
+        }
+        
+        .star-citizen-link {
+            background: linear-gradient(45deg, #0f4c81, #ff69b4);
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+        }
+        
+        .star-citizen-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+            color: white;
+        }
+        
+        .twitch-link {
+            background: linear-gradient(45deg, #9146ff, #a970ff);
+            box-shadow: 0 4px 15px rgba(145, 70, 255, 0.3);
+        }
+        
+        .twitch-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(145, 70, 255, 0.5);
+            color: white;
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        
+        /* Specific watermark container hover effects */
+        .sc-watermark-container svg,
+        .ref-watermark-container svg,
+        .mc-watermark-container svg {
+            opacity: 0.6;
+            filter: saturate(0.5) brightness(0.8);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover .sc-watermark-container svg,
+        a:hover .ref-watermark-container svg,
+        a:hover .mc-watermark-container svg {
+            opacity: 1;
+            filter: saturate(1) brightness(1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(22, 27, 34, 0.8));
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #58a6ff, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #8b949e;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        
+        .games-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .game-item {
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(22, 27, 34, 0.8));
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .game-item:hover {
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+            transform: translateY(-3px);
+        }
+        .game-item a::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        
+        .star-citizen-game {
+            border-color: rgba(255, 105, 180, 0.5);
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(30, 106, 160, 0.1));
+        }
+        
+        .game-title {
+            color: #58a6ff;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .game-status {
+            color: #ff69b4;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .game-description {
+            color: #8b949e;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(22, 27, 34, 0.8));
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .achievement-item:hover {
+            border-color: rgba(255, 105, 180, 0.5);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+        }
+        .achievement-item a::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #58a6ff, #ff69b4);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .achievement-title {
+            color: #58a6ff;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .achievement-desc {
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+        
+        .about-text {
+            color: #e6edf3;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .about-text:last-child {
+            margin-bottom: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #8b949e;
+            margin-top: 40px;
+            border-top: 1px solid rgba(88, 166, 255, 0.2);
+        }
+               
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                
+            }
+            
+            .xzor-ascii-banner{
+                display: none;
+            }
+            
+            .container {
+                padding: 10px 20px;
+                width: 98%;
+            }
+            
+            .profile-section {
+                padding: 20px;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .games-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="starfield"></div>
+    {{ content }}
+</body>
+</html>
