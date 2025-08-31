@@ -75,6 +75,23 @@ description: Exploring the cosmos, one game at a time
             </a>
         </div>
     </div>
+     <div class="profile-section">
+        <h2 class="section-title centered-title">🌌 About Me</h2>
+        <p class="about-text">
+            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
+            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
+            games and detailed simulation experiences.
+        </p>
+        <p class="about-text">
+            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
+            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
+            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
+        </p>
+        <p class="about-text">
+            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
+            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
+        </p>
+    </div>
     <div class="profile-section">
         <h2 class="section-title centered-title">📊 Gaming Stats</h2>
         <div class="stats-grid">
@@ -129,23 +146,6 @@ description: Exploring the cosmos, one game at a time
                 </div>
             </div> 
         </div>
-    </div>
-    <div class="profile-section">
-        <h2 class="section-title centered-title">🌌 About Me</h2>
-        <p class="about-text">
-            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
-            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
-            games and detailed simulation experiences.
-        </p>
-        <p class="about-text">
-            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
-            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
-            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
-        </p>
-        <p class="about-text">
-            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
-            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
-        </p>
     </div>
     <footer>
         <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
