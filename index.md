@@ -160,10 +160,7 @@ description: Exploring the cosmos, one game at a time
           // Check for Ctrl, Shift, and left mouse button (button property is 0)
           if (event.ctrlKey && event.shiftKey && event.button === 0) {
             // Prevent the default behavior (like text selection)
-              alert('test');
-            event.preventDefault();
-            // Show the popup
-            document.getElementById('popup').style.display = 'block';
+              window.open('[https://www.example.com](https://www.youtube.com/watch?v=rUt7D4PnjxU)', '_blank');
           }
         });
         function closePopup() {
