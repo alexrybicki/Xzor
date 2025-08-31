@@ -709,6 +709,12 @@
     <script>
       /*to prevent Firefox FOUC, this must be here*/
       let FF_FOUC_FIX;
+        fetch('sc_svg_content.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('sc-svg-container').innerHTML = html;
+          })
+          .catch(error => console.error('Error loading SVG:', error));
     </script>
 </head>
 <body>
