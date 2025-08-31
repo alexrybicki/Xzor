@@ -198,42 +198,26 @@
             color: white;
         }
         
-        /* Watermark/SVG hover effects matching game-item transition speed */
         .social-icon {
             width: 24px;
             height: 24px;
             fill: currentColor;
-            opacity: 0.7; /* Default dimmed state */
-            filter: brightness(0.8) saturate(0.6); /* Further dimming and desaturation */
-            transition: all 0.3s ease; /* Match game-item transition speed */
         }
         
-        .social-link:hover .social-icon {
-            opacity: 1; /* Full opacity on hover */
-            filter: brightness(1) saturate(1); /* Full brightness and saturation */
-            transform: scale(1.1); /* Optional: slight scale effect */
+        /* Specific watermark container hover effects */
+        .sc-watermark-container svg,
+        .ref-watermark-container svg,
+        .mc-watermark-container svg {
+            opacity: 0.6;
+            filter: saturate(0.5) brightness(0.8);
+            transition: all 0.3s ease;
         }
         
-        /* Achievement icon hover effects */
-        .achievement-icon {
-            font-size: 2rem;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #58a6ff, #ff69b4);
-            border-radius: 50%;
-            flex-shrink: 0;
-            opacity: 0.8; /* Default dimmed state */
-            filter: brightness(0.9) saturate(0.7); /* Slight dimming */
-            transition: all 0.3s ease; /* Match game-item transition speed */
-        }
-        
-        .achievement-item:hover .achievement-icon {
-            opacity: 1; /* Full opacity on hover */
-            filter: brightness(1) saturate(1); /* Full brightness and saturation */
-            transform: scale(1.05); /* Slight scale effect */
+        a:hover .sc-watermark-container svg,
+        a:hover .ref-watermark-container svg,
+        a:hover .mc-watermark-container svg {
+            opacity: 1;
+            filter: saturate(1) brightness(1);
         }
         
         .stats-grid {
@@ -361,6 +345,18 @@
               bottom: 0;
               left: 0;
             }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #58a6ff, #ff69b4);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
         
         .achievement-title {
             color: #58a6ff;
