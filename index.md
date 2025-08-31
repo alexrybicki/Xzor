@@ -62,10 +62,11 @@ description: Exploring the cosmos, one game at a time
                 <div class="game-description">Click to get 50,000 starting cash</div>
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
-            <div class="game-item">
+            <div class="game-item minecraft-game">
                 <div class="game-title">Minecraft</div>
                 <div class="game-status">Subterranean Explorer</div>
                 <div class="game-description">∞ Find me in the Minerealm Public Server</div>
+                <div class="mc-watermark-container"></div>
                 <a href="https://www.minerealm.com/"></a>
             </div>
         </div>
