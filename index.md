@@ -56,10 +56,11 @@ description: Exploring the cosmos, one game at a time
                 <div class="sc-watermark-container"></div>
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
-            <div class="game-item">
+            <div class="game-item referral-game">
                 <div class="game-title">Star Citizen Referral</div>
                 <div class="game-status">Want to play Star Citizen?</div>
                 <div class="game-description">Click to get 50,000 starting cash</div>
+                <div class="ref-watermark-container"></div>
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item minecraft-game">
@@ -129,13 +130,18 @@ description: Exploring the cosmos, one game at a time
     <div class="profile-section">
         <h2 class="section-title centered-title">🌌 About Me</h2>
         <p class="about-text">
-            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution from classic arcade games, the Atari 2600, MS-DOS classics, up to today's immersive virtual worlds. My passion lies primarily in space exploration games and detailed simulation experiences, as well as open-world exploration.
+            Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
+            from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
+            games and detailed simulation experiences.
         </p>
         <p class="about-text">
-            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
+            I've been part of the Star Citizen community since 2016, where I participate in the Evocati testing program, 
+            helping provide feedback during early development phases. Beyond space sims, I enjoy exploring RPGs, 
+            strategy games, and discovering unique indie titles that offer fresh perspectives on gaming.
         </p>
         <p class="about-text">
-            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
+            When I'm not gaming, I like to share experiences and connect with fellow enthusiasts. Feel free to reach 
+            out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
         </p>
     </div>
     <footer>
