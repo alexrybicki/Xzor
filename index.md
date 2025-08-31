@@ -148,13 +148,7 @@ description: Exploring the cosmos, one game at a time
         </p>
     </div>
     <footer>
-        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p>
-        <p id="myParagraph">π</p>
-          <div id="popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; border:1px solid black; background-color:white; z-index:1000;">
-            <h2>Hello!</h2>
-            <p>This is the popup content.</p>
-            <button onclick="closePopup()">Close</button>
-          </div>
+        <p>&copy; 2025 Xzor Gaming • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=rUt7D4PnjxU', '_blank');}});</script>
     </footer>
 </div>
