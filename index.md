@@ -155,5 +155,19 @@ description: Exploring the cosmos, one game at a time
             <p>This is the popup content.</p>
             <button onclick="closePopup()">Close</button>
           </div>
+    <script>        
+        document.getElementById('myParagraph').addEventListener('mousedown', function(event) {
+          // Check for Ctrl, Shift, and left mouse button (button property is 0)
+          if (event.ctrlKey && event.shiftKey && event.button === 0) {
+            // Prevent the default behavior (like text selection)
+              alert(test);
+            event.preventDefault();
+            // Show the popup
+            document.getElementById('popup').style.display = 'block';
+          }
+        });
+        function closePopup() {
+          document.getElementById('popup').style.display = 'none';
+        }</script>
     </footer>
 </div>
