@@ -28,7 +28,7 @@ description: Exploring the cosmos, one game at a time
                 Discord Profile
             </a>
             <a href="https://robertsspaceindustries.com/en/citizens/Xzor" class="social-link star-citizen-link" target="_blank" rel="noopener noreferrer">
-               <div id="sc-svg-container"></div> 
+               <div class="sc-icon-container"></div> 
                 Star Citizen Profile
             </a>
             <a href="https://steamcommunity.com/id/ubuntuser/" class="social-link steam-link" target="_blank" rel="noopener noreferrer">
@@ -49,10 +49,11 @@ description: Exploring the cosmos, one game at a time
     <div class="profile-section">
         <h2 class="section-title centered-title">🎮 Currently Playing</h2>
         <div class="games-list">
-            <div class="game-item">
+            <div class="game-item star-citizen-game">
                 <div class="game-title">Star Citizen</div>
                 <div class="game-status">High Admiral • Evocati</div>
                 <div class="game-description">Commanding in the verse since 2016</div>
+                <div class="sc-watermark-container"></div>
                 <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
             </div>
             <div class="game-item">
@@ -66,7 +67,6 @@ description: Exploring the cosmos, one game at a time
                 <div class="game-status">Subterranean Explorer</div>
                 <div class="game-description">∞ Find me in the Minerealm Public Server</div>
                 <a href="https://www.minerealm.com/"></a>
-
             </div>
         </div>
     </div>
