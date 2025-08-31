@@ -64,7 +64,9 @@ description: Exploring the cosmos, one game at a time
             <div class="game-item">
                 <div class="game-title">Minecraft</div>
                 <div class="game-status">Subterranean Explorer</div>
-                <div class="game-description">∞ [Minerealm Public Server](https://www.minerealm.com/)</div>
+                <div class="game-description">∞ Minerealm Public Server</div>
+                <a href="https://www.minerealm.com/"></a>
+
             </div>
         </div>
     </div>
