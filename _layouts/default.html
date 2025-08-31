@@ -515,6 +515,7 @@
         .mc-watermark-container {
             animation-delay: 2s; /* Offset animation slightly for variety */
             filter: grayscale(1) contrast(1.2) brightness(0.8);
+            opacity: 0.12; /* Slightly higher opacity for better visibility */
         }
         
         .sc-watermark-container svg,
@@ -815,7 +816,7 @@
       
       // Function to load Minecraft SVG
       function loadMinecraftSVG() {
-        fetch('mc_svg_content.html')
+        fetch('mc-svg-content.html')  // Using hyphen to match your actual filename
           .then(response => response.text())
           .then(html => {
             mcSvgContent = html;
