@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="darkreader-lock" />
+    <link rel="icon" type="image/x-icon" href="favicon32.ico">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     
@@ -27,39 +29,291 @@
             line-height: 1.6;
             min-height: 100vh;
             position: relative;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
         
-        /* Starfield Background */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Enhanced Multi-Layer Twinkling Starfield Background */
         .starfield {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: 
-                radial-gradient(4px 4px at 20px 30px, #ffffff, transparent),
-                radial-gradient(3px 3px at 40px 70px, rgba(255, 105, 180, 1), transparent),
-                radial-gradient(3px 3px at 90px 40px, #58a6ff, transparent),
-                radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.9), transparent),
-                radial-gradient(3px 3px at 160px 30px, rgba(255, 105, 180, 0.9), transparent),
-                radial-gradient(2px 2px at 200px 90px, #ffffff, transparent),
-                radial-gradient(3px 3px at 250px 50px, rgba(88, 166, 255, 0.8), transparent),
-                radial-gradient(2px 2px at 80px 120px, #ffffff, transparent),
-                radial-gradient(3px 3px at 300px 150px, rgba(255, 105, 180, 0.7), transparent),
-                radial-gradient(2px 2px at 350px 80px, #58a6ff, transparent),
-                radial-gradient(4px 4px at 120px 180px, rgba(255, 255, 255, 0.6), transparent),
-                radial-gradient(2px 2px at 280px 120px, rgba(88, 166, 255, 0.9), transparent);
-            background-repeat: repeat;
-            background-size: 400px 300px;
-            animation: sparkle 25s linear infinite;
             z-index: -1;
-            opacity: 1;
             pointer-events: none;
+            overflow: hidden;
         }
         
-        @keyframes sparkle {
+        /* Layer 1: Large twinkling stars */
+        .starfield::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                radial-gradient(3px 3px at 120px 80px, rgba(255, 255, 255, 1), transparent),
+                radial-gradient(4px 4px at 280px 150px, rgba(88, 166, 255, 0.9), transparent),
+                radial-gradient(2px 2px at 450px 90px, rgba(255, 105, 180, 1), transparent),
+                radial-gradient(3px 3px at 650px 200px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(4px 4px at 850px 120px, rgba(255, 105, 180, 0.9), transparent),
+                radial-gradient(2px 2px at 1050px 180px, rgba(88, 166, 255, 1), transparent),
+                radial-gradient(3px 3px at 1250px 60px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(4px 4px at 1450px 220px, rgba(255, 105, 180, 0.8), transparent),
+                radial-gradient(2px 2px at 200px 300px, rgba(88, 166, 255, 0.9), transparent),
+                radial-gradient(3px 3px at 400px 380px, rgba(255, 255, 255, 1), transparent),
+                radial-gradient(4px 4px at 600px 320px, rgba(255, 105, 180, 0.9), transparent),
+                radial-gradient(2px 2px at 800px 420px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(3px 3px at 1000px 340px, rgba(255, 255, 255, 0.9), transparent),
+                radial-gradient(4px 4px at 1200px 460px, rgba(255, 105, 180, 1), transparent),
+                radial-gradient(2px 2px at 1400px 380px, rgba(88, 166, 255, 0.9), transparent);
+            background-repeat: repeat;
+            background-size: 800px 600px;
+            animation: 
+                slowDrift 40s linear infinite,
+                twinkle-large 4s ease-in-out infinite alternate;
+        }
+        
+        /* Layer 2: Medium stars with different animation timing */
+        .starfield::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 150%;
+            background-image: 
+                radial-gradient(2px 2px at 80px 40px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 180px 120px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 320px 80px, rgba(255, 105, 180, 0.7), transparent),
+                radial-gradient(1px 1px at 480px 160px, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(2px 2px at 620px 60px, rgba(88, 166, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 780px 140px, rgba(255, 105, 180, 0.8), transparent),
+                radial-gradient(2px 2px at 920px 100px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 1080px 180px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(2px 2px at 140px 240px, rgba(255, 105, 180, 0.7), transparent),
+                radial-gradient(1px 1px at 300px 280px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 460px 220px, rgba(88, 166, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 640px 300px, rgba(255, 105, 180, 0.6), transparent),
+                radial-gradient(2px 2px at 800px 260px, rgba(255, 255, 255, 0.7), transparent),
+                radial-gradient(1px 1px at 960px 320px, rgba(88, 166, 255, 0.8), transparent),
+                radial-gradient(2px 2px at 1120px 240px, rgba(255, 105, 180, 0.7), transparent);
+            background-repeat: repeat;
+            background-size: 600px 400px;
+            animation: 
+                mediumDrift 120s linear infinite reverse,
+                twinkle-medium 6s ease-in-out infinite alternate;
+        }
+        
+        /* Small stars layer */
+        .starfield-small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background-image: 
+                radial-gradient(1px 1px at 50px 30px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 120px 80px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 200px 50px, rgba(255, 105, 180, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 280px 120px, rgba(255, 255, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 360px 40px, rgba(88, 166, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 440px 100px, rgba(255, 105, 180, 0.6), transparent),
+                radial-gradient(1px 1px at 520px 70px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 600px 140px, rgba(88, 166, 255, 0.4), transparent),
+                radial-gradient(1px 1px at 90px 180px, rgba(255, 105, 180, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 170px 220px, rgba(255, 255, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 250px 160px, rgba(88, 166, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 330px 240px, rgba(255, 105, 180, 0.4), transparent),
+                radial-gradient(1px 1px at 410px 200px, rgba(255, 255, 255, 0.5), transparent),
+                radial-gradient(0.5px 0.5px at 490px 260px, rgba(88, 166, 255, 0.6), transparent),
+                radial-gradient(1px 1px at 570px 180px, rgba(255, 105, 180, 0.5), transparent);
+            background-repeat: repeat;
+            background-size: 400px 300px;
+            animation: 
+                fastDrift 90s linear infinite,
+                twinkle-small 2s ease-in-out infinite alternate;
+        }
+        
+        /* Shooting stars */
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 1), transparent);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(88, 166, 255, 0.4),
+                0 0 30px rgba(255, 105, 180, 0.2);
+            animation: shootingStar 8s linear infinite;
+            opacity: 0;
+        }
+        
+        .shooting-star:nth-child(3) { 
+            top: 20%; 
+            left: -10px; 
+            animation-delay: 5s;
+            animation-duration: 8s;
+        }
+        .shooting-star:nth-child(4) { 
+            top: 60%; 
+            left: -10px; 
+            animation-delay: 20s;
+            animation-duration: 9s;
+        }
+        .shooting-star:nth-child(5) { 
+            top: 35%; 
+            left: -10px; 
+            animation-delay: 45s;
+            animation-duration: 7s;
+        }
+        .shooting-star:nth-child(6) { 
+            top: 80%; 
+            left: -10px; 
+            animation-delay: 70s;
+            animation-duration: 8s;
+        }
+        
+        /* Gentle light patterns */
+        .light-shimmer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 30%, rgba(88, 166, 255, 0.02) 50%, transparent 70%),
+                linear-gradient(-45deg, transparent 30%, rgba(255, 105, 180, 0.02) 50%, transparent 70%);
+            background-size: 400% 400%;
+            animation: lightShimmer 30s ease-in-out infinite;
+        }
+        
+        /* Soft aurora effect */
+        .aurora {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 1200px 200px at 20% 80%, rgba(88, 166, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(ellipse 800px 150px at 80% 20%, rgba(255, 105, 180, 0.02) 0%, transparent 40%),
+                radial-gradient(ellipse 600px 100px at 60% 60%, rgba(147, 51, 234, 0.015) 0%, transparent 40%);
+            animation: pulseGlow 45s ease-in-out infinite alternate;
+        }
+        .nebula {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 800px 400px at 30% 20%, rgba(88, 166, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse 600px 300px at 70% 70%, rgba(255, 105, 180, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse 400px 600px at 50% 50%, rgba(147, 51, 234, 0.02) 0%, transparent 50%);
+            animation: nebulaFloat 240s ease-in-out infinite alternate;
+        }
+        
+        /* Optimized Animation keyframes with gentle movement */
+        @keyframes gentleDrift {
             from { transform: translateY(0px) translateX(0px); }
-            to { transform: translateY(-200px) translateX(-100px); }
+            to { transform: translateY(-30px) translateX(-15px); }
+        }
+        
+        @keyframes slowDrift {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-50px) translateX(-25px); }
+        }
+        
+        @keyframes mediumDrift {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-40px) translateX(-20px); }
+        }
+        
+        @keyframes fastDrift {
+            from { transform: translateY(0px) translateX(0px); }
+            to { transform: translateY(-60px) translateX(-30px); }
+        }
+        
+        @keyframes twinkle-large {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        
+        @keyframes twinkle-medium {
+            0% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.5; }
+        }
+        
+        @keyframes twinkle-small {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.4; }
+        }
+        
+        @keyframes shootingStar {
+            0% { 
+                opacity: 0; 
+                transform: translateX(-50px) translateY(25px); 
+            }
+            10% { 
+                opacity: 1; 
+                transform: translateX(100px) translateY(-25px); 
+            }
+            90% { 
+                opacity: 1; 
+                transform: translateX(600px) translateY(-150px); 
+            }
+            100% { 
+                opacity: 0; 
+                transform: translateX(700px) translateY(-175px); 
+            }
+        }
+        
+        @keyframes nebulaFloat {
+            0% { 
+                transform: translateY(0px) scale(1); 
+                opacity: 0.8; 
+            }
+            50% { 
+                transform: translateY(-10px) scale(1.01); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: translateY(0px) scale(1); 
+                opacity: 0.9; 
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        @keyframes lightShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes scWatermarkPulse {
+            0% { 
+                opacity: 0.05; 
+                transform: scale(0.95); 
+            }
+            50% { 
+                opacity: 0.15; 
+                transform: scale(1.02); 
+            }
+            100% { 
+                opacity: 0.08; 
+                transform: scale(0.98); 
+            }
         }
         
         .container {
@@ -78,12 +332,12 @@
         }
         
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 165px;
+            height: 165px;
             border-radius: 50%;
             margin: 0 auto 20px;
             border: 4px solid #58a6ff;
-            box-shadow: 0 0 30px rgba(88, 166, 255, 0.5), 0 0 60px rgba(255, 105, 180, 0.3);
+/*             box-shadow: 0 0 30px rgba(88, 166, 255, 0.5), 0 0 60px rgba(255, 105, 180, 0.3); */
             object-fit: cover;
             display: block;
             transition: all 0.3s ease;
@@ -91,7 +345,9 @@
         
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(88, 166, 255, 0.7), 0 0 80px rgba(255, 105, 180, 0.5);
+/*             box-shadow: 0 0 40px rgba(88, 166, 255, 0.7), 0 0 80px rgba(255, 105, 180, 0.5); */
+            filter: drop-shadow(0 0 1px #FCE) drop-shadow(0 0 2px #fff);
+
         }
         
         h1 {
@@ -145,6 +401,21 @@
             background-clip: text;
         }
         
+        .centered-title {
+            text-align: center;
+            padding-left: 0;
+        }
+        
+        .centered-title::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #58a6ff, transparent);
+            margin: 0 auto 15px auto;
+            opacity: 0.6;
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
@@ -163,6 +434,9 @@
             transition: all 0.3s ease;
             font-weight: 600;
             backdrop-filter: blur(10px);
+            min-width: 180px;
+            height: 48px;
+            justify-content: center;
         }
         
         .discord-link {
@@ -198,26 +472,66 @@
             color: white;
         }
         
+        .steam-link {
+            background: linear-gradient(45deg, #1b2838, #66c0f4);
+            box-shadow: 0 4px 15px rgba(102, 192, 244, 0.3);
+        }
+        
+        .steam-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 192, 244, 0.5);
+            color: white;
+        }
+        
         .social-icon {
             width: 24px;
             height: 24px;
             fill: currentColor;
         }
         
-        /* Specific watermark container hover effects */
-        .sc-watermark-container svg,
-        .ref-watermark-container svg,
-        .mc-watermark-container svg {
-            opacity: 0.6;
-            filter: saturate(0.5) brightness(0.8);
-            transition: all 0.3s ease;
+        /* Star Citizen Icon and Watermark Styles */
+        .sc-icon-container,
+        .sc-watermark-container,
+        .mc-watermark-container,
+        .ref-watermark-container {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
         }
         
-        a:hover .sc-watermark-container svg,
-        a:hover .ref-watermark-container svg,
-        a:hover .mc-watermark-container svg {
-            opacity: 1;
-            filter: saturate(1) brightness(1);
+        .sc-watermark-container,
+        .mc-watermark-container,
+        .ref-watermark-container {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            opacity: 0.08;
+            animation: scWatermarkPulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .mc-watermark-container {
+            animation-delay: 2s; /* Offset animation slightly for variety */
+            filter: grayscale(1) contrast(1.2) brightness(0.8);
+            opacity: 0.12; /* Slightly higher opacity for better visibility */
+        }
+        
+        .ref-watermark-container {
+            animation-delay: 4s; /* Different offset for variety */
+            opacity: 0.1; /* Balanced opacity for the referral logo */
+        }
+        
+        .sc-watermark-container svg,
+        .sc-icon-container svg,
+        .mc-watermark-container svg,
+        .ref-watermark-container svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
         }
         
         .stats-grid {
@@ -273,6 +587,8 @@
             padding: 20px;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
         }
         
         .game-item:hover {
@@ -294,23 +610,39 @@
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(30, 106, 160, 0.1));
         }
         
+        .minecraft-game {
+            border-color: rgba(76, 175, 80, 0.5);
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(46, 125, 50, 0.1));
+        }
+        
+        .referral-game {
+            border-color: rgba(219, 141, 8, 0.5);
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9), rgba(219, 141, 8, 0.1));
+        }
+        
         .game-title {
             color: #58a6ff;
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .game-status {
             color: #ff69b4;
             font-size: 0.9rem;
             margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
         }
         
         .game-description {
             color: #8b949e;
             font-size: 0.8rem;
             font-style: italic;
+            position: relative;
+            z-index: 1;
         }
         
         .achievements-grid {
@@ -370,7 +702,7 @@
         }
         
         .about-text {
-            color: #e6edf3;
+            color: #bfc5cb;
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
@@ -387,7 +719,25 @@
             margin-top: 40px;
             border-top: 1px solid rgba(88, 166, 255, 0.2);
         }
-               
+        
+         .xzor-ascii-banner {
+            line-height: 1.2;
+/*             text-shadow: 0 0 30px rgba(88, 166, 255, 0.5), 0 0 60px rgba(255, 105, 180, 0.3); */
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .xzor-ascii-banner:hover {
+             background: linear-gradient(5deg, #0c3b6b, #906599);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: scale(1.05);
+              /* Use filter for the glow instead of text-shadow */
+            filter: drop-shadow(0 0 1px #FCE) drop-shadow(0 0 2px #ff69b4 )drop-shadow(0 5px 9px #ff69b4 );
+        }
+
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -412,6 +762,15 @@
                 height: 120px;
             }
             
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                min-width: 250px;
+            }
+            
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -423,11 +782,124 @@
             .achievements-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .sc-watermark-container {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .mc-watermark-container {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .ref-watermark-container {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
+    <script>
+      /*to prevent Firefox FOUC, this must be here*/
+      let FF_FOUC_FIX;
+      
+      // Global SVG content variables
+      let scSvgContent = '';
+      let mcSvgContent = '';
+      let refSvgContent = '';
+      
+      // Function to load and inject SVG content
+      function loadStarCitizenSVG() {
+        fetch('sc_svg_content.html')
+          .then(response => response.text())
+          .then(html => {
+            scSvgContent = html;
+            // Inject into all SC containers
+            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = scSvgContent;
+            });
+          })
+          .catch(error => {
+            console.error('Error loading Star Citizen SVG:', error);
+            // Fallback to a simple icon if SVG fails to load
+            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>`;
+            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = fallbackSVG;
+            });
+          });
+      }
+      
+      // Function to load Minecraft SVG
+      function loadMinecraftSVG() {
+        fetch('mc-svg-content.html')  // Using hyphen to match your actual filename
+          .then(response => response.text())
+          .then(html => {
+            mcSvgContent = html;
+            // Inject into all MC containers
+            const containers = document.querySelectorAll('.mc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = mcSvgContent;
+            });
+          })
+          .catch(error => {
+            console.error('Error loading Minecraft SVG:', error);
+            // Fallback to a simple icon if SVG fails to load
+            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+            </svg>`;
+            const containers = document.querySelectorAll('.mc-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = fallbackSVG;
+            });
+          });
+      }
+      
+      // Function to load Referral SVG
+      function loadReferralSVG() {
+        fetch('ref-svg-content.html')
+          .then(response => response.text())
+          .then(html => {
+            refSvgContent = html;
+            // Inject into all Referral containers
+            const containers = document.querySelectorAll('.ref-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = refSvgContent;
+            });
+          })
+          .catch(error => {
+            console.error('Error loading Referral SVG:', error);
+            // Fallback to a simple icon if SVG fails to load
+            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 4V6L21 9ZM15 10V12L21 15V13L15 10ZM5 6V4L11 7V9L5 6ZM5 10V8L11 11V13L5 10ZM11 14V16L5 13V11L11 14ZM13 16V14L19 11V13L13 16Z"/>
+            </svg>`;
+            const containers = document.querySelectorAll('.ref-watermark-container');
+            containers.forEach(container => {
+              container.innerHTML = fallbackSVG;
+            });
+          });
+      }
+      
+      // Load all SVGs when DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        loadStarCitizenSVG();
+        loadMinecraftSVG();
+        loadReferralSVG();
+      });
+    </script>
 </head>
 <body>
-    <div class="starfield"></div>
+    <div class="starfield">
+        <div class="starfield-small"></div>
+        <div class="nebula"></div>
+        <div class="aurora"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
     {{ content }}
 </body>
 </html>
