@@ -512,6 +512,7 @@
             animation: scWatermarkPulse 8s ease-in-out infinite;
             pointer-events: none;
             z-index: 0;
+            transition: all 0.3s ease;
         }
         
         .mc-watermark-container {
@@ -523,6 +524,28 @@
         .ref-watermark-container {
             animation-delay: 4s; /* Different offset for variety */
             opacity: 0.1; /* Balanced opacity for the referral logo */
+        }
+
+        /* Enhanced hover effects for watermark containers when hovering over the parent anchor */
+        a:hover .sc-watermark-container {
+            opacity: 0.3;
+            filter: grayscale(0%) brightness(1.4) contrast(1.2) saturate(1.5);
+            transform: translateY(-50%) scale(1.08) rotate(2deg);
+            animation: none; /* Override the existing pulse animation on hover */
+        }
+
+        a:hover .ref-watermark-container {
+            opacity: 0.35;
+            filter: grayscale(0%) brightness(1.3) contrast(1.15) saturate(1.4);
+            transform: translateY(-50%) scale(1.06) rotate(-1deg);
+            animation: none; /* Override the existing pulse animation on hover */
+        }
+
+        a:hover .mc-watermark-container {
+            opacity: 0.4;
+            filter: grayscale(0%) brightness(1.5) contrast(1.25) saturate(1.6);
+            transform: translateY(-50%) scale(1.07) rotate(1deg);
+            animation: none; /* Override the existing pulse animation on hover */
         }
         
         .sc-watermark-container svg,
@@ -657,249 +680,4 @@
             align-items: center;
             gap: 15px;
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.8), rgba(22, 27, 34, 0.8));
-            border: 1px solid rgba(88, 166, 255, 0.3);
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-        
-        .achievement-item:hover {
-            border-color: rgba(255, 105, 180, 0.5);
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
-        }
-        .achievement-item a::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-            }
-        
-        .achievement-icon {
-            font-size: 2rem;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #58a6ff, #ff69b4);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        
-        .achievement-title {
-            color: #58a6ff;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .achievement-desc {
-            color: #8b949e;
-            font-size: 0.9rem;
-        }
-        
-        .about-text {
-            color: #bfc5cb;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .about-text:last-child {
-            margin-bottom: 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #8b949e;
-            margin-top: 40px;
-            border-top: 1px solid rgba(88, 166, 255, 0.2);
-        }
-        
-         .xzor-ascii-banner {
-            line-height: 1.2;
-/*             text-shadow: 0 0 30px rgba(88, 166, 255, 0.5), 0 0 60px rgba(255, 105, 180, 0.3); */
-            display: block;
-            transition: all 0.3s ease;
-        }
-        
-        .xzor-ascii-banner:hover {
-             background: linear-gradient(5deg, #0c3b6b, #906599);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transform: scale(1.05);
-              /* Use filter for the glow instead of text-shadow */
-            filter: drop-shadow(0 0 1px #FCE) drop-shadow(0 0 2px #ff69b4 )drop-shadow(0 5px 9px #ff69b4 );
-        }
-
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-                
-            }
-            
-            .xzor-ascii-banner{
-                display: none;
-            }
-            
-            .container {
-                padding: 10px 20px;
-                width: 98%;
-            }
-            
-            .profile-section {
-                padding: 20px;
-            }
-            
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .social-link {
-                min-width: 250px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .games-list {
-                grid-template-columns: 1fr;
-            }
-            
-            .achievements-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .sc-watermark-container {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .mc-watermark-container {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .ref-watermark-container {
-                width: 60px;
-                height: 60px;
-            }
-        }
-    </style>
-    <script>
-      /*to prevent Firefox FOUC, this must be here*/
-      let FF_FOUC_FIX;
-      
-      // Global SVG content variables
-      let scSvgContent = '';
-      let mcSvgContent = '';
-      let refSvgContent = '';
-      
-      // Function to load and inject SVG content
-      function loadStarCitizenSVG() {
-        fetch('sc_svg_content.html')
-          .then(response => response.text())
-          .then(html => {
-            scSvgContent = html;
-            // Inject into all SC containers
-            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = scSvgContent;
-            });
-          })
-          .catch(error => {
-            console.error('Error loading Star Citizen SVG:', error);
-            // Fallback to a simple icon if SVG fails to load
-            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>`;
-            const containers = document.querySelectorAll('.sc-icon-container, .sc-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = fallbackSVG;
-            });
-          });
-      }
-      
-      // Function to load Minecraft SVG
-      function loadMinecraftSVG() {
-        fetch('mc-svg-content.html')  // Using hyphen to match your actual filename
-          .then(response => response.text())
-          .then(html => {
-            mcSvgContent = html;
-            // Inject into all MC containers
-            const containers = document.querySelectorAll('.mc-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = mcSvgContent;
-            });
-          })
-          .catch(error => {
-            console.error('Error loading Minecraft SVG:', error);
-            // Fallback to a simple icon if SVG fails to load
-            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
-            </svg>`;
-            const containers = document.querySelectorAll('.mc-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = fallbackSVG;
-            });
-          });
-      }
-      
-      // Function to load Referral SVG
-      function loadReferralSVG() {
-        fetch('ref-svg-content.html')
-          .then(response => response.text())
-          .then(html => {
-            refSvgContent = html;
-            // Inject into all Referral containers
-            const containers = document.querySelectorAll('.ref-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = refSvgContent;
-            });
-          })
-          .catch(error => {
-            console.error('Error loading Referral SVG:', error);
-            // Fallback to a simple icon if SVG fails to load
-            const fallbackSVG = `<svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 4V6L21 9ZM15 10V12L21 15V13L15 10ZM5 6V4L11 7V9L5 6ZM5 10V8L11 11V13L5 10ZM11 14V16L5 13V11L11 14ZM13 16V14L19 11V13L13 16Z"/>
-            </svg>`;
-            const containers = document.querySelectorAll('.ref-watermark-container');
-            containers.forEach(container => {
-              container.innerHTML = fallbackSVG;
-            });
-          });
-      }
-      
-      // Load all SVGs when DOM is ready
-      document.addEventListener('DOMContentLoaded', function() {
-        loadStarCitizenSVG();
-        loadMinecraftSVG();
-        loadReferralSVG();
-      });
-    </script>
-</head>
-<body>
-    <div class="starfield">
-        <div class="starfield-small"></div>
-        <div class="nebula"></div>
-        <div class="aurora"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-    </div>
-    {{ content }}
-</body>
-</html>
+            border: 1px solid rgba(88
