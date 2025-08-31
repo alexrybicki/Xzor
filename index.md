@@ -49,13 +49,13 @@ description: Exploring the cosmos, one game at a time
     <div class="profile-section">
         <h2 class="section-title centered-title">🎮 Currently Playing</h2>
         <div class="games-list">
+            <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">
             <div class="game-item star-citizen-game">
                 <div class="game-title">Star Citizen</div>
                 <div class="game-status">High Admiral • Evocati</div>
                 <div class="game-description">Commanding in the verse since 2016</div>
                 <div class="sc-watermark-container"></div>
-                <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H"></a>
-            </div>
+            </div></a>
             <div class="game-item referral-game">
                 <div class="game-title">Star Citizen Referral</div>
                 <div class="game-status">Want to play Star Citizen?</div>
