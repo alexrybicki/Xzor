@@ -646,14 +646,15 @@
             transition: all 0.3s ease;
         }
         
-         .xzor-ascii-banner:hover {
-            text-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 105, 180, 0.3);
-            background: linear-gradient(5deg, #0c3b6b, #906599);
+        .xzor-ascii-banner:hover {
+             background: linear-gradient(5deg, #0c3b6b, #906599);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             transform: scale(1.05);
-         }
+              /* Use filter for the glow instead of text-shadow */
+            filter: drop-shadow(0 0 10px #f0f) drop-shadow(0 0 20px #f0f);
+        }
 
 
         @media (max-width: 768px) {
