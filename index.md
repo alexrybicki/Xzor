@@ -114,29 +114,8 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title">🏆 Recent Achievements</h2>
+        <h2 class="section-title centered-title">📦 Situs Incommodus</h2>
         <div class="achievements-grid">
-            <div class="achievement-item">
-                <div class="achievement-icon">🚀</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">First Flight</div>
-                    <div class="achievement-desc">Successfully piloted through asteroid field</div>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">⭐</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">Star Navigator</div>
-                    <div class="achievement-desc">Completed 50 deep space missions</div>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">👑</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">Fleet Commander</div>
-                    <div class="achievement-desc">Led successful squadron operations</div>
-                </div>
-            </div>
             <div class="achievement-item">
                 <div class="achievement-icon">🌠</div>
                 <div class="achievement-content">
