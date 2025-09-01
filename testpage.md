@@ -1,5 +1,6 @@
 
 <div class="container">
+    
     <header>
         <h1 class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
@@ -11,8 +12,13 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
     
-</div>
-<div>
-    <p>This is just some test filler text.</p>
+     <div class="profile-section">
+        <h2 class="section-title centered-title">Filler Test Text</h2>
+        <p class="about-text">
+           This is just some filler testing text. Yay. 😃
+        </p>
+    </div>    
+
+
 </div>
 <h1>[back](./)</h1>
