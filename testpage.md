@@ -24,23 +24,7 @@
                 <div class="achievement-title">Return</div>
                 <div class="achievement-desc">back to main page</div>
             </div>
-        </a>
-            <div class="achievement-item">
-                <div class="achievement-icon">🌠</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">BMM</div>
-                    <div class="achievement-desc">Is the BMM in development?</div>
-                    <a href="https://bmm.xzor.dev"></a>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">🧹</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">SC Cleaner</div>
-                    <div class="achievement-desc">An SC Cashe Cleaner</div>
-                    <a href="https://cleaner.xzor.dev"></a>
-                </div>
-            </div> 
         </div>
+        </a>
     </div>
 </div>
