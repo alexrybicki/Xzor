@@ -144,6 +144,14 @@ description: Exploring the cosmos, one game at a time
                     <div class="achievement-desc">Is the BMM in development?</div>
                     <a href="https://bmm.xzor.dev"></a>
                 </div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">🧹</div>
+                <div class="achievement-content">
+                    <div class="achievement-title">SC Cleaner</div>
+                    <div class="achievement-desc">An SC Cashe Cleaner</div>
+                    <a href="https://cleaner.xzor.dev"></a>
+                </div>
             </div> 
         </div>
     </div>
