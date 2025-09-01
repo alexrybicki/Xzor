@@ -17,6 +17,7 @@
         </p>
     </div>
     <div class="achievement-item">
+        <div class="achievements-grid">
         <a href="./">
             <div class="achievement-icon">🔙</div>
             <div class="achievement-content">
@@ -24,5 +25,6 @@
                 <div class="achievement-desc">back to main page</div>
             </div>
         </a>
+        </div>
     </div>
 </div>
