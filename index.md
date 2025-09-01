@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Xzor Gaming Profile
+title: Xzor | Gaming Enthusiast & Digital Warrior
 description: Exploring the cosmos, one game at a time
 ---
 
