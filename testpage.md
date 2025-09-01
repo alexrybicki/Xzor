@@ -17,10 +17,11 @@
         </p>
     </div>
     <div class="achievement-item">
+        <a href="./">
         <div class="achievement-icon">🔙</div>
             <div class="achievement-content">
                 <div class="achievement-title">Return</div>
                 <div class="achievement-desc">back to main page</div>
             </div>
-        </div>
+        </a>
 </div>
