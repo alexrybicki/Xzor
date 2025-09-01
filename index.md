@@ -114,7 +114,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title">📦 Erratum</h2>
+        <h2 class="section-title centered-title">📦 Miscellus</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
                 <div class="achievement-icon">🌠</div>
