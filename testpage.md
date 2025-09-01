@@ -12,7 +12,7 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
      <div class="profile-section">
-        <h2 class="section-title centered-title">Filler Test Text</h2>
+        <h2 class="section-title centered-title alt">Filler Test Text</h2>
         <p class="about-text">
            This is just some filler testing text. Yay. 😃
         </p>
