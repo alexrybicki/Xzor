@@ -18,7 +18,7 @@ description: Exploring the cosmos, one game at a time
         <h1>Xzor</h1>
     </header>
     <div class="profile-section">
-        <h2 class="section-title centered-title">
+        <h2 class="section-title centered-title alt">
             🚀 Connect With Me</h2>
         <div class="social-links">
             <a href="https://discordapp.com/users/251628894048878594" class="social-link discord-link" target="_blank" rel="noopener noreferrer">
@@ -47,7 +47,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title">🎮 Currently Playing</h2>
+        <h2 class="section-title centered-title alt">🎮 Currently Playing</h2>
         <div class="games-list">
             <a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">
             <div class="game-item star-citizen-game">
@@ -76,7 +76,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
      <div class="profile-section">
-        <h2 class="section-title centered-title">🤵 About Me</h2>
+        <h2 class="section-title centered-title alt">🤵 About Me</h2>
         <p class="about-text">
             Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
             from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
@@ -93,7 +93,7 @@ description: Exploring the cosmos, one game at a time
         </p>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title">📊 Gaming Stats</h2>
+        <h2 class="section-title centered-title alt">📊 Gaming Stats</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">∞</div>
@@ -114,7 +114,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title">📦 Miscellus</h2>
+        <h2 class="section-title centered-title alt">📦 Miscellus</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
                 <div class="achievement-icon">🌠</div>
