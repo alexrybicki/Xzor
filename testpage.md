@@ -16,8 +16,8 @@
            This is just some filler testing text. Yay. 😃
         </p>
     </div>
-    <div class="achievement-item">
-        <div class="achievements-grid">
+    <div class="achievements-grid">
+        <div class="achievement-item">
         <a href="./">
             <div class="achievement-icon">🔙</div>
             <div class="achievement-content">
