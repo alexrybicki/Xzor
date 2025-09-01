@@ -76,7 +76,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
      <div class="profile-section">
-        <h2 class="section-title centered-title">🌌 About Me</h2>
+        <h2 class="section-title centered-title">🤵 About Me</h2>
         <p class="about-text">
             Gaming has been part of my life since the early days, and I've been fortunate to experience the evolution 
             from classic arcade games to today's immersive virtual worlds. My passion lies primarily in space exploration 
