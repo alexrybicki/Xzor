@@ -179,7 +179,7 @@
             <input type="text" id="filename" value="cube_1inch.stl" placeholder="Enter filename">
         </div>
         <div class="preview">
-            <h3>Preview</h3>
+            <h3>Preview</h3><br>
             <div class="cube-container">
                 <div class="cube-visual">
                     <div class="cube-face front"></div>
