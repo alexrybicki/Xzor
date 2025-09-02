@@ -357,45 +357,57 @@
         }
         function updateBoxVisualization(width, height, depth) {
             const boxVisual = document.getElementById('boxVisual');
-            const faces = boxVisual.querySelectorAll('.box-face');
-            // Scale dimensions for visualization (max 80px for any dimension)
+            const faces = boxVisual.querySelectorAll('.box-face');            
+            // Scale dimensions for visualization (max 80px for largest dimension)
             const maxDim = Math.max(width, height, depth);
-            const scale = 100 / maxDim;            
+            const scale = 80 / maxDim;            
             // Calculate scaled dimensions
             const scaledWidth = width * scale;   // X-axis (left-right)
-            const scaledHeight = height * scale; // Y-axis (front-back)
+            const scaledHeight = height * scale; // Y-axis (front-back)  
             const scaledDepth = depth * scale;   // Z-axis (bottom-top)            
-            // Calculate half-dimensions for positioning
+            // Calculate half-dimensions for positioning (these are the distances from center to face)
             const halfWidth = scaledWidth / 2;
             const halfHeight = scaledHeight / 2;
             const halfDepth = scaledDepth / 2;            
-            // Front face (Y+ direction) - shows Width × Depth
+            // FRONT face (positive Y direction) - Width × Depth
             faces[0].style.width = `${scaledWidth}px`;
             faces[0].style.height = `${scaledDepth}px`;
-            faces[0].style.transform = `rotateY(0deg) translateZ(${halfHeight}px)`;            
-            // Back face (Y- direction) - shows Width × Depth
+            faces[0].style.left = `${-halfWidth}px`;
+            faces[0].style.top = `${-halfDepth}px`;
+            faces[0].style.transform = `translateZ(${halfHeight}px)`;            
+            // BACK face (negative Y direction) - Width × Depth  
             faces[1].style.width = `${scaledWidth}px`;
             faces[1].style.height = `${scaledDepth}px`;
-            faces[1].style.transform = `rotateY(180deg) translateZ(${halfHeight}px)`;            
-            // Right face (X+ direction) - shows Height × Depth
+            faces[1].style.left = `${-halfWidth}px`;
+            faces[1].style.top = `${-halfDepth}px`;
+            faces[1].style.transform = `translateZ(${-halfHeight}px) rotateY(180deg)`;            
+            // RIGHT face (positive X direction) - Height × Depth
             faces[2].style.width = `${scaledHeight}px`;
             faces[2].style.height = `${scaledDepth}px`;
+            faces[2].style.left = `${-halfHeight}px`;
+            faces[2].style.top = `${-halfDepth}px`;
             faces[2].style.transform = `rotateY(90deg) translateZ(${halfWidth}px)`;            
-            // Left face (X- direction) - shows Height × Depth
+            // LEFT face (negative X direction) - Height × Depth
             faces[3].style.width = `${scaledHeight}px`;
             faces[3].style.height = `${scaledDepth}px`;
+            faces[3].style.left = `${-halfHeight}px`;
+            faces[3].style.top = `${-halfDepth}px`;
             faces[3].style.transform = `rotateY(-90deg) translateZ(${halfWidth}px)`;            
-            // Top face (Z+ direction) - shows Width × Height
+            // TOP face (positive Z direction) - Width × Height
             faces[4].style.width = `${scaledWidth}px`;
             faces[4].style.height = `${scaledHeight}px`;
+            faces[4].style.left = `${-halfWidth}px`;
+            faces[4].style.top = `${-halfHeight}px`;
             faces[4].style.transform = `rotateX(90deg) translateZ(${halfDepth}px)`;            
-            // Bottom face (Z- direction) - shows Width × Height
+            // BOTTOM face (negative Z direction) - Width × Height
             faces[5].style.width = `${scaledWidth}px`;
             faces[5].style.height = `${scaledHeight}px`;
+            faces[5].style.left = `${-halfWidth}px`;
+            faces[5].style.top = `${-halfHeight}px`;
             faces[5].style.transform = `rotateX(-90deg) translateZ(${halfDepth}px)`;            
-            console.log(`Preview updated: ${width.toFixed(1)} × ${height.toFixed(1)} × ${depth.toFixed(1)}mm`);
+            console.log(`Watertight box preview: ${width.toFixed(1)} × ${height.toFixed(1)} × ${depth.toFixed(1)}mm`);
             console.log(`Scaled to: ${scaledWidth.toFixed(1)} × ${scaledHeight.toFixed(1)} × ${scaledDepth.toFixed(1)}px`);
-        }
+        }        
         function generateBox() {
             const widthInput = document.getElementById('width');
             const heightInput = document.getElementById('height');
