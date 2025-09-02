@@ -123,14 +123,6 @@ description: Exploring the cosmos, one game at a time
         <h2 class="section-title centered-title alt">📦 Miscellaneous Projects</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
-                <div class="achievement-icon">🌠</div>
-                <div class="achievement-content">
-                    <div class="achievement-title">BMM</div>
-                    <div class="achievement-desc">Is the BMM in development?</div>
-                    <a href="https://bmm.xzor.dev"></a>
-                </div>
-            </div>
-            <div class="achievement-item">
                 <div class="achievement-icon">🧹</div>
                 <div class="achievement-content">
                     <div class="achievement-title">SC Cleaner</div>
@@ -146,6 +138,14 @@ description: Exploring the cosmos, one game at a time
                     <a href="https://www.xzor.dev/cube"></a>
                 </div>
             </div> 
+            <div class="achievement-item">
+                <div class="achievement-icon">🌠</div>
+                <div class="achievement-content">
+                    <div class="achievement-title">BMM</div>
+                    <div class="achievement-desc">Is the BMM in development?</div>
+                    <a href="https://bmm.xzor.dev"></a>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
