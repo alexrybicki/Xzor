@@ -120,7 +120,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
     <div class="profile-section">
-        <h2 class="section-title centered-title alt">📦 Miscellus</h2>
+        <h2 class="section-title centered-title alt">📦 Miscellaneous Projects</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
                 <div class="achievement-icon">🌠</div>
