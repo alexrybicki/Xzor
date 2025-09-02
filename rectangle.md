@@ -153,7 +153,6 @@
             display: none;
         }
     </style>
-</head>
 <body>
     <div class="profile-section">
         <h2 class="section-title centered-title alt">📦 STL Box Generator</h2>        
