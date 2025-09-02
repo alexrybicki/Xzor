@@ -159,6 +159,9 @@
             border-left: 4px solid #4CAF50;
             display: none;
         }
+        ul {
+            padding-left: 50px;
+        }
     </style>
     <div class="profile-section">
         <h2 section-title centered-title alt>🎲 STL Cube Generator</h2>
@@ -200,7 +203,7 @@
     <div class="profile-section">
         <div class="about-text">
             <h3 class="section-title centered-title alt">ℹ️ How it works:</h3>
-            <div class="achievement-desc">
+            <div>
                 <ul>
                     <li>Creates a perfect cube with the dimensions you specify</li>
                     <li>Generates a binary STL file compatible with all 3D printers</li>
