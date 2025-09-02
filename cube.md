@@ -56,6 +56,7 @@
             border-radius: 10px;
             font-size: 16px;
             background: rgba(255, 255, 255, 0.2);
+            background-color: #f0f0f0;
             color: white;
             backdrop-filter: blur(5px);
         }
@@ -120,8 +121,8 @@
             display: none;
         }
     </style>
-    <div class="container">
-        <h1>🎲 STL Cube Generator</h1>
+    <div class="profile-section">
+        <h2>🎲 STL Cube Generator</h2>
         <div class="input-group">
             <label for="size">Cube Size:</label>
             <input type="number" id="size" value="25.4" step="0.1" min="0.1" placeholder="Enter size in mm">
