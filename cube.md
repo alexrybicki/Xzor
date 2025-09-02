@@ -196,6 +196,8 @@
         <div id="successMessage" class="success-message">
             ✅ STL file generated and downloaded successfully!
         </div>
+    </div>
+    <div class="profile-section">
         <div class="about-text">
             <h3 class="section-title centered-title alt">ℹ️ How it works:</h3>
             <div class="achievement-desc">
