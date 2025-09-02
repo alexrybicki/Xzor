@@ -43,12 +43,14 @@
         .input-group {
             margin-bottom: 20px;
         }
+        
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
             font-size: 1.1em;
         }
+        
         input, select {
             width: 100%;
             padding: 12px;
@@ -120,29 +122,29 @@
         }
         .box-face.front {
             background: linear-gradient(45deg, #ff6b6b, #ffa500);
-        }        
+        }
         .box-face.back {
             background: linear-gradient(45deg, #ff4757, #ff3838);
-        }        
+        }
         .box-face.right {
             background: linear-gradient(45deg, #ffa500, #ff9f43);
-        }        
+        }
         .box-face.left {
             background: linear-gradient(45deg, #ff3838, #ff6b6b);
         }
         .box-face.top {
             background: linear-gradient(45deg, #ff9f43, #feca57);
-        }        
+        }
         .box-face.bottom {
             background: linear-gradient(45deg, #ff4757, #c44569);
-        }        
+        }
         @keyframes rotateBox {
             0% { transform: rotateX(15deg) rotateY(0deg) rotateZ(5deg); }
             25% { transform: rotateX(75deg) rotateY(90deg) rotateZ(15deg); }
             50% { transform: rotateX(165deg) rotateY(180deg) rotateZ(95deg); }
             75% { transform: rotateX(255deg) rotateY(270deg) rotateZ(175deg); }
             100% { transform: rotateX(375deg) rotateY(360deg) rotateZ(365deg); }
-        }        
+        }
         .success-message {
             background: rgba(76, 175, 80, 0.3);
             color: white;
@@ -159,15 +161,15 @@
         <div class="input-group">
             <label for="width">Width (X-axis):</label>
             <input type="number" id="width" value="25.4" step="0.1" min="0.1" placeholder="Enter width">
-        </div>        
+        </div>
         <div class="input-group">
             <label for="height">Height (Y-axis):</label>
             <input type="number" id="height" value="25.4" step="0.1" min="0.1" placeholder="Enter height">
-        </div>        
+        </div>
         <div class="input-group">
             <label for="depth">Depth (Z-axis):</label>
             <input type="number" id="depth" value="25.4" step="0.1" min="0.1" placeholder="Enter depth">
-        </div>        
+        </div>
         <div class="input-group">
             <label for="unit">Unit:</label>
             <select id="unit">
@@ -175,11 +177,11 @@
                 <option value="inch" selected>Inches (will convert to mm)</option>
                 <option value="cm">Centimeters (cm)</option>
             </select>
-        </div>        
+        </div>
         <div class="input-group">
             <label for="filename">Filename:</label>
             <input type="text" id="filename" value="box_custom.stl" placeholder="Enter filename">
-        </div>        
+        </div>
         <div class="preview">
             <h3>Preview</h3>
             <div class="box-container">
@@ -193,8 +195,8 @@
                 </div>
             </div>
             <p id="dimensions">Dimensions: 25.4mm × 25.4mm × 25.4mm</p>
-        </div>        
-        <button onclick="generateBox()">Generate & Download STL</button>        
+        </div>
+        <button onclick="generateBox()">Generate & Download STL</button>
         <div id="successMessage" class="success-message">
             ✅ STL file generated and downloaded successfully!
         </div>
@@ -217,7 +219,7 @@
             // Define the 8 vertices of a rectangular box
             const w = width / 2;
             const h = height / 2;
-            const d = depth / 2;            
+            const d = depth / 2;
             const vertices = [
                 [-w, -h, -d],  // 0: bottom-back-left
                 [+w, -h, -d],  // 1: bottom-back-right
@@ -227,7 +229,7 @@
                 [+w, -h, +d],  // 5: top-back-right
                 [+w, +h, +d],  // 6: top-front-right
                 [-w, +h, +d],  // 7: top-front-left
-            ];            
+            ];
             // Define the 12 triangular faces
             const faces = [
                 [0, 2, 1], [0, 3, 2],  // Bottom face
@@ -236,88 +238,88 @@
                 [0, 1, 5], [0, 5, 4],  // Back face
                 [1, 2, 6], [1, 6, 5],  // Right face
                 [0, 4, 7], [0, 7, 3],  // Left face
-            ];            
+            ];
             // Calculate normal vector for a triangle
             function calculateNormal(v0, v1, v2) {
                 const edge1 = [v1[0] - v0[0], v1[1] - v0[1], v1[2] - v0[2]];
-                const edge2 = [v2[0] - v0[0], v2[1] - v0[1], v2[2] - v0[2]];                
+                const edge2 = [v2[0] - v0[0], v2[1] - v0[1], v2[2] - v0[2]];
                 // Cross product
                 const normal = [
                     edge1[1] * edge2[2] - edge1[2] * edge2[1],
                     edge1[2] * edge2[0] - edge1[0] * edge2[2],
                     edge1[0] * edge2[1] - edge1[1] * edge2[0]
-                ];                
+                ];
                 // Normalize
                 const length = Math.sqrt(normal[0] * normal[0] + normal[1] * normal[1] + normal[2] * normal[2]);
                 if (length > 0) {
                     normal[0] /= length;
                     normal[1] /= length;
                     normal[2] /= length;
-                }                
+                }
                 return normal;
-            }            
+            }
             // Helper functions for binary data
             function floatToBytes(value) {
                 const buffer = new ArrayBuffer(4);
                 const view = new DataView(buffer);
                 view.setFloat32(0, value, true);
                 return new Uint8Array(buffer);
-            }            
+            }
             function uint32ToBytes(value) {
                 const buffer = new ArrayBuffer(4);
                 const view = new DataView(buffer);
                 view.setUint32(0, value, true);
                 return new Uint8Array(buffer);
-            }            
+            }
             function uint16ToBytes(value) {
                 const buffer = new ArrayBuffer(2);
                 const view = new DataView(buffer);
                 view.setUint16(0, value, true);
                 return new Uint8Array(buffer);
-            }            
+            }
             // Build STL data
-            const data = [];            
+            const data = [];
             // 80-byte header
             const headerText = 'Generated rectangular box for 3D printing - Browser STL Generator';
             const header = new Uint8Array(80);
             for (let i = 0; i < Math.min(headerText.length, 80); i++) {
                 header[i] = headerText.charCodeAt(i);
             }
-            data.push(header);            
+            data.push(header);
             // Triangle count
-            data.push(uint32ToBytes(faces.length));            
+            data.push(uint32ToBytes(faces.length));
             // Write each triangle
             faces.forEach(face => {
                 const v0 = vertices[face[0]];
                 const v1 = vertices[face[1]];
                 const v2 = vertices[face[2]];
-                const normal = calculateNormal(v0, v1, v2);                
+                const normal = calculateNormal(v0, v1, v2);
                 // Normal vector
                 data.push(floatToBytes(normal[0]));
                 data.push(floatToBytes(normal[1]));
-                data.push(floatToBytes(normal[2]));                
+                data.push(floatToBytes(normal[2]));
                 // Vertices
                 [v0, v1, v2].forEach(vertex => {
                     data.push(floatToBytes(vertex[0]));
                     data.push(floatToBytes(vertex[1]));
                     data.push(floatToBytes(vertex[2]));
-                });                
+                });
                 // Attribute byte count
                 data.push(uint16ToBytes(0));
-            });            
+            });
             // Combine all data
             const totalLength = data.reduce((sum, chunk) => sum + chunk.length, 0);
             const binaryData = new Uint8Array(totalLength);
-            let offset = 0;            
+            let offset = 0;
             data.forEach(chunk => {
                 binaryData.set(chunk, offset);
                 offset += chunk.length;
-            });            
+            });
             return binaryData;
-        }        
+        }
         function downloadFile(data, filename) {
             const blob = new Blob([data], { type: 'application/octet-stream' });
-            const url = URL.createObjectURL(blob);            
+            const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
             a.download = filename;
@@ -325,18 +327,18 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
-        }        
+        }
         function updatePreview() {
             const widthInput = document.getElementById('width');
             const heightInput = document.getElementById('height');
             const depthInput = document.getElementById('depth');
             const unitSelect = document.getElementById('unit');
             const dimensionsEl = document.getElementById('dimensions');
-            const boxVisual = document.getElementById('boxVisual');            
+            const boxVisual = document.getElementById('boxVisual');
             let width = parseFloat(widthInput.value) || 25.4;
             let height = parseFloat(heightInput.value) || 25.4;
             let depth = parseFloat(depthInput.value) || 25.4;
-            const unit = unitSelect.value;            
+            const unit = unitSelect.value;
             // Convert to mm for internal calculations
             let widthInMM = width, heightInMM = height, depthInMM = depth;
             if (unit === 'inch') {
@@ -347,53 +349,70 @@
                 widthInMM = width * 10;
                 heightInMM = height * 10;
                 depthInMM = depth * 10;
-            }            
+            }
             // Update dimensions display
-            dimensionsEl.textContent = `Dimensions: ${widthInMM.toFixed(1)}mm × ${heightInMM.toFixed(1)}mm × ${depthInMM.toFixed(1)}mm`;            
+            dimensionsEl.textContent = `Dimensions: ${widthInMM.toFixed(1)}mm × ${heightInMM.toFixed(1)}mm × ${depthInMM.toFixed(1)}mm`;
             // Update 3D preview proportions
             updateBoxVisualization(widthInMM, heightInMM, depthInMM);
-        }        
+        }
         function updateBoxVisualization(width, height, depth) {
             const boxVisual = document.getElementById('boxVisual');
-            const faces = boxVisual.querySelectorAll('.box-face');            
+            const faces = boxVisual.querySelectorAll('.box-face');
             // Scale dimensions for visualization (max 80px for any dimension)
             const maxDim = Math.max(width, height, depth);
-            const scale = Math.min(80, maxDim) / maxDim;            
-            const w = (width * scale) / 2;
-            const h = (height * scale) / 2;
-            const d = (depth * scale) / 2;            
-            // Update each face with correct dimensions and positioning
-            faces[0].style.width = `${width * scale}px`;  // front
-            faces[0].style.height = `${depth * scale}px`;
-            faces[0].style.transform = `rotateY(0deg) translateZ(${h}px)`;            
-            faces[1].style.width = `${width * scale}px`;  // back
-            faces[1].style.height = `${depth * scale}px`;
-            faces[1].style.transform = `rotateY(180deg) translateZ(${h}px)`;            
-            faces[2].style.width = `${height * scale}px`; // right
-            faces[2].style.height = `${depth * scale}px`;
-            faces[2].style.transform = `rotateY(90deg) translateZ(${w}px)`;            
-            faces[3].style.width = `${height * scale}px`; // left
-            faces[3].style.height = `${depth * scale}px`;
-            faces[3].style.transform = `rotateY(-90deg) translateZ(${w}px)`;            
-            faces[4].style.width = `${width * scale}px`;  // top
-            faces[4].style.height = `${height * scale}px`;
-            faces[4].style.transform = `rotateX(90deg) translateZ(${d}px)`;            
-            faces[5].style.width = `${width * scale}px`;  // bottom
-            faces[5].style.height = `${height * scale}px`;
+            const scale = 100 / maxDim;
+            
+            // Calculate scaled half-dimensions
+            const scaledWidth = width * scale;
+            const scaledHeight = height * scale;
+            const scaledDepth = depth * scale;
+            
+            const w = scaledWidth / 2;   // half width
+            const h = scaledHeight / 2;  // half height  
+            const d = scaledDepth / 2;   // half depth
+            
+            // Front face (looking down negative Y axis)
+            faces[0].style.width = `${scaledWidth}px`;
+            faces[0].style.height = `${scaledDepth}px`;
+            faces[0].style.transform = `rotateY(0deg) translateZ(${h}px)`;
+            
+            // Back face (looking down positive Y axis)
+            faces[1].style.width = `${scaledWidth}px`;
+            faces[1].style.height = `${scaledDepth}px`;
+            faces[1].style.transform = `rotateY(180deg) translateZ(${h}px)`;
+            
+            // Right face (looking down negative X axis)
+            faces[2].style.width = `${scaledHeight}px`;
+            faces[2].style.height = `${scaledDepth}px`;
+            faces[2].style.transform = `rotateY(90deg) translateZ(${w}px)`;
+            
+            // Left face (looking down positive X axis)
+            faces[3].style.width = `${scaledHeight}px`;
+            faces[3].style.height = `${scaledDepth}px`;
+            faces[3].style.transform = `rotateY(-90deg) translateZ(${w}px)`;
+            
+            // Top face (looking down negative Z axis)
+            faces[4].style.width = `${scaledWidth}px`;
+            faces[4].style.height = `${scaledHeight}px`;
+            faces[4].style.transform = `rotateX(90deg) translateZ(${d}px)`;
+            
+            // Bottom face (looking down positive Z axis)
+            faces[5].style.width = `${scaledWidth}px`;
+            faces[5].style.height = `${scaledHeight}px`;
             faces[5].style.transform = `rotateX(-90deg) translateZ(${d}px)`;
-        }        
+        }
         function generateBox() {
             const widthInput = document.getElementById('width');
             const heightInput = document.getElementById('height');
             const depthInput = document.getElementById('depth');
             const unitSelect = document.getElementById('unit');
             const filenameInput = document.getElementById('filename');
-            const successMessage = document.getElementById('successMessage');            
+            const successMessage = document.getElementById('successMessage');
             let width = parseFloat(widthInput.value) || 1;
             let height = parseFloat(heightInput.value) || 1;
             let depth = parseFloat(depthInput.value) || 1;
             const unit = unitSelect.value;
-            const filename = filenameInput.value || 'box.stl';            
+            const filename = filenameInput.value || 'box.stl';
             // Convert to mm
             let widthInMM = width, heightInMM = height, depthInMM = depth;
             if (unit === 'inch') {
@@ -404,20 +423,20 @@
                 widthInMM = width * 10;
                 heightInMM = height * 10;
                 depthInMM = depth * 10;
-            }            
+            }
             try {
                 const stlData = createBoxSTL(widthInMM, heightInMM, depthInMM, filename);
-                downloadFile(stlData, filename);                
+                downloadFile(stlData, filename);
                 successMessage.style.display = 'block';
                 setTimeout(() => {
                     successMessage.style.display = 'none';
-                }, 3000);                
+                }, 3000);
                 console.log(`Generated ${filename}: ${widthInMM.toFixed(1)}×${heightInMM.toFixed(1)}×${depthInMM.toFixed(1)}mm box with ${stlData.length} bytes`);
             } catch (error) {
                 alert('Error generating STL file: ' + error.message);
                 console.error(error);
             }
-        }        
+        }
         // Update preview when inputs change
         document.getElementById('width').addEventListener('input', updatePreview);
         document.getElementById('height').addEventListener('input', updatePreview);
@@ -426,7 +445,7 @@
             const widthInput = document.getElementById('width');
             const heightInput = document.getElementById('height');
             const depthInput = document.getElementById('depth');
-            const unit = this.value;            
+            const unit = this.value;
             // Auto-adjust default values based on unit
             if (unit === 'inch') {
                 widthInput.value = '1.0';
@@ -442,7 +461,7 @@
                 depthInput.value = '2.54';
             }
             updatePreview();
-        });        
+        });
         // Initialize
         updatePreview();
     </script>
