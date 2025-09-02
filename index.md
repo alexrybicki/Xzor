@@ -126,7 +126,7 @@ description: Exploring the cosmos, one game at a time
                 <div class="achievement-icon">🧹</div>
                 <div class="achievement-content">
                     <div class="achievement-title">SC Cleaner</div>
-                    <div class="achievement-desc">An SC Cashe Cleaner</div>
+                    <div class="achievement-desc">An SC Cache Cleaner</div>
                     <a href="https://cleaner.xzor.dev"></a>
                 </div>
             </div>
