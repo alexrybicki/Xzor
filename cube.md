@@ -160,8 +160,6 @@
             display: none;
         }
     </style>
-</head>
-<body>
     <div class="profile-section">
         <h2>🎲 STL Cube Generator</h2>
         <div class="input-group">
