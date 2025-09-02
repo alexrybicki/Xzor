@@ -56,7 +56,7 @@
             border-radius: 10px;
             font-size: 16px;
             background: rgba(255, 255, 255, 0.2);
-            background-color: #f0f0f0;
+            background-color: #232731;
             color: white;
             backdrop-filter: blur(5px);
         }
