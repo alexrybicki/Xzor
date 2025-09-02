@@ -10,14 +10,14 @@
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
-     <div class="profile-section">
+<!--      <div class="profile-section">
         <h2 class="section-title centered-title alt">Filler Test Text</h2>
         <p class="about-text">
            This is just some filler testing text. Yay. 😃
         </p>
-    </div>
+    </div> -->
   <style>
-        body {
+/*         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             max-width: 800px;
             margin: 0 auto;
@@ -39,7 +39,7 @@
             margin-bottom: 30px;
             font-size: 2.5em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+        } */
         .input-group {
             margin-bottom: 20px;
         }
@@ -120,8 +120,6 @@
             display: none;
         }
     </style>
-</head>
-<body>
     <div class="container">
         <h1>🎲 STL Cube Generator</h1>
         <div class="input-group">
@@ -333,5 +331,4 @@
         // Initialize
         updatePreview();
     </script>
-</body>
 </div>
