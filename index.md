@@ -143,7 +143,7 @@ description: Exploring the cosmos, one game at a time
                 <div class="achievement-content">
                     <div class="achievement-title">STL Cube Generator</div>
                     <div class="achievement-desc">Creates a perfect cube with the dimensions you specify</div>
-                    <a href="https://cleaner.xzor.dev"></a>
+                    <a href="https://www.xzor.dev/cube"></a>
                 </div>
             </div> 
         </div>
