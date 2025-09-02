@@ -164,7 +164,7 @@
         }
     </style>
     <div class="profile-section">
-        <h2 section-title centered-title alt>🎲 STL Cube Generator</h2>
+        <h2 class="section-title centered-title alt">🎲 STL Cube Generator</h2>
         <div class="input-group">
             <label for="size">Cube Size:</label>
             <input type="number" id="size" value="25.4" step="0.1" min="0.1" placeholder="Enter size in mm">
