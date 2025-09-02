@@ -161,7 +161,7 @@
         }
     </style>
     <div class="profile-section">
-        <h2>🎲 STL Cube Generator</h2>
+        <h2 section-title centered-title alt>🎲 STL Cube Generator</h2>
         <div class="input-group">
             <label for="size">Cube Size:</label>
             <input type="number" id="size" value="25.4" step="0.1" min="0.1" placeholder="Enter size in mm">
@@ -196,15 +196,17 @@
         <div id="successMessage" class="success-message">
             ✅ STL file generated and downloaded successfully!
         </div>
-        <div class="info">
-            <h3>ℹ️ How it works:</h3>
-            <ul>
-                <li>Creates a perfect cube with the dimensions you specify</li>
-                <li>Generates a binary STL file compatible with all 3D printers</li>
-                <li>Downloads directly to your device</li>
-                <li>Uses 12 triangles to define the cube faces</li>
-                <li>File size will be approximately 684 bytes</li>
-            </ul>
+        <div class="about-text">
+            <h3 class="section-title centered-title alt">ℹ️ How it works:</h3>
+            <div class="achievement-desc">
+                <ul>
+                    <li>Creates a perfect cube with the dimensions you specify</li>
+                    <li>Generates a binary STL file compatible with all 3D printers</li>
+                    <li>Downloads directly to your device</li>
+                    <li>Uses 12 triangles to define the cube faces</li>
+                    <li>File size will be approximately 684 bytes</li>
+                </ul>
+            </div>
         </div>
     </div>
     <script>
