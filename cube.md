@@ -10,36 +10,7 @@
         <p class="subtitle">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
-<!--      <div class="profile-section">
-        <h2 class="section-title centered-title alt">Filler Test Text</h2>
-        <p class="about-text">
-           This is just some filler testing text. Yay. 😃
-        </p>
-    </div> -->
   <style>
-/*         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: white;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        } */
         .input-group {
             margin-bottom: 20px;
         }
