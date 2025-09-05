@@ -139,7 +139,7 @@ description: Exploring the cosmos, one game at a time
                 </div>
             </div> 
             <div class="achievement-item">
-                <div class="achievement-icon"><span class="material-symbols-outlined">crop_16_9</span></div>
+                <div class="achievement-icon">🟧</div>
                 <div class="achievement-content">
                     <div class="achievement-title">STL Rectangle Generator</div>
                     <div class="achievement-desc">Creates a rectangle with the dimensions you specify</div>
