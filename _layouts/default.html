@@ -8,6 +8,9 @@
     <link rel="icon" type="image/x-icon" href="favicon32.ico">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -25,8 +28,11 @@
         body {
             background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            font-style: normal;
+/*             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; */
             min-height: 100vh;
             position: relative;
             opacity: 0;
