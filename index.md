@@ -3,7 +3,6 @@ layout: default
 title: Xzor | Gaming Enthusiast & Digital Warrior
 description: Exploring the cosmos, one game at a time
 ---
-
 <div class="container">
     <header>
         <h1 class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
