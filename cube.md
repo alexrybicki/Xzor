@@ -19,6 +19,7 @@
             margin-bottom: 8px;
             font-weight: bold;
             font-size: 1.1em;
+            color: #ffffff;
         }
         input, select {
             width: 100%;
