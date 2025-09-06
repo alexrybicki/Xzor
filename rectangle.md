@@ -17,6 +17,7 @@
         label {
             display: block;
             margin-bottom: 8px;
+            color: #ffffff;
             font-weight: bold;
             font-size: 1.1em;
         }        
