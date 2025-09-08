@@ -10,7 +10,7 @@
         <div class="cloud cloud6"></div>
     </div>
     <!-- Toggle Switch -->
-    <div class="toggle-container">
+    <div class="toggle-container" id="toggle-container" title="Toggle Day / Night Mode">
         <div class="toggle-switch" id="themeToggle">
             <div class="toggle-slider">
                 <div class="icon sun-icon">☀️</div>
@@ -42,6 +42,41 @@
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
     <script>
+                        // Scroll to hide
+        function initScrollHide() {
+            const toggleContainer = document.getElementById('toggle-container');    
+            if (toggleContainer) {
+                // Get the original transform value from CSS
+                const computedStyle = getComputedStyle(toggleContainer);
+                const originalTransform = computedStyle.transform;
+                // console.log('Original transform:', originalTransform);        
+                document.body.addEventListener('scroll', function() {
+                    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+                    const maxScroll = 400;            
+                    if (scrollY <= maxScroll) {
+                        const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                        const translateY = Math.min(scrollY * 0.5, 100);                
+                        toggleContainer.style.opacity = opacity;                
+                        // If there was an original transform, combine it with translateY
+                        if (originalTransform && originalTransform !== 'none') {
+                            toggleContainer.style.transform = `${originalTransform} translateY(-${translateY}%)`;
+                        } else {
+                            toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                        }
+                    } else {
+                        toggleContainer.style.opacity = '0';                
+                        // Preserve original transform when fully hidden
+                        if (originalTransform && originalTransform !== 'none') {
+                            toggleContainer.style.transform = `${originalTransform} translateY(-100%)`;
+                        } else {
+                            toggleContainer.style.transform = 'translateY(-100%)';
+                        }
+                    }
+                });
+            }
+        }
+        initScrollHide();
+            //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
