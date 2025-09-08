@@ -137,39 +137,6 @@
             transform: rotate(0deg);
             opacity: 1;
         }
-            .tooltip-text {
-          visibility: hidden;
-          width: 120px;
-          background-color: #555;
-          color: #fff;
-          text-align: center;
-          border-radius: 6px;
-          padding: 5px 0;
-          position: absolute;
-          z-index: 1;
-          bottom: 125%; /* Position the tooltip above the text */
-          left: 50%;
-          margin-left: -60px; /* Use negative margin to center the tooltip */
-          opacity: 0;
-          transition: opacity 0.3s; /* Smooth transition for the tooltip appearance */
-        }
-        
-        .tooltip-container:hover .tooltip-text {
-          visibility: visible;
-          opacity: 1;
-        }
-        
-        /* Optional: Add a small arrow to the tooltip */
-        .tooltip-text::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: #555 transparent transparent transparent;
-        }
         /* Stars animation for night mode */
         .stars {
             position: fixed;
