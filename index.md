@@ -180,41 +180,32 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
                     // Scroll to hide
-        console.log('Script loaded');
-        function initScrollHide() {
-            console.log('Initializing scroll hide');    
-            const toggleContainer = document.getElementById('toggle-container');
-            console.log('Element found:', toggleContainer);    
-            if (toggleContainer) {
-                console.log('Adding scroll listener to document.body');        
-                // Use document.body instead of window for scroll events
-                document.body.addEventListener('scroll', function() {
-                    console.log('triggered scroll');            
-                    // Get scroll position from body instead of window
-                    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
-                    const maxScroll = 400;            
-                    if (scrollY <= maxScroll) {
-                        console.log('within max scroll range, scrollY:', scrollY);
-                        const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                        const translateY = Math.min(scrollY * 0.5, 100);                
-                        toggleContainer.style.opacity = opacity;
-                        toggleContainer.style.transform = `translateY(-${translateY}%)`;
-                    } else {
-                        console.log('past max scroll - hiding completely');
-                        toggleContainer.style.opacity = '0';
-                        toggleContainer.style.transform = 'translateY(-100%)';
-                    }
-                });        
+function initScrollHide() {
+    const toggleContainer = document.getElementById('toggle-container');    
+    if (toggleContainer) {
+        function handleScroll() {
+            // Try multiple ways to get scroll position
+            const scrollY = window.pageYOffset || 
+                          document.documentElement.scrollTop || 
+                          document.body.scrollTop || 0;            
+            console.log('scroll detected, scrollY:', scrollY);            
+            const maxScroll = 400;            
+            if (scrollY <= maxScroll) {
+                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                const translateY = Math.min(scrollY * 0.5, 100);                
+                toggleContainer.style.opacity = opacity;
+                toggleContainer.style.transform = `translateY(-${translateY}%)`;
             } else {
-                console.error('toggle-container element not found');
+                toggleContainer.style.opacity = '0';
+                toggleContainer.style.transform = 'translateY(-100%)';
             }
-        }
-        // Initialize
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initScrollHide);
-        } else {
-            initScrollHide();
-        }
+        }        
+        // Listen to both window and body scroll events
+        window.addEventListener('scroll', handleScroll);
+        document.body.addEventListener('scroll', handleScroll);
+    }
+}
+initScrollHide();
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
