@@ -213,10 +213,12 @@
         .day-style {
              /* Yellow / Pink */
             background: linear-gradient(13deg, #cb24af, #f4ff4e);
+            background-clip: text;
         }
        .night-style {
             /*  Blue/Purple */
             background: linear-gradient(5deg, #0c3b6b, #906599);
+           background-clip: text;
         }
     </style>
 </head>
