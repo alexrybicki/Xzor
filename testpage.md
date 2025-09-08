@@ -60,7 +60,7 @@
         // Create stars
         function createStars() {
             stars.innerHTML = '';
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i <300; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
