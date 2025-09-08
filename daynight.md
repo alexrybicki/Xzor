@@ -246,10 +246,27 @@
            This is just some filler testing text. Yay. 😃
         </p>
     </div>
-</div>    <script>
+</div>    
+    <script>
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
+        // Cookie utility functions
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        }
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
         // Create stars
         function createStars() {
             stars.innerHTML = '';
@@ -262,11 +279,31 @@
                 stars.appendChild(star);
             }
         }
+        // Apply theme
+        function applyTheme(isNightMode) {
+            if (isNightMode) {
+                toggle.classList.add('active');
+                body.classList.add('night-mode');
+            } else {
+                toggle.classList.remove('active');
+                body.classList.remove('night-mode');
+            }
+        }
+        // Initialize theme from cookie
+        function initializeTheme() {
+            const savedTheme = getCookie('themePreference');
+            const isNightMode = savedTheme === 'night';
+            applyTheme(isNightMode);
+        }
         createStars();
+        // Load saved theme on page load
+        initializeTheme();
         // Toggle functionality
         toggle.addEventListener('click', function() {
-            toggle.classList.toggle('active');
-            body.classList.toggle('night-mode');
+            const willBeNightMode = !body.classList.contains('night-mode');
+            applyTheme(willBeNightMode);
+            // Save preference to cookie (expires in 365 days)
+            setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
         });
         // Optional: Add keyboard support
         toggle.addEventListener('keydown', function(e) {
