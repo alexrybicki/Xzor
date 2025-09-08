@@ -4,6 +4,10 @@
     <div class="clouds">
         <div class="cloud cloud1"></div>
         <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+        <div class="cloud cloud5"></div>
+        <div class="cloud cloud6"></div>
     </div>
     <!-- Toggle Switch -->
     <div class="toggle-container">
