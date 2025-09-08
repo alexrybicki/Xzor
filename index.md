@@ -3,20 +3,6 @@ layout: default
 title: Xzor | Gaming Enthusiast & Digital Warrior
 description: Exploring the cosmos, one game at a time
 ---
-<style>
-      body {
-                margin: 0;
-                padding: 0;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: 'Arial', sans-serif;
-                transition: background 0.8s ease;
-                background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 50%, #F0F8FF 100%);
-            }
-
-</style>
 <!-- Background elements -->
 <div class="stars"></div>
 <div class="clouds">
