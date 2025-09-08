@@ -180,30 +180,41 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
             // Scroll to hide
-            document.addEventListener('DOMContentLoaded', function() {
-                const toggleContainer = document.getElementById('toggle-container');
-                if (toggleContainer) {
-                    window.addEventListener('scroll', () => {
-                        console.log('triggered scroll');
-                        const scrollY = window.scrollY;
-                        const maxScroll = 400;
-                        if (scrollY <= maxScroll) {
-                            console.log('within max scroll range');
-                            const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                            const translateY = Math.min(scrollY * 0.5, 100);
-                            toggleContainer.style.opacity = opacity;
-                            toggleContainer.style.transform = `translateY(-${translateY}%)`;
-                        } else {
-                            // Ensure element is fully hidden when past maxScroll
-                            console.log('past max scroll - hiding completely');
-                            toggleContainer.style.opacity = '0';
-                            toggleContainer.style.transform = 'translateY(-100%)';
-                        }
-                    });
-                } else {
-                    console.error('toggle-container element not found');
-                }
-            });
+console.log('Script loaded');
+// Function to run our code
+function initScrollHide() {
+    console.log('Initializing scroll hide');
+    const toggleContainer = document.getElementById('toggle-container');
+    console.log('Element found:', toggleContainer);
+    if (toggleContainer) {
+        console.log('Adding scroll listener');
+        window.addEventListener('scroll', () => {
+            console.log('triggered scroll');
+            const scrollY = window.scrollY;
+            const maxScroll = 400;
+            if (scrollY <= maxScroll) {
+                console.log('within max scroll range');
+                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                const translateY = Math.min(scrollY * 0.5, 100);
+                toggleContainer.style.opacity = opacity;
+                toggleContainer.style.transform = `translateY(-${translateY}%)`;
+            } else {
+                console.log('past max scroll - hiding completely');
+                toggleContainer.style.opacity = '0';
+                toggleContainer.style.transform = 'translateY(-100%)';
+            }
+        });
+    } else {
+        console.error('toggle-container element not found');
+    }
+}
+// Try both approaches
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollHide);
+} else {
+    // DOM already loaded
+    initScrollHide();
+}
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
