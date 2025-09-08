@@ -220,6 +220,12 @@
             background: linear-gradient(5deg, #0c3b6b, #906599);
            background-clip: text;
         }
+        .light-mode {
+            color: #000;    
+        }
+        .dark-mode {
+            color: #fff;
+                }        
     </style>
 </head>
 <body>
