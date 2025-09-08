@@ -301,7 +301,7 @@
         }
         // Function to update custom div classes
         function updateCustomDivClasses(isNightMode) {
-            const xzorBannerDiv = document.getElementById('xzor-ascii-banner'');            
+            const xzorBannerDiv = document.getElementById('xzor-ascii-banner');            
             if (xzorBannerDiv) {
                 if (isNightMode) {
                     xzorBannerDiv.classList.remove('day-style');
