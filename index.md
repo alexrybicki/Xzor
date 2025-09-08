@@ -185,9 +185,9 @@ description: Exploring the cosmos, one game at a time
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             if (scrollY > scrollThreshold) {
-                toggleContainer.classList.add('header-hidden');
+                toggleContainer.classList.add('toggle-hidden');
             } else {
-                toggleContainer.classList.remove('header-hidden');
+                toggleContainer.classList.remove('toggle-hidden');
             }
         });
         const toggle = document.getElementById('themeToggle');
