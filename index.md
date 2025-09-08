@@ -182,9 +182,11 @@ description: Exploring the cosmos, one game at a time
             // Scroll to hide
        const toggleContainer = document.getElementById('toggle-container');
        window.addEventListener('scroll', () => {
+            console.log('triggered scroll');
             const scrollY = window.scrollY;
             const maxScroll = 400; // Maximum scroll for complete fade
             if (scrollY <= maxScroll) {
+                console.log('triggered max scroll');
                 const opacity = Math.max(0, 1 - (scrollY / maxScroll));
                 const translateY = Math.min(scrollY * 0.5, 100); // Move up as we scroll
                 toggleContainer.style.opacity = opacity;
