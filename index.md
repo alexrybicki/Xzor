@@ -19,7 +19,7 @@ description: Exploring the cosmos, one game at a time
     <div class="toggle-switch" id="themeToggle">
         <div class="toggle-slider">
             <div class="icon sun-icon">☀️</div>
-            <div class="icon moon-icon">🌙</div>
+            <div class="icon moon-icon">🌛</div>
         </div>
     </div>
 </div>
