@@ -210,6 +210,14 @@
             color: #ecf0f1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
+        .day-style {
+             /* Yellow / Pink */
+            background: linear-gradient(13deg, #cb24af, #f4ff4e);
+        }
+       .night-style {
+            /*  Blue/Purple */
+            background: linear-gradient(5deg, #0c3b6b, #906599);
+        }
     </style>
 </head>
 <body>
@@ -231,7 +239,7 @@
 <div class="container">
     <header>
         <a class="no-underline" href="./" >
-        <h1 class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
+        <h1 id='xzor-ascii-banner' class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
               &nbsp;&nbsp;&nbsp;╚███╔╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██████╔╝<br>
             &nbsp;&nbsp;&nbsp;██╔██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;███╔╝&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║██╔══██╗<br>
@@ -251,14 +259,12 @@
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
-
         // Cookie utility functions
         function setCookie(name, value, days) {
             const expires = new Date();
             expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
             document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
         }
-
         function getCookie(name) {
             const nameEQ = name + "=";
             const ca = document.cookie.split(';');
@@ -269,7 +275,6 @@
             }
             return null;
         }
-
         // Create stars
         function createStars() {
             stars.innerHTML = '';
@@ -282,7 +287,6 @@
                 stars.appendChild(star);
             }
         }
-
         // Apply theme
         function applyTheme(isNightMode) {
             if (isNightMode) {
@@ -291,26 +295,22 @@
             } else {
                 toggle.classList.remove('active');
                 body.classList.remove('night-mode');
-            }
-            
+            }            
             // Update custom div classes
             updateCustomDivClasses(isNightMode);
         }
-
         // Function to update custom div classes
         function updateCustomDivClasses(isNightMode) {
-            const testDiv = document.getElementById('test');
-            
-            if (testDiv) {
+            const xzorBannerDiv = document.getElementById('xzor-ascii-banner'');            
+            if (xzorBannerDiv) {
                 if (isNightMode) {
-                    testDiv.classList.remove('day-style');
-                    testDiv.classList.add('night-style');
+                    xzorBannerDiv.classList.remove('day-style');
+                    xzorBannerDiv.classList.add('night-style');
                 } else {
-                    testDiv.classList.remove('night-style');
-                    testDiv.classList.add('day-style');
+                    xzorBannerDiv.classList.remove('night-style');
+                    xzorBannerDiv.classList.add('day-style');
                 }
-            }
-            
+            }            
             // Example: Update multiple elements with a specific class
             const themeElements = document.querySelectorAll('.theme-sensitive');
             themeElements.forEach(element => {
@@ -323,28 +323,22 @@
                 }
             });
         }
-
         // Initialize theme from cookie
         function initializeTheme() {
             const savedTheme = getCookie('themePreference');
             const isNightMode = savedTheme === 'night';
             applyTheme(isNightMode);
         }
-
-        createStars();
-        
+        createStars();        
         // Load saved theme on page load
         initializeTheme();
-
         // Toggle functionality
         toggle.addEventListener('click', function() {
             const willBeNightMode = !body.classList.contains('night-mode');
-            applyTheme(willBeNightMode);
-            
+            applyTheme(willBeNightMode);            
             // Save preference to cookie (expires in 365 days)
             setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
         });
-
         // Optional: Add keyboard support
         toggle.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -352,7 +346,6 @@
                 toggle.click();
             }
         });
-
         // Make toggle focusable
         toggle.setAttribute('tabindex', '0');
     </script>
