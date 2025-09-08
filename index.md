@@ -16,6 +16,7 @@ description: Exploring the cosmos, one game at a time
 <!-- Toggle Switch -->
 <div class="toggle-container">
     <div class="toggle-switch" id="themeToggle">
+            <span class="tooltip-text">Day / Night Theme</span>
         <div class="toggle-slider">
             <div class="icon sun-icon">☀️</div>
             <div class="icon moon-icon">🌙</div>
