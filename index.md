@@ -13,8 +13,7 @@ description: Exploring the cosmos, one game at a time
         <div class="cloud cloud5"></div>
         <div class="cloud cloud6"></div>
 </div>
-<div class="container">
-                    <!-- Toggle Switch -->
+<!-- Toggle Switch -->
 <div class="toggle-container" title="Toggle Day / Night Mode">
     <div class="toggle-switch" id="themeToggle">
         <div class="toggle-slider">
@@ -23,6 +22,7 @@ description: Exploring the cosmos, one game at a time
         </div>
     </div>
 </div>
+<div class="container">
     <header>
          <h1 id='xzor-ascii-banner' class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
