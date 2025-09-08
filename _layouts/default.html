@@ -1259,9 +1259,6 @@
             const isNightMode = savedTheme === 'night';
             applyTheme(isNightMode);
         }
-        createStars();        
-        // Load saved theme on page load
-        initializeTheme();
         // Toggle functionality
         toggle.addEventListener('click', function() {
             const willBeNightMode = !body.classList.contains('night-mode');
@@ -1365,6 +1362,8 @@
         loadMinecraftSVG();
         loadReferralSVG();
         createStars();
+        // Load saved theme on page load
+        initializeTheme();
       });
     </script>
 </head>
