@@ -180,9 +180,8 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
             // Scroll to hide
-            toggle-container
        const toggleContainer = document.getElementById('toggle-container');
-        window.addEventListener('scroll', () => {
+       window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const maxScroll = 400; // Maximum scroll for complete fade
             if (scrollY <= maxScroll) {
