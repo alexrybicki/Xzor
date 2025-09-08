@@ -242,7 +242,7 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt">Filler Test Text</h2>
-        <p class="about-text">
+        <p class="about-text text-night">
            This is just some filler testing text. Yay. 😃
         </p>
     </div>
