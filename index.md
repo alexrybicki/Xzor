@@ -178,7 +178,19 @@ description: Exploring the cosmos, one game at a time
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
-    <script>const toggle = document.getElementById('themeToggle');
+    <script>
+            // Scroll to hide
+        const header = document.getElementById('themeToggle');
+        const scrollThreshold = 300; // Scroll out point in pixels
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > scrollThreshold) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+        });
+        const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
         // Cookie utility functions
