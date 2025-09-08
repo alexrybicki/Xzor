@@ -210,24 +210,6 @@
             color: #ecf0f1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
-        /* Day content - visible by default, hidden in night mode */
-        .text-day {
-            opacity: 1;
-            visibility: visible;
-        }
-        body.night-mode .text-day {
-            opacity: 0;
-            visibility: hidden;
-        }
-        /* Night content - hidden by default, visible in night mode */
-        .text-night {
-            opacity: 0;
-            visibility: hidden;
-        }
-        body.night-mode .text-night {
-            opacity: 1;
-            visibility: visible;
-        }
     </style>
 </head>
 <body>
@@ -260,7 +242,7 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt">Filler Test Text</h2>
-        <p class="about-text text-night">
+        <p class="about-text">
            This is just some filler testing text. Yay. 😃
         </p>
     </div>
@@ -269,12 +251,14 @@
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
+
         // Cookie utility functions
         function setCookie(name, value, days) {
             const expires = new Date();
             expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
             document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
         }
+
         function getCookie(name) {
             const nameEQ = name + "=";
             const ca = document.cookie.split(';');
@@ -285,6 +269,7 @@
             }
             return null;
         }
+
         // Create stars
         function createStars() {
             stars.innerHTML = '';
@@ -297,6 +282,7 @@
                 stars.appendChild(star);
             }
         }
+
         // Apply theme
         function applyTheme(isNightMode) {
             if (isNightMode) {
@@ -306,23 +292,59 @@
                 toggle.classList.remove('active');
                 body.classList.remove('night-mode');
             }
+            
+            // Update custom div classes
+            updateCustomDivClasses(isNightMode);
         }
+
+        // Function to update custom div classes
+        function updateCustomDivClasses(isNightMode) {
+            const testDiv = document.getElementById('test');
+            
+            if (testDiv) {
+                if (isNightMode) {
+                    testDiv.classList.remove('day-style');
+                    testDiv.classList.add('night-style');
+                } else {
+                    testDiv.classList.remove('night-style');
+                    testDiv.classList.add('day-style');
+                }
+            }
+            
+            // Example: Update multiple elements with a specific class
+            const themeElements = document.querySelectorAll('.theme-sensitive');
+            themeElements.forEach(element => {
+                if (isNightMode) {
+                    element.classList.add('dark-mode');
+                    element.classList.remove('light-mode');
+                } else {
+                    element.classList.add('light-mode');
+                    element.classList.remove('dark-mode');
+                }
+            });
+        }
+
         // Initialize theme from cookie
         function initializeTheme() {
             const savedTheme = getCookie('themePreference');
             const isNightMode = savedTheme === 'night';
             applyTheme(isNightMode);
         }
+
         createStars();
+        
         // Load saved theme on page load
         initializeTheme();
+
         // Toggle functionality
         toggle.addEventListener('click', function() {
             const willBeNightMode = !body.classList.contains('night-mode');
             applyTheme(willBeNightMode);
+            
             // Save preference to cookie (expires in 365 days)
             setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
         });
+
         // Optional: Add keyboard support
         toggle.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -330,6 +352,7 @@
                 toggle.click();
             }
         });
+
         // Make toggle focusable
         toggle.setAttribute('tabindex', '0');
     </script>
