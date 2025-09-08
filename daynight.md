@@ -210,6 +210,24 @@
             color: #ecf0f1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
+        /* Day content - visible by default, hidden in night mode */
+        .text-day {
+            opacity: 1;
+            visibility: visible;
+        }
+        body.night-mode .text-day {
+            opacity: 0;
+            visibility: hidden;
+        }
+        /* Night content - hidden by default, visible in night mode */
+        .text-night {
+            opacity: 0;
+            visibility: hidden;
+        }
+        body.night-mode .text-night {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 <body>
