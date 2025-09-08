@@ -47,10 +47,10 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-    body {
-        transition: background 0.8s ease;
-        background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 50%, #F0F8FF 100%);
-    }
+        body {
+            transition: background 0.8s ease;
+            background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 50%, #F0F8FF 100%);
+        }
         body.night-mode {
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         }
@@ -59,6 +59,7 @@
             display: inline-block;
         }
         .toggle-switch {
+            position: fixed;
             width: 80px;
             height: 40px;
             background: linear-gradient(145deg, #e6e6e6, #ffffff);
@@ -1092,13 +1093,11 @@
             }
         }
     </style>
-    <script>
-      
+    <script>    
       // Global SVG content variables
       let scSvgContent = '';
       let mcSvgContent = '';
-      let refSvgContent = '';
-      
+      let refSvgContent = '';      
       // Function to load and inject SVG content
       function loadStarCitizenSVG() {
         fetch('sc_svg_content.html')
@@ -1122,8 +1121,7 @@
               container.innerHTML = fallbackSVG;
             });
           });
-      }
-      
+      }      
       // Function to load Minecraft SVG
       function loadMinecraftSVG() {
         fetch('mc-svg-content.html')  // Using hyphen to match your actual filename
@@ -1147,8 +1145,7 @@
               container.innerHTML = fallbackSVG;
             });
           });
-      }
-      
+      }      
       // Function to load Referral SVG
       function loadReferralSVG() {
         fetch('ref-svg-content.html')
@@ -1172,8 +1169,7 @@
               container.innerHTML = fallbackSVG;
             });
           });
-      }
-      
+      }      
       // Load all SVGs when DOM is ready
       document.addEventListener('DOMContentLoaded', function() {
         loadStarCitizenSVG();
