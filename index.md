@@ -180,14 +180,14 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
             // Scroll to hide
-        const themeToggle = document.getElementById('themeToggle');
+        const toggleContainer = document.getElementById('toggle-container');
         const scrollThreshold = 300; // Scroll out point in pixels
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             if (scrollY > scrollThreshold) {
-                themeToggle.classList.add('header-hidden');
+                toggleContainer.classList.add('header-hidden');
             } else {
-                themeToggle.classList.remove('header-hidden');
+                toggleContainer.classList.remove('header-hidden');
             }
         });
         const toggle = document.getElementById('themeToggle');
