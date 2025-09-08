@@ -179,45 +179,42 @@ description: Exploring the cosmos, one game at a time
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
     <script>
-            // Scroll to hide
-console.log('Script loaded');
-function initScrollHide() {
-    console.log('Initializing scroll hide');
-    const toggleContainer = document.getElementById('toggle-container');
-    console.log('Element found:', toggleContainer);    
-    if (toggleContainer) {
-        console.log('Adding scroll listener');        
-        // Method 1: Traditional function (not arrow function)
-        function handleScroll() {
-            console.log('SCROLL EVENT FIRED! scrollY:', window.scrollY);
-            const scrollY = window.scrollY || window.pageYOffset; // Fallback for older browsers
-            const maxScroll = 400;            
-            if (scrollY <= maxScroll) {
-                console.log('within max scroll range');
-                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                const translateY = Math.min(scrollY * 0.5, 100);                
-                toggleContainer.style.opacity = opacity;
-                toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                    // Scroll to hide
+        console.log('Script loaded');
+        function initScrollHide() {
+            console.log('Initializing scroll hide');    
+            const toggleContainer = document.getElementById('toggle-container');
+            console.log('Element found:', toggleContainer);    
+            if (toggleContainer) {
+                console.log('Adding scroll listener to document.body');        
+                // Use document.body instead of window for scroll events
+                document.body.addEventListener('scroll', function() {
+                    console.log('triggered scroll');            
+                    // Get scroll position from body instead of window
+                    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+                    const maxScroll = 400;            
+                    if (scrollY <= maxScroll) {
+                        console.log('within max scroll range, scrollY:', scrollY);
+                        const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                        const translateY = Math.min(scrollY * 0.5, 100);                
+                        toggleContainer.style.opacity = opacity;
+                        toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                    } else {
+                        console.log('past max scroll - hiding completely');
+                        toggleContainer.style.opacity = '0';
+                        toggleContainer.style.transform = 'translateY(-100%)';
+                    }
+                });        
             } else {
-                console.log('past max scroll - hiding completely');
-                toggleContainer.style.opacity = '0';
-                toggleContainer.style.transform = 'translateY(-100%)';
+                console.error('toggle-container element not found');
             }
-        }        
-        // Try multiple approaches
-        window.addEventListener('scroll', handleScroll);
-        document.addEventListener('scroll', handleScroll);        
-        // Also try the old-school way
-        window.onscroll = function() {
-            console.log('OLD SCHOOL SCROLL DETECTED');
-            handleScroll();
-        };        
-    } else {
-        console.error('toggle-container element not found');
-    }
-}
-// Initialize immediately (don't wait for DOMContentLoaded)
-initScrollHide();
+        }
+        // Initialize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initScrollHide);
+        } else {
+            initScrollHide();
+        }
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
