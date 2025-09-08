@@ -186,7 +186,7 @@ description: Exploring the cosmos, one game at a time
                 // Get the original transform value from CSS
                 const computedStyle = getComputedStyle(toggleContainer);
                 const originalTransform = computedStyle.transform;
-                console.log('Original transform:', originalTransform);        
+                // console.log('Original transform:', originalTransform);        
                 document.body.addEventListener('scroll', function() {
                     const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
                     const maxScroll = 400;            
