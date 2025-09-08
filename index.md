@@ -180,19 +180,18 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
             // Scroll to hide
-        const toggleContainer = document.getElementById('toggle-container');
-        const scrollThreshold = 300; // Scroll out point in pixels
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const toggleContainer = document.querySelector('.toggle-container');
-                if (entry.isIntersecting) {
-                    toggleContainer.classList.remove('toggle-hidden');
-                } else {
-                    toggleContainer.classList.add('toggle-hidden');
-                }
-            });
-        }); 
-        observer.observe(toggleContainer);
+            toggle-container
+       const toggleContainer = document.getElementById('toggle-container');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const maxScroll = 400; // Maximum scroll for complete fade
+            if (scrollY <= maxScroll) {
+                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                const translateY = Math.min(scrollY * 0.5, 100); // Move up as we scroll
+                toggleContainer.style.opacity = opacity;
+                toggleContainer.style.transform = `translateY(-${translateY}%)`;
+            }
+        });
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
