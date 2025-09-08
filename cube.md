@@ -375,7 +375,100 @@
                 sizeInput.value = '2.54';
             }
             updatePreview();
-        });        
+        }); 
+        //day-night code
+                const toggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const stars = document.querySelector('.stars');
+        // Cookie utility functions
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        }
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        // Create stars
+        function createStars() {
+            stars.innerHTML = '';
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                stars.appendChild(star);
+            }
+        }
+        // Apply theme
+        function applyTheme(isNightMode) {
+            if (isNightMode) {
+                toggle.classList.add('active');
+                body.classList.add('night-mode');
+            } else {
+                toggle.classList.remove('active');
+                body.classList.remove('night-mode');
+            }            
+            // Update custom div classes
+            updateCustomDivClasses(isNightMode);
+        }
+        // Function to update custom div classes
+        function updateCustomDivClasses(isNightMode) {
+            const xzorBannerDiv = document.getElementById('xzor-ascii-banner');            
+            if (xzorBannerDiv) {
+                if (isNightMode) {
+                    xzorBannerDiv.classList.remove('day-style');
+                    xzorBannerDiv.classList.add('night-style');
+                } else {
+                    xzorBannerDiv.classList.remove('night-style');
+                    xzorBannerDiv.classList.add('day-style');
+                }
+            }            
+            // Update multiple elements with a specific class
+            const themeElements = document.querySelectorAll('.theme-sensitive');
+            themeElements.forEach(element => {
+                if (isNightMode) {
+                    element.classList.add('dark-mode');
+                    element.classList.remove('light-mode');
+                } else {
+                    element.classList.add('light-mode');
+                    element.classList.remove('dark-mode');
+                }
+            });
+        }
+        // Initialize theme from cookie
+        function initializeTheme() {
+            const savedTheme = getCookie('themePreference');
+            const isNightMode = savedTheme === 'night';
+            applyTheme(isNightMode);
+        }
+        createStars();        
+        // Load saved theme on page load
+        initializeTheme();
+        // Toggle functionality
+        toggle.addEventListener('click', function() {
+            const willBeNightMode = !body.classList.contains('night-mode');
+            applyTheme(willBeNightMode);            
+            // Save preference to cookie (expires in 365 days)
+            setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
+        });
+        // Optional: Add keyboard support
+        toggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle.click();
+            }
+        });
+        // Make toggle focusable
+        toggle.setAttribute('tabindex', '0');
         // Initialize
         updatePreview();
     </script>
