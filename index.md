@@ -186,9 +186,9 @@ description: Exploring the cosmos, one game at a time
             entries.forEach(entry => {
                 const toggleContainer = document.querySelector('.toggle-container');
                 if (entry.isIntersecting) {
-                    header.classList.remove('toggle-hidden');
+                    toggleContainer.classList.remove('toggle-hidden');
                 } else {
-                    header.classList.add('toggle-hidden');
+                    toggleContainer.classList.add('toggle-hidden');
                 }
             });
         }); 
