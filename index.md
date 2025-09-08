@@ -181,29 +181,29 @@ description: Exploring the cosmos, one game at a time
     <script>
             // Scroll to hide
             document.addEventListener('DOMContentLoaded', function() {
-        const toggleContainer = document.getElementById('toggle-container');
-        if (toggleContainer) {
-            window.addEventListener('scroll', () => {
-                console.log('triggered scroll');
-                const scrollY = window.scrollY;
-                const maxScroll = 400;
-                if (scrollY <= maxScroll) {
-                    console.log('within max scroll range');
-                    const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                    const translateY = Math.min(scrollY * 0.5, 100);
-                    toggleContainer.style.opacity = opacity;
-                    toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                const toggleContainer = document.getElementById('toggle-container');
+                if (toggleContainer) {
+                    window.addEventListener('scroll', () => {
+                        console.log('triggered scroll');
+                        const scrollY = window.scrollY;
+                        const maxScroll = 400;
+                        if (scrollY <= maxScroll) {
+                            console.log('within max scroll range');
+                            const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                            const translateY = Math.min(scrollY * 0.5, 100);
+                            toggleContainer.style.opacity = opacity;
+                            toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                        } else {
+                            // Ensure element is fully hidden when past maxScroll
+                            console.log('past max scroll - hiding completely');
+                            toggleContainer.style.opacity = '0';
+                            toggleContainer.style.transform = 'translateY(-100%)';
+                        }
+                    });
                 } else {
-                    // Ensure element is fully hidden when past maxScroll
-                    console.log('past max scroll - hiding completely');
-                    toggleContainer.style.opacity = '0';
-                    toggleContainer.style.transform = 'translateY(-100%)';
+                    console.error('toggle-container element not found');
                 }
             });
-        } else {
-            console.error('toggle-container element not found');
-        }
-    });
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
