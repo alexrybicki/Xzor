@@ -196,7 +196,7 @@ description: Exploring the cosmos, one game at a time
         // Create stars
         function createStars() {
             stars.innerHTML = '';
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 200; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
