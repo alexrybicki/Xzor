@@ -182,14 +182,17 @@ description: Exploring the cosmos, one game at a time
             // Scroll to hide
         const toggleContainer = document.getElementById('toggle-container');
         const scrollThreshold = 300; // Scroll out point in pixels
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            if (scrollY > scrollThreshold) {
-                toggleContainer.classList.add('toggle-hidden');
-            } else {
-                toggleContainer.classList.remove('toggle-hidden');
-            }
-        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const toggleContainer = document.querySelector('.toggle-container');
+                if (entry.isIntersecting) {
+                    header.classList.remove('toggle-hidden');
+                } else {
+                    header.classList.add('toggle-hidden');
+                }
+            });
+        }); 
+        observer.observe(toggleContainer);
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
         const stars = document.querySelector('.stars');
@@ -281,5 +284,7 @@ description: Exploring the cosmos, one game at a time
             }
         });
         // Make toggle focusable
-        toggle.setAttribute('tabindex', '0');</script>
+        toggle.setAttribute('tabindex', '0');
+    </script>
+        
 </div>
