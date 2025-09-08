@@ -180,41 +180,53 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
             // Scroll to hide
-console.log('Script loaded');
-// Function to run our code
-function initScrollHide() {
-    console.log('Initializing scroll hide');
-    const toggleContainer = document.getElementById('toggle-container');
-    console.log('Element found:', toggleContainer);
-    if (toggleContainer) {
-        console.log('Adding scroll listener');
-        window.addEventListener('scroll', () => {
-            console.log('triggered scroll');
-            const scrollY = window.scrollY;
-            const maxScroll = 400;
-            if (scrollY <= maxScroll) {
-                console.log('within max scroll range');
-                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                const translateY = Math.min(scrollY * 0.5, 100);
-                toggleContainer.style.opacity = opacity;
-                toggleContainer.style.transform = `translateY(-${translateY}%)`;
+        console.log('Script loaded');
+        function initScrollHide() {
+            console.log('Initializing scroll hide');
+            const toggleContainer = document.getElementById('toggle-container');
+            console.log('Element found:', toggleContainer);
+            // Check if page is scrollable
+            console.log('Page height:', document.body.scrollHeight);
+            console.log('Window height:', window.innerHeight);
+            console.log('Is scrollable:', document.body.scrollHeight > window.innerHeight);
+            if (toggleContainer) {
+                console.log('Adding scroll listener');
+                // Use passive listener for better performance
+                window.addEventListener('scroll', function() {
+                    console.log('triggered scroll, scrollY:', window.scrollY);
+                    const scrollY = window.scrollY;
+                    const maxScroll = 400;
+                    if (scrollY <= maxScroll) {
+                        console.log('within max scroll range, scrollY:', scrollY);
+                        const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                        const translateY = Math.min(scrollY * 0.5, 100);                
+                        console.log('Setting opacity:', opacity, 'translateY:', translateY);
+                        toggleContainer.style.opacity = opacity;
+                        toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                    } else {
+                        console.log('past max scroll - hiding completely');
+                        toggleContainer.style.opacity = '0';
+                        toggleContainer.style.transform = 'translateY(-100%)';
+                    }
+                }, { passive: true });        
+                // Also test with a simple scroll counter
+                let scrollCount = 0;
+                window.addEventListener('scroll', () => {
+                    scrollCount++;
+                    if (scrollCount % 10 === 0) { // Log every 10th scroll event
+                        console.log('Scroll event #', scrollCount);
+                    }
+                });        
             } else {
-                console.log('past max scroll - hiding completely');
-                toggleContainer.style.opacity = '0';
-                toggleContainer.style.transform = 'translateY(-100%)';
+                console.error('toggle-container element not found');
             }
-        });
-    } else {
-        console.error('toggle-container element not found');
-    }
-}
-// Try both approaches
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initScrollHide);
-} else {
-    // DOM already loaded
-    initScrollHide();
-}
+        }
+        // Initialize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initScrollHide);
+        } else {
+            initScrollHide();
+        }
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
