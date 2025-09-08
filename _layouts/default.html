@@ -35,7 +35,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+/*             background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%); */
             font-display: swap;
             color: #ffffff;
 /*             font-family: "Roboto Mono", monospace;
@@ -48,24 +48,15 @@
             position: relative;
             opacity: 0;
             animation: fadeIn 0.2s ease-in-out forwards;
+            transition: background 0.8s ease;
+            background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 50%, #F0F8FF 100%);
+            body.night-mode {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         }
         
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-            body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial', sans-serif;
-            transition: background 0.8s ease;
-            background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 50%, #F0F8FF 100%);
-            body.night-mode {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         }
         .toggle-container {
             position: relative;
