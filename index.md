@@ -180,32 +180,39 @@ description: Exploring the cosmos, one game at a time
     </footer>
     <script>
                     // Scroll to hide
-function initScrollHide() {
-    const toggleContainer = document.getElementById('toggle-container');    
-    if (toggleContainer) {
-        function handleScroll() {
-            // Try multiple ways to get scroll position
-            const scrollY = window.pageYOffset || 
-                          document.documentElement.scrollTop || 
-                          document.body.scrollTop || 0;            
-            console.log('scroll detected, scrollY:', scrollY);            
-            const maxScroll = 400;            
-            if (scrollY <= maxScroll) {
-                const opacity = Math.max(0, 1 - (scrollY / maxScroll));
-                const translateY = Math.min(scrollY * 0.5, 100);                
-                toggleContainer.style.opacity = opacity;
-                toggleContainer.style.transform = `translateY(-${translateY}%)`;
-            } else {
-                toggleContainer.style.opacity = '0';
-                toggleContainer.style.transform = 'translateY(-100%)';
+        function initScrollHide() {
+            const toggleContainer = document.getElementById('toggle-container');    
+            if (toggleContainer) {
+                // Get the original transform value from CSS
+                const computedStyle = getComputedStyle(toggleContainer);
+                const originalTransform = computedStyle.transform;
+                console.log('Original transform:', originalTransform);        
+                document.body.addEventListener('scroll', function() {
+                    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+                    const maxScroll = 400;            
+                    if (scrollY <= maxScroll) {
+                        const opacity = Math.max(0, 1 - (scrollY / maxScroll));
+                        const translateY = Math.min(scrollY * 0.5, 100);                
+                        toggleContainer.style.opacity = opacity;                
+                        // If there was an original transform, combine it with translateY
+                        if (originalTransform && originalTransform !== 'none') {
+                            toggleContainer.style.transform = `${originalTransform} translateY(-${translateY}%)`;
+                        } else {
+                            toggleContainer.style.transform = `translateY(-${translateY}%)`;
+                        }
+                    } else {
+                        toggleContainer.style.opacity = '0';                
+                        // Preserve original transform when fully hidden
+                        if (originalTransform && originalTransform !== 'none') {
+                            toggleContainer.style.transform = `${originalTransform} translateY(-100%)`;
+                        } else {
+                            toggleContainer.style.transform = 'translateY(-100%)';
+                        }
+                    }
+                });
             }
-        }        
-        // Listen to both window and body scroll events
-        window.addEventListener('scroll', handleScroll);
-        document.body.addEventListener('scroll', handleScroll);
-    }
-}
-initScrollHide();
+        }
+        initScrollHide();
             //end scroll to hide
         const toggle = document.getElementById('themeToggle');
         const body = document.body;
