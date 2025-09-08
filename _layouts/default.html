@@ -1259,22 +1259,6 @@
             const isNightMode = savedTheme === 'night';
             applyTheme(isNightMode);
         }
-        // Toggle functionality
-        toggle.addEventListener('click', function() {
-            const willBeNightMode = !body.classList.contains('night-mode');
-            applyTheme(willBeNightMode);            
-            // Save preference to cookie (expires in 365 days)
-            setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
-        });
-        // Optional: Add keyboard support
-        toggle.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggle.click();
-            }
-        });
-        // Make toggle focusable
-        toggle.setAttribute('tabindex', '0');
       
       // Global SVG content variables
       let scSvgContent = '';
@@ -1364,6 +1348,22 @@
         createStars();
         // Load saved theme on page load
         initializeTheme();
+                  // Toggle functionality
+        toggle.addEventListener('click', function() {
+            const willBeNightMode = !body.classList.contains('night-mode');
+            applyTheme(willBeNightMode);            
+            // Save preference to cookie (expires in 365 days)
+            setCookie('themePreference', willBeNightMode ? 'night' : 'day', 365);
+        });
+        // Optional: Add keyboard support
+        toggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle.click();
+            }
+        });
+        // Make toggle focusable
+        toggle.setAttribute('tabindex', '0');
       });
     </script>
 </head>
