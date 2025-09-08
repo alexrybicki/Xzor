@@ -225,7 +225,25 @@
         }
         .dark-mode {
             color: #fff;
-                }        
+        }
+        /* Day content - visible by default, hidden in night mode */
+        .only-day {
+            opacity: 1;
+            visibility: visible;
+        }
+        body.night-mode .onlyt-day {
+            opacity: 0;
+            visibility: hidden;
+        }
+        /* Night content - hidden by default, visible in night mode */
+        .only-night {
+            opacity: 0;
+            visibility: hidden;
+        }
+        body.night-mode .only-night {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 <body>
@@ -319,7 +337,7 @@
                     xzorBannerDiv.classList.add('day-style');
                 }
             }            
-            // Example: Update multiple elements with a specific class
+            // Update multiple elements with a specific class
             const themeElements = document.querySelectorAll('.theme-sensitive');
             themeElements.forEach(element => {
                 if (isNightMode) {
