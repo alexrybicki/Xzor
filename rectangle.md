@@ -143,7 +143,7 @@
     </style>
 <body>
     <div class="profile-section">
-        <h2 class="section-title centered-title alt">📦 STL Box Generator</h2>        
+        <h2 class="section-title centered-title alt">📦 STL Rectangle Generator</h2>        
         <div class="input-group">
             <label for="width">Width (X-axis):</label>
             <input type="number" id="width" value="25.4" step="0.1" min="0.1" placeholder="Enter width">
