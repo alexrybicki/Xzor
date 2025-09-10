@@ -2,7 +2,28 @@
 <div id="question" class="question-text">Is the BMM in development?</div>
 <div id="answer" class="answer-text">NO</div>
 <div id="emoji" class="emoji-text">😡</div>
-
+<br>
+    <div class="counter-container">
+        <h1 class="title">Time Since</h1>
+        <div class="date">November 11, 2013</div>
+        <div class="time-display">
+            <div class="time-unit">
+                <span class="time-number" id="years">0</span>
+                <span class="time-label">Years</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-number" id="months">0</span>
+                <span class="time-label">Months</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-number" id="days">0</span>
+                <span class="time-label">Days</span>
+            </div>
+        </div>
+        <div class="total-days">
+            <div>Total Days: <span class="total-days-number" id="totalDays">0</span></div>
+        </div>
+    </div>
 <style>
 body {
     margin: 0;
@@ -173,5 +194,46 @@ document.addEventListener('DOMContentLoaded', function() {
             emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
         }, 8000); // 6.5s delay + 1.5s pop duration
     }, 100);
+    // Time Since Announced
+     function calculateTimeSince() {
+            // Target date: November 11, 2013
+            const targetDate = new Date('2013-11-11T00:00:00');
+            const currentDate = new Date();
+            
+            // Calculate total days
+            const totalMilliseconds = currentDate - targetDate;
+            const totalDays = Math.floor(totalMilliseconds / (1000 * 60 * 60 * 24));
+            
+            // Calculate years, months, and remaining days
+            let years = currentDate.getFullYear() - targetDate.getFullYear();
+            let months = currentDate.getMonth() - targetDate.getMonth();
+            let days = currentDate.getDate() - targetDate.getDate();
+            
+            // Adjust for negative days
+            if (days < 0) {
+                months--;
+                const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+                days += lastMonth.getDate();
+            }
+            
+            // Adjust for negative months
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            // Update the display
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('totalDays').textContent = totalDays.toLocaleString();
+        }
+        
+        // Calculate immediately when page loads
+        calculateTimeSince();
+        
+        // Update every second
+        setInterval(calculateTimeSince, 1000);
 });
+    
 </script>
