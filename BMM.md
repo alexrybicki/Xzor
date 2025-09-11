@@ -200,7 +200,6 @@
     text-align: center;
     opacity: 1;
     animation: fadeOut 5s ease-in-out forwards;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -213,7 +212,6 @@
     color: #ff4444;
     opacity: 0;
     animation: fadeIn 2s ease-in-out 4s forwards;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -224,7 +222,6 @@
     text-align: center;
     opacity: 0;
     animation: emojiPop 1.5s ease-out 6.5s forwards;
-    position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
