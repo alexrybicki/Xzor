@@ -1,4 +1,4 @@
-body>
+<body>
     <!-- Background elements -->
     <div class="stars"></div>
     <div class="clouds">
