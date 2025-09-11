@@ -36,8 +36,7 @@
             <div id="emoji" class="emoji-text">😡</div>
         </div>
          <div class="profile-section">
-        <h2 class="section-title centered-title alt">Time Since</h2>
-        <div class="date">November 11, 2013</div>
+        <h2 class="section-title centered-title alt">Time Elapsed Since BMM Announcement: November 11, 2013</h2>
         <div class="time-display">
             <div class="time-unit">
                 <span class="time-number" id="years">0</span>
@@ -103,9 +102,9 @@
         
         .time-number {
             font-size: 2.5rem;
-            font-weight: bold;
+/*             font-weight: bold;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 5px; */
         }
         
         .time-label {
