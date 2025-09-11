@@ -413,18 +413,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const question = document.getElementById('question');
     const answer = document.getElementById('answer');
     const emoji = document.getElementById('emoji');
-    
     // Reset animations if page is refreshed
     question.style.animation = 'none';
     answer.style.animation = 'none';
-    emoji.style.animation = 'none';
-    
+    emoji.style.animation = 'none';    
     // Trigger animations with a small delay
     setTimeout(() => {
         question.style.animation = 'fadeOut 5s ease-in-out forwards';
         answer.style.animation = 'fadeIn 2s ease-in-out 4s forwards';
-        emoji.style.animation = 'emojiPop 1.5s ease-out 6.5s forwards';
-        
+        emoji.style.animation = 'emojiPop 1.5s ease-out 6.5s forwards';        
         // Add continuous wiggle after the pop animation
         setTimeout(() => {
             emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
