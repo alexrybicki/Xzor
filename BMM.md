@@ -31,7 +31,7 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
         <div class="profile-section">
-            <div id="question" class="question-text">Is the BMM in development?</div>
+            <div id="question" class="question-text">Is the BMM in active development?</div>
             <div id="answer" class="answer-text">NO</div>
             <div id="emoji" class="emoji-text">😡</div>
         </div>
@@ -299,6 +299,26 @@ document.addEventListener('DOMContentLoaded', function() {
         // Make toggle focusable
         toggle.setAttribute('tabindex', '0');
         // Ensure the animation works properly when the page loads
+});
+    // Ensure the animation works properly when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const question = document.getElementById('question');
+    const answer = document.getElementById('answer');
+    const emoji = document.getElementById('emoji');
+    // Reset animations if page is refreshed
+    question.style.animation = 'none';
+    answer.style.animation = 'none';
+    emoji.style.animation = 'none';    
+    // Trigger animations with a small delay
+    setTimeout(() => {
+        question.style.animation = 'fadeOut 5s ease-in-out forwards';
+        answer.style.animation = 'fadeIn 2s ease-in-out 4s forwards';
+        emoji.style.animation = 'emojiPop 1.5s ease-out 6.5s forwards';        
+        // Add continuous wiggle after the pop animation
+        setTimeout(() => {
+            emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
+        }, 8000); // 6.5s delay + 1.5s pop duration
+    }, 100);
 });
 </script>
 </body>
