@@ -194,7 +194,7 @@
         font-size: 2.5rem;
     }
 }
-    .question-text {
+/*     .question-text {
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
@@ -230,7 +230,7 @@
 
 a {
     display: none;
-}
+} */
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
