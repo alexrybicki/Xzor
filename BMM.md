@@ -167,7 +167,7 @@
       top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
-/*       white-space: nowrap; */
+      white-space: nowrap;
     }
     .answer-text {
       font-size: 8rem;
@@ -257,6 +257,7 @@
     @media (max-width: 768px) {
       .question-text {
         font-size: 2.5rem;
+        white-space: wrap;
       }
       .answer-text {
         font-size: 5rem;
