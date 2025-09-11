@@ -146,6 +146,7 @@
     text-align: center;
     opacity: 0;
     animation: emojiPop 1.5s ease-out 6.5s forwards;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
