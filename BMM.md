@@ -134,20 +134,22 @@
     text-align: center;
     color: #ff4444;
     opacity: 0;
-    animation: fadeIn 2s ease-in-out 4s forwards;
-    top: 55%;
+    animation: fadeInThenOut 4s ease-in-out 4s forwards; /* Changed animation */
+    position: absolute;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     text-shadow: 3px 3px 6px rgba(255, 68, 68, 0.5);
 }
 .emoji-text {
     font-size: 4rem;
     text-align: center;
     opacity: 0;
-    animation: emojiPop 1.5s ease-out 6.5s forwards;
+    animation: emojiPop 1.5s ease-out 8s forwards; /* Delayed to 8s */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 120px));
+    transform: translate(-50%, -50%);
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
     @keyframes fadeOut {
@@ -225,6 +227,24 @@
     .emoji-text {
         font-size: 2.5rem;
     }
+@keyframes fadeInThenOut {
+    0% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.8); 
+    }
+    25% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    75% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.9); 
+    }
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -418,8 +438,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger animations with a small delay
     setTimeout(() => {
         question.style.animation = 'fadeOut 5s ease-in-out forwards';
-        answer.style.animation = 'fadeIn 2s ease-in-out 4s forwards';
-        emoji.style.animation = 'emojiPop 1.5s ease-out 6.5s forwards';        
+        answer.style.animation = 'fadeInThenOut 4s ease-in-out 4s forwards'; // Changed
+        emoji.style.animation = 'emojiPop 1.5s ease-out 8s forwards'; // Changed timing
+    }, 100);       
         // Add continuous wiggle after the pop animation
         setTimeout(() => {
             emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
