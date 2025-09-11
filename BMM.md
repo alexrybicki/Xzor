@@ -36,6 +36,7 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
         <div class="profile-section">
+            <div class="filler-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <div id="question" class="question-text">Is the BMM in active development?</div>
             <div id="answer" class="answer-text">NO</div>
             <div id="emoji" class="emoji-text">😡</div>
@@ -120,6 +121,9 @@
             font-weight: bold;
             color: #667eea;
         }
+    .filler-text {
+        position: static;       
+    }
 .question-text {
     font-size: 4rem;
     font-weight: bold;
@@ -139,7 +143,7 @@
     color: #ff4444;
     opacity: 0;
     animation: fadeInThenOut 8s ease-in-out 4s forwards;
-/*     position: absolute; */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
