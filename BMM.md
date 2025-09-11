@@ -126,7 +126,7 @@
     animation: fadeOut 5s ease-in-out forwards;
     top: 50%;
     left: 50%;
-/*     transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     white-space: nowrap;
 }
 .answer-text {
@@ -136,9 +136,9 @@
     color: #ff4444;
     opacity: 0;
     animation: fadeIn 2s ease-in-out 4s forwards;
-    top: 65%;
+    top: 55%;
     left: 50%;
-/*     transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     text-shadow: 3px 3px 6px rgba(255, 68, 68, 0.5);
 }
 .emoji-text {
@@ -149,7 +149,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 120px));
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
     @keyframes fadeOut {
