@@ -238,29 +238,6 @@ a {
     }
 }
 
-@media (max-width: 768px) {
-    .question-text {
-        font-size: 2.5rem;
-    }
-    .answer-text {
-        font-size: 5rem;
-    }
-    .emoji-text {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .question-text {
-        font-size: 1.8rem;
-    }
-    .answer-text {
-        font-size: 3.5rem;
-    }
-    .emoji-text {
-        font-size: 2.5rem;
-    }
-}
 </style>
 <script>
 
