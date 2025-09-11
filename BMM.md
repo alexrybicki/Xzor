@@ -60,32 +60,25 @@
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
-
-         
-    
 <style>
-
         .title {
             font-size: 2.5rem;
             margin-bottom: 10px;
             color: #333;
             font-weight: 300;
         }
-        
         .date {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 40px;
             font-style: italic;
-        }
-        
+        }        
         .time-display {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 20px;
             margin: 30px 0;
-        }
-        
+        }        
         .time-unit {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             border-radius: 15px;
@@ -94,43 +87,36 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transform: translateY(0);
             transition: transform 0.3s ease;
-        }
-        
+        }        
         .time-unit:hover {
             transform: translateY(-5px);
-        }
-        
+        }        
         .time-number {
             font-size: 2.5rem;
 /*             font-weight: bold;
             display: block;
             margin-bottom: 5px; */
-        }
-        
+        }        
         .time-label {
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             opacity: 0.9;
-        }
-        
+        }        
         .total-days {
             margin-top: 30px;
             padding: 20px;
             background: rgba(102, 126, 234, 0.1);
             border-radius: 10px;
             border-left: 4px solid #667eea;
-        }
-        
+        }        
         .total-days-number {
             font-size: 2rem;
             font-weight: bold;
             color: #667eea;
         }
-
 </style>
 <script>
-
 document.addEventListener('DOMContentLoaded', function() {
     const question = document.getElementById('question');
     const answer = document.getElementById('answer');
