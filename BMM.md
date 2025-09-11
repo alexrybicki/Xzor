@@ -439,8 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         question.style.animation = 'fadeOut 5s ease-in-out forwards';
         answer.style.animation = 'fadeInThenOut 4s ease-in-out 4s forwards'; // Changed
-        emoji.style.animation = 'emojiPop 1.5s ease-out 8s forwards'; // Changed timing
-    }, 100);       
+        emoji.style.animation = 'emojiPop 1.5s ease-out 8s forwards'; // Changed timing       
         // Add continuous wiggle after the pop animation
         setTimeout(() => {
             emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
