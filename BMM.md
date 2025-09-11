@@ -35,7 +35,7 @@
             <div id="answer" class="answer-text">NO</div>
             <div id="emoji" class="emoji-text">😡</div>
         </div>
-         <div class="counter-container">
+         <div class="profile-section">
         <h2 class="section-title centered-title alt">Time Since</h2>
         <div class="date">November 11, 2013</div>
         <div class="time-display">
@@ -65,7 +65,7 @@
          
     
 <style>
-        .counter-container {
+/*         .counter-container {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -74,7 +74,7 @@
             text-align: center;
             max-width: 600px;
             width: 90%;
-        }
+        } */
         
         .title {
             font-size: 2.5rem;
