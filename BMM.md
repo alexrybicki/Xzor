@@ -123,13 +123,8 @@
         }
     .filler-text {
         font-size: 4rem;
-        font-weight: bold;
-        text-align: center;
-        opacity: 1;
+        opacity: 0;
         position: static;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         white-space: nowrap;
     }
 .question-text {
