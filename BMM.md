@@ -148,7 +148,7 @@
     animation: emojiPop 1.5s ease-out 6.5s forwards;
     top: 50%;
     left: 50%;
-/*     transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
     @keyframes fadeOut {
