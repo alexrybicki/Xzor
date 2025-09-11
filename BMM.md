@@ -208,7 +208,7 @@
 }
 @media (max-width: 768px) {
     .question-text {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .answer-text {
         font-size: 5rem;
@@ -219,7 +219,7 @@
 }
 @media (max-width: 480px) {
     .question-text {
-        font-size: 1.8rem;
+        font-size: 0.8rem;
     }
     .answer-text {
         font-size: 3.5rem;
