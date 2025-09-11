@@ -257,7 +257,7 @@
     @media (max-width: 768px) {
       .question-text {
         font-size: 2.5rem;
-        white-space: wrap;
+        white-space: normal;
       }
       .answer-text {
         font-size: 5rem;
