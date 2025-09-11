@@ -162,7 +162,7 @@
         opacity: 0;
     }
 }
-
+/*
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -173,7 +173,6 @@
         transform: translate(-50%, -50%) scale(1);
     }
 }
-
 @keyframes emojiPop {
     0% {
         opacity: 0;
@@ -195,7 +194,6 @@
         animation: emojiWiggle 2s ease-in-out 0.5s infinite;
     }
 }
-
 @keyframes emojiWiggle {
     0%, 100% {
         transform: translate(-50%, -50%) rotate(0deg) scale(1);
@@ -207,7 +205,6 @@
         transform: translate(-50%, -50%) rotate(3deg) scale(1.05);
     }
 }
-
 @media (max-width: 768px) {
     .question-text {
         font-size: 2.5rem;
@@ -219,7 +216,6 @@
         font-size: 3rem;
     }
 }
-
 @media (max-width: 480px) {
     .question-text {
         font-size: 1.8rem;
@@ -230,6 +226,7 @@
     .emoji-text {
         font-size: 2.5rem;
     }
+    */
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
