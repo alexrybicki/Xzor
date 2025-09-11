@@ -134,7 +134,7 @@
     text-align: center;
     color: #ff4444;
     opacity: 0;
-    animation: fadeInThenOut 8s ease-in-out 4s forwards; /* 8 second duration */
+    animation: fadeInThenOut 8s ease-in-out 4s forwards;
     position: absolute;
     top: 50%;
     left: 50%;
