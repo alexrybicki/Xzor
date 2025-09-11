@@ -312,5 +312,5 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.setAttribute('tabindex', '0');
         // Ensure the animation works properly when the page loads
 });
-
+</script>
 </body>
