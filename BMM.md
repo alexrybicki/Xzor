@@ -230,17 +230,7 @@
     transform: translate(-50%, -50%);
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
-.container-lg, h1, a {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-width: none !important;
-    width: 100% !important;
-    height: 100vh !important;
-    position: relative !important;
-}
+
 a {
     display: none;
 }
