@@ -436,15 +436,14 @@ document.addEventListener('DOMContentLoaded', function() {
     answer.style.animation = 'none';
     emoji.style.animation = 'none';    
     // Trigger animations with a small delay
-setTimeout(() => {
-    question.style.animation = 'fadeOut 5s ease-in-out forwards';
-    answer.style.animation = 'fadeInThenOut 8s ease-in-out 4s forwards';
-    emoji.style.animation = 'emojiPop 1.5s ease-out 12s forwards';
-    // Add continuous wiggle after the pop animation
     setTimeout(() => {
-        emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
-    }, 13500); // 12s delay + 1.5s pop duration
-}, 100);
+        question.style.animation = 'fadeOut 5s ease-in-out forwards';
+        answer.style.animation = 'fadeInThenOut 8s ease-in-out 4s forwards';
+        emoji.style.animation = 'emojiPop 1.5s ease-out 12s forwards';
+        // Add continuous wiggle after the pop animation
+        setTimeout(() => {
+            emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
+        }, 13500); // 12s delay + 1.5s pop duration
     }, 100);
 });
 </script>
