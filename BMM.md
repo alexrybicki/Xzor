@@ -232,15 +232,15 @@
         opacity: 0; 
         transform: translate(-50%, -50%) scale(0.8); 
     }
-    12.5% { 
+    25% {  /* Takes 2 seconds to fade in (25% of 8s) */
         opacity: 1; 
         transform: translate(-50%, -50%) scale(1); 
     }
-    75% { 
+    85% {  /* Stays visible until 85% (6.8 seconds) */
         opacity: 1; 
         transform: translate(-50%, -50%) scale(1); 
     }
-    100% { 
+    100% { /* Fades out in the last 15% (1.2 seconds) */
         opacity: 0; 
         transform: translate(-50%, -50%) scale(0.9); 
     }
