@@ -36,7 +36,7 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
         <div class="profile-section">
-            <div class="filler-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="filler-text">filler text to keep static positioning</div>
             <div id="question" class="question-text">Is the BMM in active development?</div>
             <div id="answer" class="answer-text">NO</div>
             <div id="emoji" class="emoji-text">😡</div>
@@ -122,7 +122,15 @@
             color: #667eea;
         }
     .filler-text {
-        position: static;       
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        opacity: 1;
+        position: static;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
     }
 .question-text {
     font-size: 4rem;
