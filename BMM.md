@@ -326,7 +326,7 @@ a {
         });
         // Make toggle focusable
         toggle.setAttribute('tabindex', '0');
-        / Ensure the animation works properly when the page loads
+        // Ensure the animation works properly when the page loads
 document.addEventListener('DOMContentLoaded', function() {
     const question = document.getElementById('question');
     const answer = document.getElementById('answer');
