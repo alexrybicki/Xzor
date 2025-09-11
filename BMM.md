@@ -134,7 +134,7 @@
     text-align: center;
     color: #ff4444;
     opacity: 0;
-    animation: fadeInThenOut 4s ease-in-out 4s forwards; /* Changed animation */
+    animation: fadeInThenOut 8s ease-in-out 4s forwards; /* 8 second duration */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -145,7 +145,7 @@
     font-size: 4rem;
     text-align: center;
     opacity: 0;
-    animation: emojiPop 1.5s ease-out 8s forwards; /* Delayed to 8s */
+    animation: emojiPop 1.5s ease-out 12s forwards; /* Starts at 12s */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -232,7 +232,7 @@
         opacity: 0; 
         transform: translate(-50%, -50%) scale(0.8); 
     }
-    25% { 
+    12.5% { 
         opacity: 1; 
         transform: translate(-50%, -50%) scale(1); 
     }
@@ -436,14 +436,15 @@ document.addEventListener('DOMContentLoaded', function() {
     answer.style.animation = 'none';
     emoji.style.animation = 'none';    
     // Trigger animations with a small delay
+setTimeout(() => {
+    question.style.animation = 'fadeOut 5s ease-in-out forwards';
+    answer.style.animation = 'fadeInThenOut 8s ease-in-out 4s forwards';
+    emoji.style.animation = 'emojiPop 1.5s ease-out 12s forwards';
+    // Add continuous wiggle after the pop animation
     setTimeout(() => {
-        question.style.animation = 'fadeOut 5s ease-in-out forwards';
-        answer.style.animation = 'fadeInThenOut 4s ease-in-out 4s forwards'; // Changed
-        emoji.style.animation = 'emojiPop 1.5s ease-out 8s forwards'; // Changed timing       
-        // Add continuous wiggle after the pop animation
-        setTimeout(() => {
-            emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
-        }, 8000); // 6.5s delay + 1.5s pop duration
+        emoji.style.animation += ', emojiWiggle 2s ease-in-out 0.5s infinite';
+    }, 13500); // 12s delay + 1.5s pop duration
+}, 100);
     }, 100);
 });
 </script>
