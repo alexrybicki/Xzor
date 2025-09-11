@@ -118,7 +118,39 @@
             font-weight: bold;
             color: #667eea;
         }
-
+.question-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    animation: fadeOut 5s ease-in-out forwards;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.answer-text {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ff4444;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 4s forwards;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 6px rgba(255, 68, 68, 0.5);
+}
+.emoji-text {
+    font-size: 4rem;
+    text-align: center;
+    opacity: 0;
+    animation: emojiPop 1.5s ease-out 6.5s forwards;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
