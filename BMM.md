@@ -172,7 +172,7 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
-}
+}*/
 @keyframes emojiPop {
     0% {
         opacity: 0;
@@ -226,7 +226,6 @@
     .emoji-text {
         font-size: 2.5rem;
     }
-    */
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
