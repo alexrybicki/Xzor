@@ -61,6 +61,9 @@
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
 <style>
+        .profile-section {
+            text-align: center;
+        }
         .title {
             font-size: 2.5rem;
             margin-bottom: 10px;
