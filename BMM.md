@@ -126,7 +126,6 @@
     animation: fadeOut 5s ease-in-out forwards;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
 }
 .answer-text {
@@ -138,7 +137,6 @@
     animation: fadeIn 2s ease-in-out 4s forwards;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
     text-shadow: 3px 3px 6px rgba(255, 68, 68, 0.5);
 }
 .emoji-text {
