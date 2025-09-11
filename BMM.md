@@ -59,7 +59,6 @@
        <p class="subtitle">
         November 11, 2013
       </p>
-      November 11, 2013
       <div class="time-display">
         <div class="time-unit">
           <span class="time-number" id="years">0</span>
