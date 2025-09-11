@@ -30,10 +30,11 @@
         <p class="subtitle theme-sensitive">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
-         <div class="profile-section">
-         <div id="question" class="question-text">Is the BMM in development?</div>
-        <div id="answer" class="answer-text">NO</div>
-        <div id="emoji" class="emoji-text">😡</div>
+        <div class="profile-section">
+            <div id="question" class="question-text">Is the BMM in development?</div>
+            <div id="answer" class="answer-text">NO</div>
+            <div id="emoji" class="emoji-text">😡</div>
+        </div>
          <div class="counter-container">
         <h2 class="section-title centered-title alt">Time Since</h2>
         <div class="date">November 11, 2013</div>
@@ -53,15 +54,14 @@
         </div>
         <div class="total-days">
             <div>Total Days: <span class="total-days-number" id="totalDays">0</span></div>
-        </div>
      </div>
-
+</div>
+</div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
     </footer>
-</div>
-</div>
+
          
     
 <style>
