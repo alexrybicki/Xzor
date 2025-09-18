@@ -18,9 +18,14 @@
             </div>
         </div>
     </div>
-  <style>
-    .copy-button {
-            background-color: #007bff;
+  <style> 
+        .profile-section {
+          text-align: center;
+        }
+        .copy-button {
+            font-size: 2.5rem; 
+            font-weight: 300;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             border: none;
             padding: 15px 25px;
@@ -52,7 +57,7 @@
         .success-message.show {
             opacity: 1;
         }
-    </style></style>
+    </style>
 <div class="container">
     <header>
         <a class="no-underline" href="./" >
@@ -65,7 +70,8 @@
         <p class="subtitle theme-sensitive">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
-     <div class="profile-section">      
+     <div class="profile-section"> 
+         
         <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
         <div id="successMessage" class="success-message">Code copied to clipboard!</div>
         <br><br>
