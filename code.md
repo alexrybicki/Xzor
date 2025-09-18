@@ -53,7 +53,6 @@
             color: #28a745;
             font-size: 2.5rem; 
             font-weight: 300;
-            margin-top: 10px;
             opacity: 0;
             transition: opacity 0.3s;
         }        
@@ -74,9 +73,12 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
      <div class="profile-section"> 
+         <h2 class="section-title centered-title alt">
+            Pirate Week 2025 
+          </h2>
         <div id="successMessage" class="success-message">Code copied to clipboard!</div>
         <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
-        <br>
+        <p>Then</p>
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" 
            target="_blank">Paste on this page</a>
