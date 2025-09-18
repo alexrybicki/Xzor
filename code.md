@@ -74,9 +74,9 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
      <div class="profile-section"> 
-        <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
         <div id="successMessage" class="success-message">Code copied to clipboard!</div>
-        <br><br>
+        <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
+        <br>
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" 
            target="_blank">Paste on this page</a>
