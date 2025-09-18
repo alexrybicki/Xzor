@@ -78,8 +78,7 @@
         <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
         <p>Then</p>
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
-           class="paste-link" 
-           target="_blank">Paste on this page</a>
+           class="paste-link" rel="noopener noreferrer"target="_blank">Paste on this page</a>
     </div>
     <script>
 
