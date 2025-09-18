@@ -80,7 +80,6 @@
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a>
     </div>  
-</div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
         <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
@@ -239,4 +238,5 @@
         // Make toggle focusable
         toggle.setAttribute('tabindex', '0');
     </script>
+    </div>
 </body>
