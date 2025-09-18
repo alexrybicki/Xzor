@@ -51,8 +51,6 @@
         }        
         .success-message {
             color: #28a745;
-            font-size: 2.5rem; 
-            font-weight: 300;
             opacity: 0;
             transition: opacity 0.3s;
         }        
@@ -84,6 +82,15 @@
            target="_blank">Paste on this page</a>
     </div>
     <script>
+
+    </script>
+</div>    
+    <footer>
+        <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
+        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
+    </footer>
+    <script>
+        //Copy Pasta Pirate Code
         const codeText = "M50-BT3480-7142-0059GM-ON-2-6-1STRD";        
         function copyCode() {
             navigator.clipboard.writeText(codeText).then(function() {
@@ -108,14 +115,7 @@
                 }, 2000);
             });
         }
-    </script>
-</div>    
-    <footer>
-        <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
-        <script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script>
-    </footer>
-    <script>
-                        // Scroll to hide
+        // Scroll to hide
         function initScrollHide() {
             const toggleContainer = document.getElementById('toggle-container');    
             if (toggleContainer) {
