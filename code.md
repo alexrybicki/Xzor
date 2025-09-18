@@ -41,7 +41,8 @@
         .paste-link {
             color: #007bff;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 2.5rem; 
+            font-weight: 300;
             border-bottom: 1px solid #007bff;
             transition: color 0.3s;
         }        
@@ -50,6 +51,8 @@
         }        
         .success-message {
             color: #28a745;
+            font-size: 2.5rem; 
+            font-weight: 300;
             margin-top: 10px;
             opacity: 0;
             transition: opacity 0.3s;
