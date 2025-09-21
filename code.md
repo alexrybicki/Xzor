@@ -50,7 +50,13 @@
             color: #0056b3;
         }        
         .success-message {
-            color: #28a745;
+/*             color: #28a745; */
+            background: rgba(76, 175, 80, 0.3);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
             opacity: 0;
             transition: opacity 0.3s;
         }        
