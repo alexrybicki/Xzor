@@ -55,7 +55,6 @@
             color: white;
             padding: 15px;
             border-radius: 10px;
-            margin: 20px 0;
             border-left: 4px solid #4CAF50;
             opacity: 0;
             transition: opacity 0.3s;
