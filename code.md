@@ -84,6 +84,7 @@
         <p>Then</p>
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a>
+        <div id="successMessage" class="success-message">Code copied to clipboard!</div>
     </div>  
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨ </p><p id="myParagraph">π</p>
