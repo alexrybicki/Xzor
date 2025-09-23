@@ -116,7 +116,7 @@ description: Exploring the cosmos, one game at a time
             out on Discord if you'd like to chat about games, swap stories, or team up for some co-op adventures!
         </p>
     </div>
-    <div class="profile-section">
+    <!-- <div class="profile-section">
         <h2 class="section-title centered-title alt">📊 Gaming Stats</h2>
         <div class="stats-grid">
             <div class="stat-card">
@@ -136,7 +136,7 @@ description: Exploring the cosmos, one game at a time
                 <div class="stat-label">Friends Online</div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="profile-section">
         <h2 class="section-title centered-title alt">📦 Miscellaneous Projects</h2>
         <div class="achievements-grid">
