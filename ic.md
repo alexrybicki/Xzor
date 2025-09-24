@@ -38,7 +38,7 @@
                 <div class="achievement-content">
                     <div class="achievement-title">Hottest Issue Council Items</div>
                     <div class="achievement-desc">50 most popular IC in the last 72 hours</div>
-                    <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open" class="social-link steam-link" target="_blank" rel="noopener noreferrer></a>
+                    <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open" class="social-link steam-link" target="_blank" rel="noopener noreferrer"></a>
             </div>
         </div>
         <div class="achievement-item">
@@ -46,9 +46,10 @@
             <div class="achievement-content">
                 <div class="achievement-title">Hottest Issue Council Items</div>
                 <div class="achievement-desc">50 most popular IC in the last week</div>
-                <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open" class="social-link steam-link" target="_blank" rel="noopener noreferrer></a>
+                <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open" class="social-link steam-link" target="_blank" rel="noopener noreferrer"></a>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
