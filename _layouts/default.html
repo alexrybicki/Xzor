@@ -1224,7 +1224,7 @@
             document.body.classList.remove('low-performance');
             
             // Only add it if we have a valid low core count
-            if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 2) {
+            if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 1) {
                 document.body.classList.add('low-performance');
                 console.log('Low performance mode activated - CPU cores:', cpuCores);
             } else {
