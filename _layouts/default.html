@@ -299,19 +299,7 @@
             0% { transform: translateX(-100px); }
             100% { transform: translateX(calc(100vw + 100px)); }
         }
-        /* Demo text */
-        .demo-text {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #333;
-            font-size: 18px;
-            font-weight: 500;
-            transition: color 0.8s ease;
-            text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
-        }
-        body.night-mode .demo-text {
+        body.night-mode {
             color: #ecf0f1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
@@ -774,11 +762,6 @@
             0% { opacity: 0.6; transform: scaleX(1); }
             50% { opacity: 1; transform: scaleX(1.1); }
             100% { opacity: 0.6; transform: scaleX(1); }
-        }
-        .demo-title {
-            margin: 40px 0 20px 0;
-            font-size: 1.2rem;
-            color: #c6d1dd;
         }
         .code-block {
             background: rgba(13, 17, 23, 0.9);
