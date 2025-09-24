@@ -32,12 +32,12 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt theme-sensitive"> Empty Page</h2>
-        <p class="about-text theme-sensitive">
+        <p class="about-text">
             This is just an empty test page. 🙈
         </p>
     </div>
     <footer>
-        <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<p id="myParagraph">π</p><script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></p>
+        <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<div id="myParagraph">π</p><script>document.getElementById('myParagraph').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></div>
     </footer>
 </div>
     <script>
