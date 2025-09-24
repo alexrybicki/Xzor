@@ -449,30 +449,30 @@
                 0 0 10px rgba(255, 255, 255, 0.8),
                 0 0 20px rgba(88, 166, 255, 0.4),
                 0 0 30px rgba(255, 105, 180, 0.2);
-            animation: shootingStar 8s linear infinite;
+            animation: shootingStar 10s linear infinite;
             opacity: 0;
         }        
         .shooting-star:nth-child(3) { 
             top: 10%; 
-            left: 10%; 
+            left: -10%; 
             animation-delay: 5s;
             animation-duration: 2s;
         }
         .shooting-star:nth-child(4) { 
             top: 30%; 
-            left: 15%; 
+            left: -15%; 
             animation-delay: 20s;
             animation-duration: 8s;
         }
         .shooting-star:nth-child(5) { 
             top: 20%; 
-            left: 5%; 
+            left: -5%; 
             animation-delay: 35s;
             animation-duration: 4s;
         }
         .shooting-star:nth-child(6) { 
             top: 40%; 
-            left: 20%; 
+            left: -20%; 
             animation-delay: 50s;
             animation-duration: 7s;
         }      
@@ -551,11 +551,11 @@
             }
             90% { 
                 opacity: 1; 
-                transform: translateX(600px) translateY(150px); 
+                transform: translateX(calc(100vw + 50px)) translateY(calc(100vh + 50px)); 
             }
             100% { 
                 opacity: 0; 
-                transform: translateX(700px) translateY(175px); 
+                transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)); 
             }
         }
         @keyframes nebulaFloat {
