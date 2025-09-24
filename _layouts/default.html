@@ -1178,14 +1178,16 @@
         }
     </style>
     <script>
-         // Memory optimization functions
-        function initializeMemoryOptimizations() {
-            let animationsPaused = false;            
+        // Memory optimization functions
+         function initializeMemoryOptimizations() {
+            let animationsPaused = false;
+            
             // Pause animations when page becomes hidden
             document.addEventListener('visibilitychange', function() {
                 const animatedElements = document.querySelectorAll(
                     '.starfield, .starfield-small, .shooting-star, .nebula, .aurora, .cloud'
-                );                
+                );
+                
                 if (document.hidden) {
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
@@ -1201,7 +1203,8 @@
                         animationsPaused = false;
                     }
                 }
-            });            
+            });
+            
             // Clean up animations periodically (every 5 minutes)
             setInterval(function() {
                 // Force garbage collection by removing and re-adding animation classes
@@ -1211,12 +1214,15 @@
                     star.offsetHeight; // Trigger reflow
                     star.style.animation = null; // Reset to CSS value
                 });
-            }, 300000); // 5 minutes            
+            }, 300000); // 5 minutes
+            
             // Check performance and apply/remove low-performance class
             const cpuCores = navigator.hardwareConcurrency;
-            console.log('Detected CPU cores:', cpuCores);            
+            console.log('Detected CPU cores:', cpuCores);
+            
             // Always remove the class first
-            document.body.classList.remove('low-performance');            
+            document.body.classList.remove('low-performance');
+            
             // Only add it if we have a valid low core count
             if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 2) {
                 document.body.classList.add('low-performance');
@@ -1225,6 +1231,18 @@
                 console.log('Normal performance mode - CPU cores:', cpuCores);
             }
         }
+        
+        // Memory monitoring (for development)
+        if ('memory' in performance) {
+            setInterval(() => {
+                const memInfo = performance.memory;
+                if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+                    console.warn('High memory usage detected:', 
+                        Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
+                }
+            }, 30000); // Check every 30 seconds
+        }
+
       // Global SVG content variables
       let scSvgContent = '';
       let mcSvgContent = '';
@@ -1301,25 +1319,6 @@
             });
           });
       }
-        // Memory monitoring (for development)
-        if ('memory' in performance) {
-            setInterval(() => {
-                const memInfo = performance.memory;
-                if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
-                    console.warn('High memory usage detected:', 
-                        Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
-                }
-            }, 30000); // Check every 30 seconds
-        }
-        //log whenever the low-performance class changes
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    console.log('Body class changed:', document.body.className);
-                }
-            });
-        });
-        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     // INIT
         document.addEventListener('DOMContentLoaded', function() {
             loadStarCitizenSVG();
