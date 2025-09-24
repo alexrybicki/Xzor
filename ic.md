@@ -34,7 +34,7 @@
         <h2 class="section-title centered-title alt theme-sensitive">Issue Council</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
-                <div class="achievement-icon">🧹</div>
+                <div class="achievement-icon">🚧</div>
                 <div class="achievement-content">
                     <div class="achievement-title">Hottest Issue Council Items</div>
                     <div class="achievement-desc">50 most popular IC in the last 72 hours</div>
