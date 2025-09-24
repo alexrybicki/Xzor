@@ -1268,7 +1268,7 @@
             ).catch(error => { // This .catch() handles a rejected Promise from the observe() call
               if (error instanceof TypeError) {
                 console.error("Error: The 'cpu' pressure source is not supported in this browser.");
-                console.error(error);
+                //console.error(error);
               } else {
                 // Handle any other unexpected errors from the asynchronous operation
                 console.error("An unexpected error occurred during observation:", error);
