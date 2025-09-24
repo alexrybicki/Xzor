@@ -1087,32 +1087,29 @@
         }
         .no-underline {
               text-decoration: none;
-        }
-            /* Disable resource-intensive animations on low-end devices */
-        .low-performance .starfield::before,
-        .low-performance .starfield::after,
-        .low-performance .starfield-small {
-            animation: none;
+        }        
+        /* Disable resource-intensive animations on low-end devices */
+        body.low-performance .starfield::before,
+        body.low-performance .starfield::after,
+        body.low-performance .starfield-small {
+            animation: none !important;
             background-image: 
                 radial-gradient(2px 2px at 120px 80px, rgba(255, 255, 255, 0.8), transparent),
-                radial-gradient(1px 1px at 280px 150px, rgba(88, 166, 255, 0.6), transparent);
+                radial-gradient(1px 1px at 280px 150px, rgba(88, 166, 255, 0.6), transparent) !important;
             /* Only 2 simple gradients */
+        }        
+        body.low-performance .shooting-star {
+            display: none !important; /* Completely disable shooting stars */
+        }        
+        body.low-performance .nebula,
+        body.low-performance .aurora,
+        body.low-performance .light-shimmer {
+            animation: none !important;
+            opacity: 0.1 !important; /* Keep subtle effect without animation */
+        }        
+        body.low-performance .cloud {
+            animation-duration: 60s !important; /* Slower, less frequent updates */
         }
-        
-        .low-performance .shooting-star {
-            display: none; /* Completely disable shooting stars */
-        }
-        
-        .low-performance .nebula,
-        .low-performance .aurora,
-        .low-performance .light-shimmer {
-            animation: none;
-            opacity: 0.1; /* Keep subtle effect without animation */
-        }
-        
-        .low-performance .cloud {
-            animation-duration: 60s; /* Slower, less frequent updates */
-        }       
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;                
@@ -1180,7 +1177,8 @@
             }
         }
     </style>
-    <script>// Memory optimization functions
+    <script>
+        // Memory optimization functions
         function initializeMemoryOptimizations() {
             let animationsPaused = false;
             
@@ -1188,8 +1186,7 @@
             document.addEventListener('visibilitychange', function() {
                 const animatedElements = document.querySelectorAll(
                     '.starfield, .starfield-small, .shooting-star, .nebula, .aurora, .cloud'
-                );
-                
+                );                
                 if (document.hidden) {
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
@@ -1205,8 +1202,7 @@
                         animationsPaused = false;
                     }
                 }
-            });
-            
+            });            
             // Clean up animations periodically (every 5 minutes)
             setInterval(function() {
                 // Force garbage collection by removing and re-adding animation classes
@@ -1216,8 +1212,7 @@
                     star.offsetHeight; // Trigger reflow
                     star.style.animation = null; // Reset to CSS value
                 });
-            }, 300000); // 5 minutes
-            
+            }, 300000); // 5 minutes            
             // Reduce animations on low-end devices
             if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
                 document.body.classList.add('low-performance');
@@ -1300,15 +1295,22 @@
           });
       }
     // Memory monitoring (for development)
-    if ('memory' in performance) {
-        setInterval(() => {
-            const memInfo = performance.memory;
-            if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
-                console.warn('High memory usage detected:', 
-                    Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
-            }
-        }, 30000); // Check every 30 seconds
-    }
+        if ('memory' in performance) {
+            setInterval(() => {
+                const memInfo = performance.memory;
+                if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+                    console.warn('High memory usage detected:', 
+                        Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
+                }
+            }, 30000); // Check every 30 seconds
+        }
+        // Add this to the initializeMemoryOptimizations function for debugging
+        if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
+            document.body.classList.add('low-performance');
+            console.log('Low performance mode activated - CPU cores:', navigator.hardwareConcurrency);
+        } else {
+            console.log('Normal performance mode - CPU cores:', navigator.hardwareConcurrency);
+        }
     // INIT
     document.addEventListener('DOMContentLoaded', function() {
         loadStarCitizenSVG();
