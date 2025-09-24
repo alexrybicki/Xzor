@@ -1242,50 +1242,45 @@
                 }
             }, 30000); // Check every 30 seconds
         }
-        // CPU Pressure sensor (experimental in most browsers)
+      // CPU Pressure sensor (experimental in most browsers)
         if ('PressureObserver' in window) {
-          // Define the callback function to handle pressure changes
-          const handlePressureState = (records) => {
-            // Get the most recent pressure record from the array
-            const lastRecord = records[records.length - 1];
-            const cpuState = lastRecord.state;        
-            console.log(`Current CPU pressure state: ${cpuState}`);        
-            // Conditional logic to add or remove a CSS class
-            if (cpuState === 'serious' || cpuState === 'critical') {
-              console.warn('High pressure detected. Applying "low-performance" class.');
-              document.body.classList.add('low-performance');
-            } else {
-              console.log('Pressure is low. Removing "low-performance" class.');
-              document.body.classList.remove('low-performance');
+            // Define the callback function to handle pressure changes
+            const handlePressureState = (records) => {
+                // Get the most recent pressure record from the array
+                const lastRecord = records[records.length - 1];
+                const cpuState = lastRecord.state;
+                console.log(`Current CPU pressure state: ${cpuState}`);                
+                // Conditional logic to add or remove a CSS class
+                if (cpuState === 'serious' || cpuState === 'critical') {
+                    console.warn('High pressure detected. Applying "low-performance" class.');
+                    document.body.classList.add('low-performance');
+                } else {
+                    console.log('Pressure is low. Removing "low-performance" class.');
+                    document.body.classList.remove('low-performance');
+                }
+            };            
+            // Create a new PressureObserver instance with the callback
+            const observer = new PressureObserver(handlePressureState);            
+            try {
+                // Correct syntax: pass source as string, options as separate object
+                observer.observe('cpu', { sampleInterval: 10000 });
+                console.log('Started observing CPU pressure. Check the console for updates...');
+            } catch (error) {
+                if (error.name === 'NotSupportedError') {
+                    console.info("The 'cpu' pressure source is not supported in this browser.");
+                } else if (error instanceof TypeError) {
+                    console.error("TypeError in PressureObserver:", error.message);
+                } else {
+                    console.error("An unexpected error occurred:", error);
+                }                
+                // Fallback to CPU core count method
+                console.log('Falling back to CPU core count detection...');
+                fallbackToCpuCoreDetection();
             }
-          };        
-          // Create a new PressureObserver instance with the callback
-          const observer = new PressureObserver(handlePressureState);        
-          try {
-            // Attempt to start observing the 'cpu' source. This call might return a Promise.
-            observer.observe(
-              { source: 'cpu', sampleInterval: 10000 }
-            ).catch(error => { // This .catch() handles a rejected Promise from the observe() call
-              if (error instanceof TypeError) {
-                console.info("Sorry: The 'cpu' pressure source is not supported in this browser. CPU core count will be used as a fallback.");
-                //console.error(error);
-              } else {
-                // Handle any other unexpected errors from the asynchronous operation
-                console.error("An unexpected error occurred during observation:", error);
-              }
-            });        
-            console.log('Started observing CPU pressure. Check the console for updates...');        
-          } catch (error) { // This catch block handles synchronous errors when observer.observe() is first called
-            if (error instanceof TypeError) {
-              console.error("Error: The PressureObserver could not be created or observed due to a Type error.");
-              console.error(error);
-            } else {
-              // Handle any other synchronous errors
-              console.error("An unexpected synchronous error occurred:", error);
-            }
-          }        
         } else {
-          console.log('Compute Pressure API is not supported in this browser.');
+            console.log('Compute Pressure API is not supported in this browser.');
+            // Fallback to CPU core count method
+            fallbackToCpuCoreDetection();
         }
       // Global SVG content variables
       let scSvgContent = '';
