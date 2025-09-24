@@ -1192,7 +1192,6 @@
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
                         element.style.animationPlayState = 'paused';
-                        console.log('paused');
                     });
                     animationsPaused = true;
                 } else {
@@ -1200,7 +1199,6 @@
                     if (animationsPaused) {
                         animatedElements.forEach(element => {
                             element.style.animationPlayState = 'running';
-                            console.log('running');
                         });
                         animationsPaused = false;
                     }
