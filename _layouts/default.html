@@ -299,6 +299,18 @@
             0% { transform: translateX(-100px); }
             100% { transform: translateX(calc(100vw + 100px)); }
         }
+        /* Demo text */
+        .demo-text {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.8s ease;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+        }
         body.night-mode .demo-text {
             color: #ecf0f1;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
@@ -462,20 +474,20 @@
             top: 60%; 
             left: -10px; 
             animation-delay: 20s;
-            animation-duration: 7s;
+            animation-duration: 9s;
         }
         .shooting-star:nth-child(5) { 
             top: 35%; 
             left: -10px; 
             animation-delay: 45s;
-            animation-duration: 9s;
+            animation-duration: 7s;
         }
         .shooting-star:nth-child(6) { 
-            top: 60%; 
-            left: 44%; 
-            animation-delay: 10s;
+            top: 80%; 
+            left: -10px; 
+            animation-delay: 70s;
             animation-duration: 8s;
-        }
+        }        
         /* Gentle light patterns */
         .light-shimmer {
             position: absolute;
@@ -1251,7 +1263,6 @@
         <div class="starfield-small"></div>
         <div class="nebula"></div>
         <div class="aurora"></div>
-        <div class="shooting-star"></div>
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
