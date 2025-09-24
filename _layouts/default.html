@@ -1088,7 +1088,31 @@
         .no-underline {
               text-decoration: none;
         }
-       
+            /* Disable resource-intensive animations on low-end devices */
+        .low-performance .starfield::before,
+        .low-performance .starfield::after,
+        .low-performance .starfield-small {
+            animation: none;
+            background-image: 
+                radial-gradient(2px 2px at 120px 80px, rgba(255, 255, 255, 0.8), transparent),
+                radial-gradient(1px 1px at 280px 150px, rgba(88, 166, 255, 0.6), transparent);
+            /* Only 2 simple gradients */
+        }
+        
+        .low-performance .shooting-star {
+            display: none; /* Completely disable shooting stars */
+        }
+        
+        .low-performance .nebula,
+        .low-performance .aurora,
+        .low-performance .light-shimmer {
+            animation: none;
+            opacity: 0.1; /* Keep subtle effect without animation */
+        }
+        
+        .low-performance .cloud {
+            animation-duration: 60s; /* Slower, less frequent updates */
+        }       
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;                
@@ -1156,7 +1180,49 @@
             }
         }
     </style>
-    <script>    
+    <script>// Memory optimization functions
+        function initializeMemoryOptimizations() {
+            let animationsPaused = false;
+            
+            // Pause animations when page becomes hidden
+            document.addEventListener('visibilitychange', function() {
+                const animatedElements = document.querySelectorAll(
+                    '.starfield, .starfield-small, .shooting-star, .nebula, .aurora, .cloud'
+                );
+                
+                if (document.hidden) {
+                    // Page is hidden, pause animations
+                    animatedElements.forEach(element => {
+                        element.style.animationPlayState = 'paused';
+                    });
+                    animationsPaused = true;
+                } else {
+                    // Page is visible, resume animations
+                    if (animationsPaused) {
+                        animatedElements.forEach(element => {
+                            element.style.animationPlayState = 'running';
+                        });
+                        animationsPaused = false;
+                    }
+                }
+            });
+            
+            // Clean up animations periodically (every 5 minutes)
+            setInterval(function() {
+                // Force garbage collection by removing and re-adding animation classes
+                const shootingStars = document.querySelectorAll('.shooting-star');
+                shootingStars.forEach(star => {
+                    star.style.animation = 'none';
+                    star.offsetHeight; // Trigger reflow
+                    star.style.animation = null; // Reset to CSS value
+                });
+            }, 300000); // 5 minutes
+            
+            // Reduce animations on low-end devices
+            if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
+                document.body.classList.add('low-performance');
+            }
+        }
       // Global SVG content variables
       let scSvgContent = '';
       let mcSvgContent = '';
@@ -1232,13 +1298,24 @@
               container.innerHTML = fallbackSVG;
             });
           });
-      }      
-      // Load all SVGs when DOM is ready
-      document.addEventListener('DOMContentLoaded', function() {
+      }
+    // Memory monitoring (for development)
+    if ('memory' in performance) {
+        setInterval(() => {
+            const memInfo = performance.memory;
+            if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+                console.warn('High memory usage detected:', 
+                    Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
+            }
+        }, 30000); // Check every 30 seconds
+    }
+    // INIT
+    document.addEventListener('DOMContentLoaded', function() {
         loadStarCitizenSVG();
         loadMinecraftSVG();
         loadReferralSVG();
-      });
+        initializeMemoryOptimizations();
+    });
     </script>
 </head>
 <body>
