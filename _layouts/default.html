@@ -1242,15 +1242,14 @@
                 }
             }, 30000); // Check every 30 seconds
         }
+        // CPU Pressure sensor (experimental in most browsers)
         if ('PressureObserver' in window) {
           // Define the callback function to handle pressure changes
           const handlePressureState = (records) => {
             // Get the most recent pressure record
             const lastRecord = records[records.length - 1];
-            const cpuState = lastRecord.state;
-        
-            console.log(`Current CPU pressure state: ${cpuState}`);
-        
+            const cpuState = lastRecord.state;        
+            console.log(`Current CPU pressure state: ${cpuState}`);        
             // Conditional statement to apply/remove a CSS class
             if (cpuState === 'serious' || cpuState === 'critical') {
               console.log('High pressure detected. Applying "low-performance" class.');
@@ -1259,18 +1258,24 @@
               console.log('Pressure is low. Removing "low-performance" class.');
               document.body.classList.remove('low-performance');
             }
-          };
-        
+          };        
           // Create a new PressureObserver instance with the callback
-          const observer = new PressureObserver(handlePressureState);
-          
-          // Start observing the "cpu" source with a 10-second sampling interval
-          observer.observe(
-            { source: 'cpu', sampleInterval: 10000 }
-          );
-        
-          console.log('Started observing CPU pressure. Check the console for updates...');
-        
+          const observer = new PressureObserver(handlePressureState);        
+          try {
+            // Start observing the "cpu" source with a 10-second sampling interval
+            observer.observe(
+              { source: 'cpu', sampleInterval: 10000 }
+            );
+            console.log('Started observing CPU pressure. Check the console for updates...');
+          } catch (error) {
+            if (error instanceof TypeError) {
+              console.error("Error: The 'cpu' pressure source is not supported in this browser.");
+              console.error(error);
+            } else {
+              // Handle other potential errors
+              console.error("An unexpected error occurred:", error);
+            }
+          }        
         } else {
           console.log('Compute Pressure API is not supported in this browser.');
         }
