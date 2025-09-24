@@ -1267,7 +1267,7 @@
               { source: 'cpu', sampleInterval: 10000 }
             ).catch(error => { // This .catch() handles a rejected Promise from the observe() call
               if (error instanceof TypeError) {
-                console.error("Error: The 'cpu' pressure source is not supported in this browser.");
+                console.warn("Sorry: The 'cpu' pressure source is not supported in this browser. CPU core count will be used as a fallback.");
                 //console.error(error);
               } else {
                 // Handle any other unexpected errors from the asynchronous operation
