@@ -31,7 +31,6 @@
         <p class="tagline">Exploring the cosmos, one game at a time</p>
     </header>
      <div class="profile-section">
-        <div class="profile-section">
         <h2 class="section-title centered-title alt">Issue Council</h2>
         <div class="achievements-grid">
             <div class="achievement-item">
@@ -51,7 +50,6 @@
                 </div>
             </div> 
         </div>
-    </div>
      </div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
