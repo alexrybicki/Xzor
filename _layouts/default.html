@@ -1252,7 +1252,7 @@
             console.log(`Current CPU pressure state: ${cpuState}`);        
             // Conditional logic to add or remove a CSS class
             if (cpuState === 'serious' || cpuState === 'critical') {
-              console.log('High pressure detected. Applying "low-performance" class.');
+              console.warn('High pressure detected. Applying "low-performance" class.');
               document.body.classList.add('low-performance');
             } else {
               console.log('Pressure is low. Removing "low-performance" class.');
@@ -1267,7 +1267,7 @@
               { source: 'cpu', sampleInterval: 10000 }
             ).catch(error => { // This .catch() handles a rejected Promise from the observe() call
               if (error instanceof TypeError) {
-                console.warn("Sorry: The 'cpu' pressure source is not supported in this browser. CPU core count will be used as a fallback.");
+                console.info("Sorry: The 'cpu' pressure source is not supported in this browser. CPU core count will be used as a fallback.");
                 //console.error(error);
               } else {
                 // Handle any other unexpected errors from the asynchronous operation
