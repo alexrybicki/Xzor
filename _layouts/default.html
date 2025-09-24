@@ -453,29 +453,29 @@
             opacity: 0;
         }        
         .shooting-star:nth-child(3) { 
-            top: 20%; 
-            left: -10px; 
+            top: 10%; 
+            left: -10%; 
             animation-delay: 5s;
             animation-duration: 8s;
         }
         .shooting-star:nth-child(4) { 
-            top: 60%; 
-            left: -10px; 
+            top: 30%; 
+            left: -15%; 
             animation-delay: 20s;
             animation-duration: 9s;
         }
         .shooting-star:nth-child(5) { 
-            top: 35%; 
-            left: -10px; 
+            top: 20%; 
+            left: -5%; 
             animation-delay: 45s;
             animation-duration: 7s;
         }
         .shooting-star:nth-child(6) { 
-            top: 80%; 
-            left: -10px; 
+            top: 40%; 
+            left: -20%; 
             animation-delay: 70s;
             animation-duration: 8s;
-        }        
+        }      
         /* Gentle light patterns */
         .light-shimmer {
             position: absolute;
@@ -543,21 +543,21 @@
         @keyframes shootingStar {
             0% { 
                 opacity: 0; 
-                transform: translateX(-100px) translateY(-100px); 
+                transform: translateX(-50px) translateY(-25px); 
             }
-            5% { 
+            10% { 
                 opacity: 1; 
-                transform: translateX(-50px) translateY(-50px); 
+                transform: translateX(100px) translateY(25px); 
             }
-            95% { 
+            90% { 
                 opacity: 1; 
-                transform: translateX(calc(100vw + 50px)) translateY(calc(100vh + 50px)); 
+                transform: translateX(600px) translateY(150px); 
             }
             100% { 
                 opacity: 0; 
-                transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)); 
+                transform: translateX(700px) translateY(175px); 
             }
-        }    
+        }   
         @keyframes nebulaFloat {
             0% { 
                 transform: translateY(0px) scale(1); 
