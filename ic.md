@@ -38,7 +38,7 @@
                 <div class="achievement-content">
                     <div class="achievement-title">Hottest Issue Council Items</div>
                     <div class="achievement-desc">50 most popular IC in the last 72 hours</div>
-                    <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open"></a>
+                    <a href="https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues?limit=50&openedOn=last72h&sort=vote&statuses=confirmed,open" class="social-link steam-link" target="_blank" rel="noopener noreferrer></a>
                 </div>
             </div>
         </div>
