@@ -1178,16 +1178,14 @@
         }
     </style>
     <script>
-        // Memory optimization functions
+         // Memory optimization functions
         function initializeMemoryOptimizations() {
-            let animationsPaused = false;
-            
+            let animationsPaused = false;            
             // Pause animations when page becomes hidden
             document.addEventListener('visibilitychange', function() {
                 const animatedElements = document.querySelectorAll(
                     '.starfield, .starfield-small, .shooting-star, .nebula, .aurora, .cloud'
-                );
-                
+                );                
                 if (document.hidden) {
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
@@ -1203,8 +1201,7 @@
                         animationsPaused = false;
                     }
                 }
-            });
-            
+            });            
             // Clean up animations periodically (every 5 minutes)
             setInterval(function() {
                 // Force garbage collection by removing and re-adding animation classes
@@ -1214,19 +1211,18 @@
                     star.offsetHeight; // Trigger reflow
                     star.style.animation = null; // Reset to CSS value
                 });
-            }, 300000); // 5 minutes
-            
-            // Reduce animations on low-end devices
+            }, 300000); // 5 minutes            
+            // Check performance and apply/remove low-performance class
             const cpuCores = navigator.hardwareConcurrency;
-            console.log('Detected CPU cores:', cpuCores);
-            
-            if (cpuCores && cpuCores <= 2) {
+            console.log('Detected CPU cores:', cpuCores);            
+            // Always remove the class first
+            document.body.classList.remove('low-performance');            
+            // Only add it if we have a valid low core count
+            if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 2) {
                 document.body.classList.add('low-performance');
                 console.log('Low performance mode activated - CPU cores:', cpuCores);
             } else {
                 console.log('Normal performance mode - CPU cores:', cpuCores);
-                // Explicitly ensure the class is not added
-                document.body.classList.remove('low-performance');
             }
         }
       // Global SVG content variables
@@ -1305,7 +1301,7 @@
             });
           });
       }
-    // Memory monitoring (for development)
+        // Memory monitoring (for development)
         if ('memory' in performance) {
             setInterval(() => {
                 const memInfo = performance.memory;
@@ -1325,12 +1321,12 @@
         });
         observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     // INIT
-    document.addEventListener('DOMContentLoaded', function() {
-        loadStarCitizenSVG();
-        loadMinecraftSVG();
-        loadReferralSVG();
-        initializeMemoryOptimizations();
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStarCitizenSVG();
+            loadMinecraftSVG();
+            loadReferralSVG();
+            initializeMemoryOptimizations();
+        });
     </script>
 </head>
 <body>
