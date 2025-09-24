@@ -1186,7 +1186,8 @@
             document.addEventListener('visibilitychange', function() {
                 const animatedElements = document.querySelectorAll(
                     '.starfield, .starfield-small, .shooting-star, .nebula, .aurora, .cloud'
-                );                
+                );
+                
                 if (document.hidden) {
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
@@ -1202,7 +1203,8 @@
                         animationsPaused = false;
                     }
                 }
-            });            
+            });
+            
             // Clean up animations periodically (every 5 minutes)
             setInterval(function() {
                 // Force garbage collection by removing and re-adding animation classes
@@ -1212,10 +1214,19 @@
                     star.offsetHeight; // Trigger reflow
                     star.style.animation = null; // Reset to CSS value
                 });
-            }, 300000); // 5 minutes            
+            }, 300000); // 5 minutes
+            
             // Reduce animations on low-end devices
-            if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
+            const cpuCores = navigator.hardwareConcurrency;
+            console.log('Detected CPU cores:', cpuCores);
+            
+            if (cpuCores && cpuCores <= 2) {
                 document.body.classList.add('low-performance');
+                console.log('Low performance mode activated - CPU cores:', cpuCores);
+            } else {
+                console.log('Normal performance mode - CPU cores:', cpuCores);
+                // Explicitly ensure the class is not added
+                document.body.classList.remove('low-performance');
             }
         }
       // Global SVG content variables
@@ -1304,13 +1315,15 @@
                 }
             }, 30000); // Check every 30 seconds
         }
-        // Add this to the initializeMemoryOptimizations function for debugging
-        if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
-            document.body.classList.add('low-performance');
-            console.log('Low performance mode activated - CPU cores:', navigator.hardwareConcurrency);
-        } else {
-            console.log('Normal performance mode - CPU cores:', navigator.hardwareConcurrency);
-        }
+        // log whenever the low-performance class changes
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    console.log('Body class changed:', document.body.className);
+                }
+            });
+        });
+observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     // INIT
     document.addEventListener('DOMContentLoaded', function() {
         loadStarCitizenSVG();
