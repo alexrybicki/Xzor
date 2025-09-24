@@ -1223,7 +1223,7 @@
             const cpuCores = navigator.hardwareConcurrency;
             console.log('Detected CPU cores:', cpuCores);            
             // Always remove the class first
-            document.body.classList.remove('low-performance');            
+            //document.body.classList.remove('low-performance');            
             // Only add it if we have a valid low core count
             if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 1) {
                 document.body.classList.add('low-performance');
@@ -1243,20 +1243,34 @@
             }, 30000); // Check every 30 seconds
         }
         if ('PressureObserver' in window) {
-          // Create a callback function to handle pressure changes
-          const logPressureState = (records) => {
+          // Define the callback function to handle pressure changes
+          const handlePressureState = (records) => {
             // Get the most recent pressure record
-            const lastRecord = records[records.length - 1];            
-            // Log the current CPU pressure state
-            console.log(`Current CPU pressure state: ${lastRecord.state}`);
-          };        
+            const lastRecord = records[records.length - 1];
+            const cpuState = lastRecord.state;
+        
+            console.log(`Current CPU pressure state: ${cpuState}`);
+        
+            // Conditional statement to apply/remove a CSS class
+            if (cpuState === 'serious' || cpuState === 'critical') {
+              console.log('High pressure detected. Applying "low-performance" class.');
+              document.body.classList.add('low-performance');
+            } else {
+              console.log('Pressure is low. Removing "low-performance" class.');
+              document.body.classList.remove('low-performance');
+            }
+          };
+        
           // Create a new PressureObserver instance with the callback
-          const observer = new PressureObserver(logPressureState);          
+          const observer = new PressureObserver(handlePressureState);
+          
           // Start observing the "cpu" source with a 10-second sampling interval
           observer.observe(
-            { source: 'cpu', sampleInterval: 10000 } //10 seconds
-          );        
-          console.log('Started observing CPU pressure. Check the console for updates...');        
+            { source: 'cpu', sampleInterval: 10000 }
+          );
+        
+          console.log('Started observing CPU pressure. Check the console for updates...');
+        
         } else {
           console.log('Compute Pressure API is not supported in this browser.');
         }
