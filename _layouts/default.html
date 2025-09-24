@@ -1192,6 +1192,7 @@
                     // Page is hidden, pause animations
                     animatedElements.forEach(element => {
                         element.style.animationPlayState = 'paused';
+                        console.log('paused');
                     });
                     animationsPaused = true;
                 } else {
@@ -1199,12 +1200,12 @@
                     if (animationsPaused) {
                         animatedElements.forEach(element => {
                             element.style.animationPlayState = 'running';
+                            console.log('running');
                         });
                         animationsPaused = false;
                     }
                 }
-            });
-            
+            });            
             // Clean up animations periodically (every 5 minutes)
             setInterval(function() {
                 // Force garbage collection by removing and re-adding animation classes
@@ -1214,15 +1215,12 @@
                     star.offsetHeight; // Trigger reflow
                     star.style.animation = null; // Reset to CSS value
                 });
-            }, 300000); // 5 minutes
-            
+            }, 300000); // 5 minutes            
             // Check performance and apply/remove low-performance class
             const cpuCores = navigator.hardwareConcurrency;
-            console.log('Detected CPU cores:', cpuCores);
-            
+            console.log('Detected CPU cores:', cpuCores);            
             // Always remove the class first
-            document.body.classList.remove('low-performance');
-            
+            document.body.classList.remove('low-performance');            
             // Only add it if we have a valid low core count
             if (cpuCores && typeof cpuCores === 'number' && cpuCores <= 1) {
                 document.body.classList.add('low-performance');
@@ -1230,8 +1228,7 @@
             } else {
                 console.log('Normal performance mode - CPU cores:', cpuCores);
             }
-        }
-        
+        }        
         // Memory monitoring (for development)
         if ('memory' in performance) {
             setInterval(() => {
@@ -1242,7 +1239,6 @@
                 }
             }, 30000); // Check every 30 seconds
         }
-
       // Global SVG content variables
       let scSvgContent = '';
       let mcSvgContent = '';
