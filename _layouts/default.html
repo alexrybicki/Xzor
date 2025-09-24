@@ -1242,6 +1242,24 @@
                 }
             }, 30000); // Check every 30 seconds
         }
+        if ('PressureObserver' in window) {
+          // Create a callback function to handle pressure changes
+          const logPressureState = (records) => {
+            // Get the most recent pressure record
+            const lastRecord = records[records.length - 1];            
+            // Log the current CPU pressure state
+            console.log(`Current CPU pressure state: ${lastRecord.state}`);
+          };        
+          // Create a new PressureObserver instance with the callback
+          const observer = new PressureObserver(logPressureState);          
+          // Start observing the "cpu" source with a 10-second sampling interval
+          observer.observe(
+            { source: 'cpu', sampleInterval: 10000 } //10 seconds
+          );        
+          console.log('Started observing CPU pressure. Check the console for updates...');        
+        } else {
+          console.log('Compute Pressure API is not supported in this browser.');
+        }
       // Global SVG content variables
       let scSvgContent = '';
       let mcSvgContent = '';
