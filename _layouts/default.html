@@ -1315,7 +1315,7 @@
                 }
             }, 30000); // Check every 30 seconds
         }
-        // log whenever the low-performance class changes
+        //log whenever the low-performance class changes
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
@@ -1323,7 +1323,7 @@
                 }
             });
         });
-observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     // INIT
     document.addEventListener('DOMContentLoaded', function() {
         loadStarCitizenSVG();
