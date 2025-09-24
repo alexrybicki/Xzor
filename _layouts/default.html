@@ -543,21 +543,21 @@
         @keyframes shootingStar {
             0% { 
                 opacity: 0; 
-                transform: translateX(-50px) translateY(-25px); 
+                transform: translateX(-100px) translateY(-100px); 
             }
-            10% { 
+            5% { 
                 opacity: 1; 
-                transform: translateX(100px) translateY(25px); 
+                transform: translateX(-50px) translateY(-50px); 
             }
-            90% { 
+            95% { 
                 opacity: 1; 
-                transform: translateX(600px) translateY(150px); 
+                transform: translateX(calc(100vw + 50px)) translateY(calc(100vh + 50px)); 
             }
             100% { 
                 opacity: 0; 
-                transform: translateX(700px) translateY(175px); 
+                transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)); 
             }
-        }      
+        }    
         @keyframes nebulaFloat {
             0% { 
                 transform: translateY(0px) scale(1); 
