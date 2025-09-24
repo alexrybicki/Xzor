@@ -1231,7 +1231,7 @@
         if ('memory' in performance) {
             setInterval(() => {
                 const memInfo = performance.memory;
-                if (memInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+                if (memInfo.usedJSHeapSize > 200 * 1024 * 1024) { // 50MB threshold
                     console.warn('High memory usage detected:', 
                         Math.round(memInfo.usedJSHeapSize / 1024 / 1024) + 'MB');
                 }
