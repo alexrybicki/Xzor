@@ -38,7 +38,7 @@
             text-decoration: none;
             color: inherit;
         }
-        .no-underline:hover {
+        .hov_ul:hover {
             text-decoration: underline;
             opacity: 0.8;
         }
@@ -87,62 +87,62 @@
         <tbody>
             <tr>
                 <td>January</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Red_Festival" target="_blank" rel="noopener noreferrer">Red Festival (Lunar New Year) 🧧</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Red_Festival" target="_blank" rel="noopener noreferrer">Red Festival (Lunar New Year) 🧧</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>February</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Coramor" target="_blank" rel="noopener noreferrer">Coramor (Valentine's Day) ❤️</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Coramor" target="_blank" rel="noopener noreferrer">Coramor (Valentine's Day) ❤️</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>March</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Stella_Fortuna" target="_blank" rel="noopener noreferrer">Stella Fortuna (St. Patrick's Day) 🍀</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Stella_Fortuna" target="_blank" rel="noopener noreferrer">Stella Fortuna (St. Patrick's Day) 🍀</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>April</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Triggerfish" target="_blank" rel="noopener noreferrer">Triggerfish (April Fools' Day)</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Triggerfish" target="_blank" rel="noopener noreferrer">Triggerfish (April Fools' Day)</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>May</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Invictus_Launch_Week" target="_blank" rel="noopener noreferrer">Invictus Launch Week</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Invictus_Launch_Week" target="_blank" rel="noopener noreferrer">Invictus Launch Week</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>June</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Alien_Week" target="_blank" rel="noopener noreferrer">Alien Week 👽</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Alien_Week" target="_blank" rel="noopener noreferrer">Alien Week 👽</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>July</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Foundation_Festival" target="_blank" rel="noopener noreferrer">Foundation Festival </a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Foundation_Festival" target="_blank" rel="noopener noreferrer">Foundation Festival </a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>August</td>
-                <td> <a class="no-underline" href="https://play.sc/shipshowdown" target="_blank" rel="noopener noreferrer">Ship Showdown 🚀</a></td>
+                <td> <a class="no-underline hov_ul" href="https://play.sc/shipshowdown" target="_blank" rel="noopener noreferrer">Ship Showdown 🚀</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>September</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Pirate_week" target="_blank" rel="noopener noreferrer">Pirate Week 🏴‍☠️</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Pirate_week" target="_blank" rel="noopener noreferrer">Pirate Week 🏴‍☠️</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>October</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/CitizenCon" target="_blank" rel="noopener noreferrer">Citizen Con</a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="no-underline" href="https://starcitizen.tools/Day_of_the_Vara">Day of the Vara (Halloween) 🎃</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/CitizenCon" target="_blank" rel="noopener noreferrer">Citizen Con</a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="no-underline" href="https://starcitizen.tools/Day_of_the_Vara">Day of the Vara (Halloween) 🎃</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>November</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Intergalactic_Aerospace_Expo" target="_blank" rel="noopener noreferrer">Intergalactic Aerospace Expo</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Intergalactic_Aerospace_Expo" target="_blank" rel="noopener noreferrer">Intergalactic Aerospace Expo</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>December</td>
-                <td><a class="no-underline" href="https://starcitizen.tools/Luminalia" target="_blank" rel="noopener noreferrer">Luminalia (X-Mas) 🎄</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Luminalia" target="_blank" rel="noopener noreferrer">Luminalia (X-Mas) 🎄</a></td>
                 <td class="free-fly-no"></td>
             </tr>
         </tbody>
