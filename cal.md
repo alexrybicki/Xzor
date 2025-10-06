@@ -40,20 +40,17 @@
             text-decoration: none;
             color: inherit;
         }
+        .hov_ul:link {
+          color: #fff; 
+        }
+        .hov_ul:visited {
+          color: #fff; 
+        }
         .hov_ul:hover {
             text-decoration: underline;
             opacity: 0.8;
         }
-        a:link {
-          color: #fff; 
-        }
-        a:visited {
-          color: #fff; 
-        }
-        a:hover {
-          color: #fff; 
-        }
-        a:active {
+        .hov_ul:active {
           color: #fff;
         }
 </style>
