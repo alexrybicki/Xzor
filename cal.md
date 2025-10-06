@@ -79,64 +79,62 @@
         <tbody>
             <tr>
                 <td>January</td>
-                <td>Red Festival (Lunar New Year) 🧧</td>
+                <td><a class="no-underline" href="https://robertsspaceindustries.com/en/comm-link/transmission/20373-Lunar-New-Year-2025">Red Festival (Lunar New Year) 🧧</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>February</td>
-                <td>Coramor (Valentine's Day) ❤️</td>
+                <td><a class="no-underline" href="">Coramor (Valentine's Day) ❤️</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>March</td>
-                <td>Stella Fortuna (St. Patrick's Day) 🍀</td>
+                <td><a class="no-underline" href="">Stella Fortuna (St. Patrick's Day) 🍀</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>April</td>
-                <td>Triggerfish (April Fools' Day)</td>
+                <td><a class="no-underline" href="">Triggerfish (April Fools' Day)</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>May</td>
-                <td>Invictus Launch Week</td>
+                <td><a class="no-underline" href="">Invictus Launch Week</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>June</td>
-                <td>Alien Week 👽</td>
+                <td><a class="no-underline" href="">Alien Week 👽</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>July</td>
-                <td>Foundation Festival</td>
+                <td><a class="no-underline" href="Foundation Festival https://robertsspaceindustries.com/en/foundation-festival</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
-                <a class="no-underline" href="https://play.sc/shipshowdown" >
                 <td>August</td>
-                <td>Ship Showdown 🚀</td>
+                <td> <a class="no-underline" href="https://play.sc/shipshowdown" >Ship Showdown 🚀</a></td>
                 <td class="free-fly-yes">YES</td>
-                </a>
             </tr>
             <tr>
                 <td>September</td>
-                <td>Pirate Week 🏴‍☠️</td>
+                <td><a class="no-underline" href="Pirate Week 🏴‍☠️</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>October</td>
-                <td>Citizen Con &nbsp;&nbsp;&nbsp;&nbsp; Day of the Vara (Halloween) 🎃</td>
+                <td><a class="no-underline" href="">Citizen Con &nbsp;&nbsp;&nbsp;&nbsp; Day of the Vara (Halloween) 🎃</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
                 <td>November</td>
-                <td>Intergalactic Aerospace Expo</td>
+                <td><a class="no-underline" href="">Intergalactic Aerospace Expo</a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
                 <td>December</td>
-                <td>Luminalia (X-Mas) 🎄</td>
+                <td><a class="no-underline" href="">Luminalia (X-Mas) 🎄</a></td>
                 <td class="free-fly-no"></td>
             </tr>
         </tbody>
