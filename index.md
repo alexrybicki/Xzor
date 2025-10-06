@@ -196,7 +196,7 @@ description: Exploring the cosmos, one game at a time
             <div class="achievement-item">
                 <div class="achievement-icon">🚧</div>
                 <div class="achievement-content">
-                    <div class="achievement-title">Issue Council Top Times</div>
+                    <div class="achievement-title">Issue Council Top Itmes</div>
                     <div class="achievement-desc">Top items recently reported to the SC IC</div>
                     <a href="https://www.xzor.dev/ic"></a>
                 </div>
