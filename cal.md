@@ -119,7 +119,7 @@
             <tr>
                 <td>May</td>
                 <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Invictus_Launch_Week" target="_blank" rel="noopener noreferrer">Invictus Launch Week</a></td>
-                <td class="free-fly-yes"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
+                <td class="free-fly-yes"><a class="no-underline hov_ul" href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
             </tr>
             <tr>
                 <td>June</td>
@@ -129,12 +129,12 @@
             <tr>
                 <td>July</td>
                 <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Foundation_Festival" target="_blank" rel="noopener noreferrer">Foundation Festival </a></td>
-                <td class="free-fly-yes"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
+                <td class="free-fly-yes"><a class="no-underline hov_ul" href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
             </tr>
             <tr>
                 <td>August</td>
                 <td> <a class="no-underline hov_ul" href="https://play.sc/shipshowdown" target="_blank" rel="noopener noreferrer">Ship Showdown 🚀</a></td>
-                <td class="free-fly-yes"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
+                <td class="free-fly-yes"><a class="no-underline hov_ul" href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
             </tr>
             <tr>
                 <td>September</td>
@@ -149,7 +149,7 @@
             <tr>
                 <td>November</td>
                 <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Intergalactic_Aerospace_Expo" target="_blank" rel="noopener noreferrer">Intergalactic Aerospace Expo</a></td>
-                <td class="free-fly-yes"><a href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
+                <td class="free-fly-yes"><a class="no-underline hov_ul" href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
             </tr>
             <tr>
                 <td>December</td>
