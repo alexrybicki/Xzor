@@ -68,7 +68,7 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt theme-sensitive">Star Citizen Event Calendar</h2>
-    <table class="theme-sensitive dark-mode">
+    <table>
         <thead>
             <tr>
                 <th>MONTH</th>
