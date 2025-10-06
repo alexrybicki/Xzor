@@ -5,7 +5,7 @@
             max-width: 1000px;
             margin: 0 auto;
             border-collapse: collapse;
-            background-color: white;
+            /* background-color: white; */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         th {
