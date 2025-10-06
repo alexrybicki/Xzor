@@ -109,7 +109,7 @@
             </tr>
             <tr>
                 <td>July</td>
-                <td><a class="no-underline" href="Foundation Festival https://robertsspaceindustries.com/en/foundation-festival</a></td>
+                <td><a class="no-underline" href="https://robertsspaceindustries.com/en/foundation-festival">Foundation Festival </a></td>
                 <td class="free-fly-yes">YES</td>
             </tr>
             <tr>
@@ -119,7 +119,7 @@
             </tr>
             <tr>
                 <td>September</td>
-                <td><a class="no-underline" href="Pirate Week 🏴‍☠️</a></td>
+                <td><a class="no-underline" href="">Pirate Week 🏴‍☠️</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
