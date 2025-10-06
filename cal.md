@@ -19,6 +19,7 @@
         td {
             padding: 12px;
             border: 1px solid #999;
+            color: #fff;
         }
         tr:nth-child(even) {
             /* background-color: #dce6f1; */
@@ -30,6 +31,7 @@
             background-color: #1d4b26;
             text-align: center;
             font-weight: bold;
+            color: #fff;
         }
         .free-fly-no {
             /* background-color: #fff; */
