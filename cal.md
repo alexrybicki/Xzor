@@ -87,7 +87,7 @@
         <tbody>
             <tr>
                 <td>January</td>
-                <td><a class="no-underline" href="https://robertsspaceindustries.com/en/comm-link/transmission/20373-Lunar-New-Year-2025"target="_blank" rel="noopener noreferrer">Red Festival (Lunar New Year) 🧧</a></td>
+                <td><a class="no-underline" href="https://starcitizen.tools/Red_Festival" target="_blank" rel="noopener noreferrer">Red Festival (Lunar New Year) 🧧</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
