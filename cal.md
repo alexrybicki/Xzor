@@ -1,4 +1,40 @@
 <body>
+    <style>
+        table {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #b8cce4;
+            color: #000;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #999;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #999;
+        }
+        tr:nth-child(even) {
+            background-color: #dce6f1;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        .free-fly-yes {
+            background-color: #c6efce;
+            text-align: center;
+            font-weight: bold;
+        }
+        .free-fly-no {
+            background-color: #fff;
+        }
+</style>
     <!-- Background elements -->
     <div class="stars"></div>
     <div class="clouds">
@@ -19,7 +55,7 @@
         </div>
     </div>
 <div class="container">
-    <!-- <header>
+    <header>
         <a class="no-underline" href="./" >
         <h1 id='xzor-ascii-banner' class='xzor-ascii-banner'>██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗███████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;██████╗&nbsp;&nbsp;&nbsp;<br>
              ╚██╗██╔╝╚══███╔╝██╔═══██╗██╔══██╗<br>
@@ -29,12 +65,83 @@
             ╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚══════╝&nbsp;&nbsp;&nbsp;╚═════╝&nbsp;&nbsp;&nbsp;╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝</h1></a><br>
         <p class="subtitle theme-sensitive">Gaming Enthusiast & Digital Warrior</p>
         <p class="tagline">Exploring the cosmos, one game at a time</p>
-    </header> -->
+    </header>
      <div class="profile-section">
-        <h2 class="section-title centered-title alt theme-sensitive"> Empty Page</h2>
-        <p class="about-text">
-            This is just an empty test page. 🙈
-        </p>
+        <h2 class="section-title centered-title alt theme-sensitive">Star Citizen Event Calendar</h2>
+    <h1></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>MONTH</th>
+                <th>EVENT</th>
+                <th>FREE FLY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>Red Festival (Lunar New Year) 🧧</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>Coramor (Valentine's Day) ❤️</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>Stella Fortuna (St. Patrick's Day) 🍀</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>April</td>
+                <td>Triggerfish (April Fools' Day)</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td>Invictus Launch Week</td>
+                <td class="free-fly-yes">YES</td>
+            </tr>
+            <tr>
+                <td>June</td>
+                <td>Alien Week 👽</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Foundation Festival</td>
+                <td class="free-fly-yes">YES</td>
+            </tr>
+            <a class="no-underline" href="https://play.sc/shipshowdown" >
+            <tr>
+                <td>August</td>
+                <td>Ship Showdown 🚀</td>
+                <td class="free-fly-yes">YES</td>
+            </tr>
+            </a>
+            <tr>
+                <td>September</td>
+                <td>Pirate Week 🏴‍☠️</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>October</td>
+                <td>Citizen Con &nbsp;&nbsp;&nbsp;&nbsp; Day of the Vara (Halloween) 🎃</td>
+                <td class="free-fly-no"></td>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td>Intergalactic Aerospace Expo</td>
+                <td class="free-fly-yes">YES</td>
+            </tr>
+            <tr>
+                <td>December</td>
+                <td>Luminalia (X-Mas) 🎄</td>
+                <td class="free-fly-no"></td>
+            </tr>
+        </tbody>
+    </table>
     </div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
