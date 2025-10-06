@@ -9,8 +9,8 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         th {
-            background-color: #b8cce4;
-            color: #000;
+            /* background-color: #b8cce4; */
+            color: #fff;
             padding: 12px;
             text-align: left;
             font-weight: bold;
@@ -21,18 +21,18 @@
             border: 1px solid #999;
         }
         tr:nth-child(even) {
-            background-color: #dce6f1;
+            /* background-color: #dce6f1; */
         }
         tr:nth-child(odd) {
-            background-color: #fff;
+            /* background-color: #fff; */
         }
         .free-fly-yes {
-            background-color: #c6efce;
+            background-color: #1d4b26;
             text-align: center;
             font-weight: bold;
         }
         .free-fly-no {
-            background-color: #fff;
+            /* background-color: #fff; */
         }
 </style>
     <!-- Background elements -->
@@ -68,8 +68,7 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt theme-sensitive">Star Citizen Event Calendar</h2>
-    <h1></h1>
-    <table>
+    <table class="theme-sensitive dark-mode">
         <thead>
             <tr>
                 <th>MONTH</th>
@@ -113,13 +112,13 @@
                 <td>Foundation Festival</td>
                 <td class="free-fly-yes">YES</td>
             </tr>
-            <a class="no-underline" href="https://play.sc/shipshowdown" >
             <tr>
+                <a class="no-underline" href="https://play.sc/shipshowdown" >
                 <td>August</td>
                 <td>Ship Showdown 🚀</td>
                 <td class="free-fly-yes">YES</td>
+                </a>
             </tr>
-            </a>
             <tr>
                 <td>September</td>
                 <td>Pirate Week 🏴‍☠️</td>
