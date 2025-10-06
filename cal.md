@@ -124,7 +124,7 @@
             </tr>
             <tr>
                 <td>October</td>
-                <td><a class="no-underline" href="">Citizen Con &nbsp;&nbsp;&nbsp;&nbsp; Day of the Vara (Halloween) 🎃</a></td>
+                <td><a class="no-underline" href="">Citizen Con</a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="no-underline" href="">Day of the Vara (Halloween) 🎃</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
