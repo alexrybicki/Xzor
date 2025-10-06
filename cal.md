@@ -44,6 +44,18 @@
             text-decoration: underline;
             opacity: 0.8;
         }
+        a:link {
+          color: #fff; 
+        }
+        a:visited {
+          color: #fff; 
+        }
+        a:hover {
+          color: #fff; 
+        }
+        a:active {
+          color: #fff;
+        }
 </style>
     <!-- Background elements -->
     <div class="stars"></div>
