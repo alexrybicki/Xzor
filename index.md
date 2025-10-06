@@ -182,6 +182,27 @@ description: Exploring the cosmos, one game at a time
             </div>
         </div>
     </div>
+    <div class="profile-section">
+        <h2 class="section-title centered-title alt">Quick links / Resources</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <div class="achievement-icon">📆</div>
+                <div class="achievement-content">
+                    <div class="achievement-title">SC Calendar</div>
+                    <div class="achievement-desc">A Calendar of anual events and "free fly's"</div>
+                    <a href="https://www.xzor.dev/cal"></a>
+                </div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">🚧</div>
+                <div class="achievement-content">
+                    <div class="achievement-title">Issue Council Top Times</div>
+                    <div class="achievement-desc">Top items recently reported to IC</div>
+                    <a href="https://www.xzor.dev/cube"></a>
+                </div>
+            </div> 
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
     </footer>
