@@ -22,22 +22,6 @@
         .profile-section {
           text-align: center;
         }
-        /* .copy-button {
-            font-size: 2.5rem; 
-            font-weight: 300;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-        }
-        .copy-button:hover {
-            background-color: #0056b3;
-        }         */
       :root {
           --size: 32px;
         }
@@ -60,7 +44,6 @@
             &:hover {
               color: black;
             }
-            /* Now, the fun part :D */    
             & .btn-content {
               pointer-events: none;
               position: relative;
@@ -74,8 +57,8 @@
                 top: 0;
                 left: 0;
                 display: grid;
-                grid-template-columns: repeat(10, 1fr); /* Make 5 columns for the spans */
-                grid-auto-rows: 1fr; /*each line got the same height */
+                grid-template-columns: repeat(10, 1fr);
+                grid-auto-rows: 1fr;
                 overflow: hidden;      
                 & span {
                   width: 100%;
@@ -148,8 +131,8 @@
          <h2 class="section-title centered-title alt">
             Pirate Week 2025 
           </h2>
-        <!-- <button class="copy-button" onclick="copyCode()">Click here to copy code</button> -->
-         <!-- button click here -->
+        <div id="successMessage" class="success-message">Code copied to clipboard!</div>
+            <br>
             <main>
             <button onclick="copyCode()">
               <div class="btn-cells">
@@ -207,9 +190,6 @@
               </span>
             </button>
         </main>
-        <!-- <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
-           class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a> -->
-        <div id="successMessage" class="success-message">Code copied to clipboard!</div>
     </div>  
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
