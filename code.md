@@ -179,9 +179,8 @@
               </span>
             </button>
         <br><br><p>Then</p><br><br>
-            <button onclick='href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
-           class="paste-link" target="_blank" rel="noopener noreferrer"'>
-              <div class="btn-cells">
+          <button onclick="window.open('https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3', '_blank', 'noopener, noreferrer')" class="paste-link">
+            <div class="btn-cells">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -208,9 +207,8 @@
               </span>
             </button>
         </main>
-        
-        <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
-           class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a>
+        <!-- <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
+           class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a> -->
         <div id="successMessage" class="success-message">Code copied to clipboard!</div>
     </div>  
     <footer>
