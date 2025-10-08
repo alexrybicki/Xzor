@@ -157,10 +157,6 @@
           </h2>
         <!-- <button class="copy-button" onclick="copyCode()">Click here to copy code</button> -->
          <!-- button click here -->
-             <label for="debug">
-              <input type="checkbox">
-              <span>Debug grid</span>
-            </label>
             <main>
             <button onclick="copyCode()">
               <div class="btn-cells">
@@ -189,8 +185,37 @@
                 Click here to copy code
               </span>
             </button>
-            </main>
         <p>Then</p>
+            <button onclick='href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
+           class="paste-link" target="_blank" rel="noopener noreferrer"'>
+              <div class="btn-cells">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="btn-content">
+                Paste on this page
+              </span>
+            </button>
+        </main>
+        
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a>
         <div id="successMessage" class="success-message">Code copied to clipboard!</div>
