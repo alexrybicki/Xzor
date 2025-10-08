@@ -87,8 +87,8 @@
                     display: block;
                     position: absolute;
                     width: 50px;
-                    height: 50px;
-                    background: #51f0ed;
+                    height: 50px;                      
+                    background: #ff69b4;
                     background-image: linear-gradient(to right, #51F0ED, color-mix(in srgb, #51F0ED, white 50%));
                     transition: transform .4s ease;
                     transform: scale(0);
@@ -102,13 +102,6 @@
                       pointer-events: none
                     }
                   }          
-                  /* Debug*/          
-                   body:has(label[for="debug"] input:checked) & {
-                    border: 1px solid red;            
-                    &:before {
-                      background: green;
-                    }
-                  }
                 }
               }
             }
@@ -185,7 +178,7 @@
                 Click here to copy code
               </span>
             </button>
-        <p>Then</p>
+        <br><br><p>Then</p><br><br>
             <button onclick='href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" target="_blank" rel="noopener noreferrer"'>
               <div class="btn-cells">
