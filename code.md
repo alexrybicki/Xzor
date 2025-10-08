@@ -22,7 +22,7 @@
         .profile-section {
           text-align: center;
         }
-        .copy-button {
+        /* .copy-button {
             font-size: 2.5rem; 
             font-weight: 300;
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -37,7 +37,83 @@
         }
         .copy-button:hover {
             background-color: #0056b3;
-        }        
+        }         */
+      :root {
+          --size: 32px;
+        }
+        main {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-items: center;  
+          & button {
+            font-size: var(--size);
+            appearance: none;
+            background: transparent;
+            padding: 1em 2em;
+            border-radius: 100px;
+            border: 1px solid;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: color .40s ease;    
+            &:hover {
+              color: black;
+            }
+            /* Now, the fun part :D */    
+            & .btn-content {
+              pointer-events: none;
+              position: relative;
+              z-index: 3;
+            }    
+            & .btn-cells {
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr); /* Make 5 columns for the spans */
+                grid-auto-rows: 1fr; /*each line got the same height */
+                overflow: hidden;      
+                & span {
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                  position: relative; 
+                  &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: #51f0ed;
+                    background-image: linear-gradient(to right, #51F0ED, color-mix(in srgb, #51F0ED, white 50%));
+                    transition: transform .4s ease;
+                    transform: scale(0);
+                    border-radius: 100px;
+                  }         
+                  &:hover:before {
+                   transform: scale(12) 
+                  }          
+                  &:hover {
+                    & ~:not(:hover) {
+                      pointer-events: none
+                    }
+                  }          
+                  /* Debug*/          
+                   body:has(label[for="debug"] input:checked) & {
+                    border: 1px solid red;            
+                    &:before {
+                      background: green;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
         .paste-link {
             color: #007bff;
             text-decoration: none;
@@ -79,7 +155,41 @@
          <h2 class="section-title centered-title alt">
             Pirate Week 2025 
           </h2>
-        <button class="copy-button" onclick="copyCode()">Click here to copy code</button>
+        <!-- <button class="copy-button" onclick="copyCode()">Click here to copy code</button> -->
+         <!-- button click here -->
+             <label for="debug">
+              <input type="checkbox">
+              <span>Debug grid</span>
+            </label>
+            <main>
+            <button onclick="copyCode()">
+              <div class="btn-cells">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="btn-content">
+                Click here to copy code
+              </span>
+            </button>
+            </main>
         <p>Then</p>
         <a href="https://robertsspaceindustries.com/en/comm-link/transmission/20733-Pirate-Week-2025#2addcbc3" 
            class="paste-link" target="_blank" rel="noopener noreferrer">Paste on this page</a>
