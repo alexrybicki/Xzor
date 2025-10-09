@@ -71,7 +71,7 @@ button {
     margin: 0 auto auto;
     width: 10px;
     aspect-ratio: 1;
-    background: #51f0ed;
+    background: #ff69b4;
     background-image: linear-gradient(
       to right,
       #51f0ed,
