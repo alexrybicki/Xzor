@@ -29,7 +29,13 @@
         }
         button {
           --transition-duration: 400ms;
-          font-size: 2rem;
+              font-family: "Doto", sans-serif;
+              font-optical-sizing: auto;
+              font-weight: 600;
+              font-style: normal;
+              font-variation-settings:
+                "ROND" 0;
+          /* font-size: 1.4rem; */
           appearance: none;
           background: transparent;
           padding: 1em 1em;
