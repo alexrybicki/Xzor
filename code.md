@@ -23,74 +23,67 @@
         .profile-section {
           text-align: center;
         }
-      :root {
-          --size: 32px;
-        }
-        main {
-          width: 100%;
-          height: 100%;
-          display: grid;
-          place-items: center;  
-          & button {
-            font-size: var(--size);
-            appearance: none;
-            background: transparent;
-            padding: 1em 1em;
-            border-radius: 100px;
-            border: 1px solid;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            transition: color .40s ease;    
-            &:hover {
-              color: black;
-            }
-            & .btn-content {
-              pointer-events: none;
-              position: relative;
-              z-index: 3;
-            }    
-            & .btn-cells {
-                position: absolute;
-                z-index: 2;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                display: grid;
-                grid-template-columns: repeat(10, 1fr);
-                grid-auto-rows: 1fr;
-                overflow: hidden;      
-                & span {
-                  width: 100%;
-                  height: 100%;
-                  display: block;
-                  position: relative; 
-                  &:before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;                      
-                    background: #ff69b4;
-                    background-image: linear-gradient(to right, #51F0ED, color-mix(in srgb, #51F0ED, white 50%));
-                    transition: transform .4s ease;
-                    transform: scale(0);
-                    border-radius: 100px;
-                  }         
-                  &:hover:before {
-                   transform: scale(12) 
-                  }          
-                  &:hover {
-                    & ~:not(:hover) {
-                      pointer-events: none
-                    }
-                  }          
-                }
-              }
-            }
-          }
-        }
+main {
+  display: grid;
+  place-items: center;
+}
+button {
+  --transition-duration: 400ms;
+  font-size: 2rem;
+  appearance: none;
+  background: transparent;
+  padding: 1em 2em;
+  border-radius: 100px;
+  border: 1px solid;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-duration) ease;
+  &:hover {
+    color: black;
+  }
+}
+.btn-content {
+  pointer-events: none;
+  position: relative;
+  z-index: 3;
+}
+.btn-cells {
+  position: absolute;
+  z-index: 2;
+  inset: 0;  
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  &::before {
+    content: "";
+    position: absolute;
+    position-anchor: --hovered-cell;
+    left: calc(anchor(left) - 20px);
+    right: calc(anchor(right) - 20px);
+    top: calc(anchor(top) - 20px);
+    bottom: calc(anchor(bottom) - 20px);
+    margin: 0 auto auto;
+  }
+  &:has(> :nth-child(n + 11):hover)::before {
+    margin: auto auto 0;
+  }
+  &:hover::before {
+    transform: scale(55);
+    transition: transform var(--transition-duration) ease, margin 0ms 0ms;
+  }
+  & span {
+    position: relative;
+  }
+  &:not(:hover) span {
+  }
+  & span:hover {
+    anchor-name: --hovered-cell;
+    transition: anchor-name 0ms;
+  }
+}
+body:has(#debug:checked) .btn-cells span {
+  outline: 1px solid red;
+}
         .paste-link {
             color: #007bff;
             text-decoration: none;
