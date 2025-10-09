@@ -68,8 +68,8 @@
             background: #ff69b4;
             background-image: linear-gradient(
               to right,
-              #51f0ed,
-              color-mix(in srgb, #51f0ed, white 50%)
+              #ff69b4,
+              color-mix(in srgb, #ff69b4, white 50%)
             );
             border-radius: 100vw;
             transition: all var(--transition-duration) ease,
