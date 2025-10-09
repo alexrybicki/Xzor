@@ -23,6 +23,7 @@
         .profile-section {
           text-align: center;
         }
+        /* *** */
 main {
   display: grid;
   place-items: center;
@@ -53,7 +54,11 @@ button {
   z-index: 2;
   inset: 0;  
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr); /* Make 5 columns for the spans */
+  /* anchor positioning plays a big role here.
+       right now, I'm just telling our element what
+       anchor to, the real trick is lower down where
+       we create the named anchor */
   &::before {
     content: "";
     position: absolute;
@@ -62,28 +67,57 @@ button {
     right: calc(anchor(right) - 20px);
     top: calc(anchor(top) - 20px);
     bottom: calc(anchor(bottom) - 20px);
+    /* pushes the element to the top */
     margin: 0 auto auto;
+    width: 10px;
+    aspect-ratio: 1;
+    background: #51f0ed;
+    background-image: linear-gradient(
+      to right,
+      #51f0ed,
+      color-mix(in srgb, #51f0ed, white 50%)
+    );
+    border-radius: 100vw;
+    /* The margin changes depending on whether we
+           hover on the top or bottom row, and I want to
+           delay that when we aren't hovering */
+    transition: all var(--transition-duration) ease,
+      margin 0ms var(--transition-duration);
+    transition-behavior: allow-discrete;
+    transform: scale(0);
   }
+  /* if we're hovering on the 2nd row,
+       we push it to the bottom, instead of the top */
   &:has(> :nth-child(n + 11):hover)::before {
     margin: auto auto 0;
   }
+  /* when we do hover, I want the margin to instantly
+       change, so I've removed the delay */
   &:hover::before {
     transform: scale(55);
     transition: transform var(--transition-duration) ease, margin 0ms 0ms;
   }
   & span {
+/*     width: 100%;
+    height: 100%;
+    display: block; */
     position: relative;
   }
   &:not(:hover) span {
+    /* we need the  allow-discrete here because
+         we're going to be transitioning anchor-name      
+         I don't actually want to transition it, but when we
+         aren't hovering, I want to delay the name from changing */
+    transition: anchor-name 0ms var(--transition-duration);
+    transition-behavior: allow-discrete;
   }
+  /* when we hover, we need to the anchor-name to switch instantly */
   & span:hover {
     anchor-name: --hovered-cell;
     transition: anchor-name 0ms;
   }
 }
-body:has(#debug:checked) .btn-cells span {
-  outline: 1px solid red;
-}
+/* *** */
         .paste-link {
             color: #007bff;
             text-decoration: none;
@@ -183,6 +217,7 @@ body:has(#debug:checked) .btn-cells span {
               </span>
             </button>
         </main>
+         <br>
     </div>  
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
