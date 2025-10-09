@@ -35,7 +35,7 @@
             font-size: var(--size);
             appearance: none;
             background: transparent;
-            padding: 1em 2em;
+            padding: 1em 1em;
             border-radius: 100px;
             border: 1px solid;
             color: white;
@@ -103,7 +103,6 @@
             color: #0056b3;
         }        
         .success-message {
-/*             color: #28a745; */
             background: rgba(76, 175, 80, 0.3);
             color: white;
             padding: 15px;
@@ -159,7 +158,7 @@
                 <span></span>
               </div>
               <span class="btn-content">
-                Click here to copy code
+                Click to copy code
               </span>
             </button>
         <br><br><p>Then</p><br><br>
