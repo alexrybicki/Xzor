@@ -32,7 +32,7 @@
           font-size: 2rem;
           appearance: none;
           background: transparent;
-          padding: 1em 2em;
+          padding: 1em 1em;
           border-radius: 100px;
           border: 1px solid;
           color: white;
