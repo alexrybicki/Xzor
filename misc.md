@@ -35,7 +35,7 @@
                 <p class="about-text theme-sensitive">Custom keybinds, custom faces, and other miscellaneous stuff that needs a place.</p>
                  <p class="subtitle">Custom Keybinds: </p>
                      <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml </code>
-                 <p class="subtitle">Custom Faces: </p
+                 <p class="subtitle">Custom Faces: </p>
                      <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\CustomCharacters </code>
          </div>
     <footer>
