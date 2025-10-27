@@ -32,8 +32,11 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt">Misc SC Stuff</h2>
-         <p class="about-text theme-sensitive">Custom Keybinds:</p> <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml </code>
-
+            <p class="about-text theme-sensitive">Custom keybinds, custom faces, and other miscellaneous stuff that needs a place.</p>
+         <h3 class="section-title centered-title alt">Custom Keybinds:</h3>
+         <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml </code>
+         <h3 class="section-title centered-title alt">Custom Faces:</h3>
+         <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\CustomCharacters </code>
  </div>
     <footer>
         <p>&copy; 2025 Xzor • Created and maintained by Xzor • See you in the 'verse! ✨<span id="tms">π<script>document.getElementById('tms').addEventListener('mousedown', function(event) {if (event.ctrlKey && event.shiftKey && event.button === 0) {window.open('https://www.youtube.com/watch?v=EKuwyH1UeYw', '_blank');}});</script></span></p>
