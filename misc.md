@@ -33,9 +33,9 @@
      <div class="profile-section">
         <h2 class="section-title centered-title alt">Misc SC Stuff</h2>
             <p class="about-text theme-sensitive">Custom keybinds, custom faces, and other miscellaneous stuff that needs a place.</p>
-         <h3 class="section-title centered-title alt">Custom Keybinds:</h3>
+         <h4 class="section-title centered-title alt">Custom Keybinds:</h4>
          <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml </code>
-         <h3 class="section-title centered-title alt">Custom Faces:</h3>
+         <h4 class="section-title centered-title alt">Custom Faces:</h4>
          <code> C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\CustomCharacters </code>
  </div>
     <footer>
