@@ -32,9 +32,9 @@
     </header>
      <div class="profile-section">
         <h2 class="section-title centered-title alt">Filler Test Text</h2>
-        <p class="about-text theme-sensitive">
-           Custom Keybinds: ```C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml```
-        </p>
+           <p class="about-text theme-sensitive">
+             This is just some filler testing text. Yay. 😃
+          </p>
     </div>
 </div>    
     <footer>
