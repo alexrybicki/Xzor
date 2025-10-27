@@ -1,0 +1,3 @@
+** Misc SC Stuff **
+*** Custom Keybinds ***
+C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\Profiles\default\actionmaps.xml
