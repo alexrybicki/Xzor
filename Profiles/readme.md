@@ -5,3 +5,5 @@
 
 ###Custom Character Faces
 ```C:\Program Files\Roberts Space Industries\StarCitizen\HOTFIX\USER\Client\0\CustomCharacters```
+xzorpirate.chf
+2.24.2 Xzor.chf
