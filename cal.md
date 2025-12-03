@@ -143,7 +143,7 @@
             </tr>
             <tr>
                 <td>October</td>
-                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/CitizenCon" target="_blank" rel="noopener noreferrer">Citizen Con</a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="no-underline" href="https://starcitizen.tools/Day_of_the_Vara">Day of the Vara (Halloween) 🎃</a></td>
+                <td><a class="no-underline hov_ul" href="https://starcitizen.tools/CitizenCon" target="_blank" rel="noopener noreferrer">Citizen Con</a> &nbsp;&nbsp;&nbsp;&nbsp; <a class="no-underline hov_ul" href="https://starcitizen.tools/Day_of_the_Vara">Day of the Vara (Halloween) 🎃</a></td>
                 <td class="free-fly-no"></td>
             </tr>
             <tr>
