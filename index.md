@@ -93,8 +93,8 @@ description: Exploring the cosmos, one game at a time
             <div class="game-item hytale-game">
                 <div class="game-title">Hytale</div>
                 <div class="game-status">Subterranean Explorer</div>
-                <div class="game-description">∞ Find me in the Hyrealm Public Server</div>
-                <div class="mc-watermark-container"></div>
+                <div class="game-description"Find me in the Hyrealm Public Server</div>
+                <div class="hytale-watermark-container"></div>
             </div> 
             </a>
             <a href="https://www.minerealm.com/">
