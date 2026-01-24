@@ -89,14 +89,14 @@ description: Exploring the cosmos, one game at a time
                 <div class="ref-watermark-container"></div>
             </div>
             </a>
-            <a href="https://discord.com/channels/283452033225326592/1459787589174427720">
+            <!-- <a href="https://discord.com/channels/283452033225326592/1459787589174427720">
             <div class="game-item hytale-game">
                 <div class="game-title">Hytale</div>
                 <div class="game-status">Subterranean Explorer</div>
                 <div class="game-description">Find me in the Hyrealm Public Server</div>
                 <div class="hytale-watermark-container"></div>
             </div> 
-            </a>
+            </a> -->
             <a href="https://www.minerealm.com/">
             <div class="game-item minecraft-game">
                 <div class="game-title">Minecraft</div>
