@@ -92,8 +92,8 @@ description: Exploring the cosmos, one game at a time
             <a href="https://discord.com/channels/283452033225326592/1459787589174427720">
             <div class="game-item hytale-game">
                 <div class="game-title">Hytale</div>
-                <div class="game-status">Subterranean Explorer</div>
-                <div class="game-description">Find me in the Hyrealm Public Server</div>
+                <div class="game-status">Sandbox Adventurer</div>
+                <div class="game-description">Find me in the Hyrealm Public Server play.hyrealm.com</div>
                 <div class="hytale-watermark-container"></div>
             </div> 
             </a>
@@ -101,7 +101,7 @@ description: Exploring the cosmos, one game at a time
             <div class="game-item minecraft-game">
                 <div class="game-title">Minecraft</div>
                 <div class="game-status">Subterranean Explorer</div>
-                <div class="game-description">∞ Find me in the Minerealm Public Server</div>
+                <div class="game-description">Find me in the Minerealm Public Server game.minerealm.com</div>
                 <div class="mc-watermark-container"></div>
             </div> 
             </a>
