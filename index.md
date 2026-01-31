@@ -89,7 +89,7 @@ description: Exploring the cosmos, one game at a time
                 <div class="ref-watermark-container"></div>
             </div>
             </a>
-            <a href="https://hytaleonlineservers.com/server-hyrealm.883 "target="_blank" rel="noopener noreferrer">
+            <a href="https://hytaleonlineservers.com/server-hyrealm.883">
             <div class="game-item hytale-game">
                 <div class="game-title">Hytale</div>
                 <div class="game-status">Sandbox Adventurer</div>
