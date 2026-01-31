@@ -104,7 +104,7 @@
             <tr>
                 <td>February</td>
                 <td><a class="no-underline hov_ul" href="https://starcitizen.tools/Coramor" target="_blank" rel="noopener noreferrer">Coramor (Valentine's Day) ❤️</a></td>
-                <td class="free-fly-no"></td>
+                <td class="free-fly-yes"><a class="no-underline hov_ul" href="https://www.robertsspaceindustries.com/enlist?referral=STAR-Q3MV-XV5H">YES</a></td>
             </tr>
             <tr>
                 <td>March</td>
