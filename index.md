@@ -190,9 +190,9 @@ description: Exploring the cosmos, one game at a time
                 <div class="achievement-item">
                 <div class="achievement-icon">🏴‍☠️</div>
                 <div class="achievement-content">
-                    <div class="achievement-title">Pirate Week 2955</div>
-                    <div class="achievement-desc">Get your Pirate Week Hangar Item</div>
-                    <a href="https://www.xzor.dev/code"></a>
+                    <div class="achievement-title">Pirate Week 2956</div>
+                    <div class="achievement-desc">Get your Pirate Week Golden Coin</div>
+                    <a href="https://www.xzor.dev/code2956"></a>
                 </div>
             </div>
         </div>
