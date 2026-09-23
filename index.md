@@ -187,6 +187,7 @@ description: Exploring the cosmos, one game at a time
                     <div class="achievement-desc">Get your Pirate Week Hangar Item</div>
                     <a href="https://www.xzor.dev/code"></a>
                 </div>
+            </div>
                 <div class="achievement-item">
                 <div class="achievement-icon">🏴‍☠️</div>
                 <div class="achievement-content">
