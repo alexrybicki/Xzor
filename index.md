@@ -105,6 +105,14 @@ description: Exploring the cosmos, one game at a time
                 <div class="mc-watermark-container"></div>
             </div> 
             </a>
+            <a href="https://store.steampowered.com/app/1867240/WARDOGS/">
+            <div class="game-item Wardogs-game">
+                <div class="game-title">Wardogs</div>
+                <div class="game-status">KOTH Tactical Warfare</div>
+                <div class="game-description">Find me on the west coast official servers</div>
+                <div class="wardogs-watermark-container"></div>
+            </div> 
+            </a>
         </div>
     </div>
      <div class="profile-section">
