@@ -49,8 +49,8 @@
       <div id="question" class="question-text">
         Is the BMM in active development?
       </div>
-      <div id="answer" class="answer-text">NO</div>
-      <div id="emoji" class="emoji-text">😡</div>
+      <div id="answer" class="answer-text">YES!!!</div>
+      <div id="emoji" class="emoji-text">'😁</div>
     </div>
     <div class="profile-section">
       <h2 class="section-title centered-title alt">
